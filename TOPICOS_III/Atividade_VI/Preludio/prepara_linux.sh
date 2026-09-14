@@ -288,9 +288,9 @@ stage_5c(){
 
 stage_5(){ # Flutter e Dart SDK
 
-    # stage_5a # Instalação Flutter
+    stage_5a # Instalação Flutter
 
-    # stage_5b # Finalização Flutter
+    stage_5b # Finalização Flutter
 
     stage_5c # instalação Dart SDK
 }
