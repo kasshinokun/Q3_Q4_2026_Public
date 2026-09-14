@@ -298,40 +298,40 @@ stage_5(){ # Flutter e Dart SDK
 # ====================================================================================================================
 # [6/6] Android Studio e Licenças
 # ====================================================================================================================
-stage_6a(){
-    log "Instalando Android Studio..."
+stage_6b1(){ # Dicas para configurar o Android SDK - 13/09/2026 revisão 14-09-2026-2
 
-    # Snap
-    android_studio_snap(){
-        # Verifica se snap está disponível; caso contrário, baixa o tarball
-        if command -v snap &> /dev/null; then
-            sudo snap install android-studio --classic
-        else
-            warn "Snap não encontrado."
-        fi
-    }
-    # Manual
-    android_studio_manual(){
-        warn "Fazendo download manual do Android Studio..."
-        ANDROID_STUDIO_URL="https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.1.4.7/android-studio-quail4-linux.tar.gz"
+    log "Instruçoes para configurar o Android SDK"
 
-        # -q ---------------> Silenciosamente
-        # --show-progress --> Exibe progresso do download
-        # -O ---------------> Especifica o arquivo a ser salvo
+    log "Instalando SDK e cmdline-tools via Android Studio"
 
-        # wget -q --show-progress "$ANDROID_STUDIO_URL" -O /tmp/android-studio.tar.gz
+    log "Passo 1: Abra o Android Studio."
+    log "        Rode no terminal 'android-studio'" 
+    log "Passo 2: Abra o SDK Manager:"
 
-        wget --show-progress "$ANDROID_STUDIO_URL" -O /tmp/android-studio.tar.gz
+    log "  A) Na tela de boas-vindas:"
+    log "        Clique em More Actions (ou no ícone de três pontos)"
+    log "        Clique em SDK Manager."
 
-        sudo tar -xzf /tmp/android-studio.tar.gz -C /opt/
-        sudo ln -sf /opt/android-studio/bin/studio.sh /usr/local/bin/android-studio
-        rm -f /tmp/android-studio.tar.gz
-    }
+    log "  B) Com um projeto aberto:"
+    log "        Vá em Tools"
+    log "        SDK Manager (ou Settings/Preferences)"
+    log "        Languages ​​& Frameworks"
+    log "        Android SDK"
 
-    android_studio_manual # No momento, sera manual
+    log "Passo 3: Selecione a aba SDK Platforms na parte superior."
+    log "        Marque todos os android sdk do 8.0 até o atual[17] (em 14-09-2026, do 29.0 ao 37.0)"
+    log "Passo 4: Selecione a aba SDK Tools na parte superior."
+    
+    log "Passo 5: Procure por Android SDK Command-line Tools (latest) e marque a caixa de seleção ao lado."
+
+    log "Passo 6: Clique em Apply no canto inferior direito."
+
+    log "Passo 7: Clique em OK para confirmar o download e aguarde a conclusão da instalação."
+
+    log "Apos isto, é somente rodar no terminal 'flutter doctor --android-licenses'"
 }
+stage_6b2(){ # Configurar o Android SDK - 13/09/2026 revisão 14-09-2026-2
 
-stage_6b(){
     log "Configure o Android SDK"
 
     android-studio
@@ -347,11 +347,13 @@ stage_6b(){
     flutter doctor
 }
 
-stage_6(){ # Android Studio 13/09/2026
+stage_6(){ # Android Studio 13/09/2026 revisão 14-09-2026-2
 
     stage_6a # Instalação
 
-    # stage_6b # Finalização
+    stage_6b1 # Dicas
+
+    stage_6b2 # Finalização
 
 }
 # ====================================================================================================================
