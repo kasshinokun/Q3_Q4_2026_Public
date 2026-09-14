@@ -298,6 +298,38 @@ stage_5(){ # Flutter e Dart SDK
 # ====================================================================================================================
 # [6/6] Android Studio e Licenças
 # ====================================================================================================================
+stage_6a(){
+    log "Instalando Android Studio..."
+
+    # Snap
+    android_studio_snap(){
+        # Verifica se snap está disponível; caso contrário, baixa o tarball
+        if command -v snap &> /dev/null; then
+            sudo snap install android-studio --classic
+        else
+            warn "Snap não encontrado."
+        fi
+    }
+    # Manual
+    android_studio_manual(){
+        warn "Fazendo download manual do Android Studio..."
+        ANDROID_STUDIO_URL="https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.1.4.7/android-studio-quail4-linux.tar.gz"
+
+        # -q ---------------> Silenciosamente
+        # --show-progress --> Exibe progresso do download
+        # -O ---------------> Especifica o arquivo a ser salvo
+
+        # wget -q --show-progress "$ANDROID_STUDIO_URL" -O /tmp/android-studio.tar.gz
+
+        wget --show-progress "$ANDROID_STUDIO_URL" -O /tmp/android-studio.tar.gz
+
+        sudo tar -xzf /tmp/android-studio.tar.gz -C /opt/
+        sudo ln -sf /opt/android-studio/bin/studio.sh /usr/local/bin/android-studio
+        rm -f /tmp/android-studio.tar.gz
+    }
+
+    android_studio_manual # No momento, sera manual
+}
 stage_6b1(){ # Dicas para configurar o Android SDK - 13/09/2026 revisão 14-09-2026-2
 
     log "Instruçoes para configurar o Android SDK"
