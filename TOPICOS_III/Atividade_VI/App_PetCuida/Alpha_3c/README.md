@@ -1,6 +1,10 @@
-# PetCuida — versão alfa Android
+# PetCuida — versão alfa 3c revisão D Android
 
 Aplicativo Flutter demonstrativo para organizar cuidados acessíveis de pets, com dados genéricos locais e sem dependências de backend. Esta entrega cobre o fluxo completo do diagrama de telas: autenticação, onboarding, dashboard, área do pet (vacinas, prontuário, QR Code), triagem orientativa (por perguntas e por chat), rede solidária (clínicas, mapa, agendamento, check-out híbrido, mural) e perfil do tutor (saldo/extrato, agendamentos, configurações, suporte).
+
+## Releases
+- em 14-09-2026: Alpha-3c
+- em 15-09-2026: mantido nome de Alpha-3c mas, houve replace pela versão D com fix e mudança do pubspec.yaml 
 
 ## Arquitetura
 
