@@ -1,0 +1,32 @@
+name: petcuida
+description: "PetCuida — aplicativo alfa de cuidado acessível para pets."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Gerenciamento de estado simples e amplamente adotado no ecossistema Flutter.
+  provider: ^6.1.2
+
+  # Navegação declarativa com suporte a shell (bottom nav) e redirects
+  # (login/onboarding), evitando lógica de navegação espalhada nas telas.
+  go_router: ^14.6.2
+
+  # Geração do QR Code exportável do prontuário (Área do Pet).
+  qr_flutter: ^4.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/petcuida-logo.png
