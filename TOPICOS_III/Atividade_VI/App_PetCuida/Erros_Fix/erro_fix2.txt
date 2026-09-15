@@ -1,0 +1,42 @@
+ongtiu-ti@ongtiu-ti:~/Pictures/teste/Etapa_VI$ flutter run
+[1/5] Android SDK
+  ├─ [1/6] android-arm-profile/linux-x64                         (2.5MB in 3.2s)
+  ├─ [2/6] android-arm-release/linux-x64                         (2.0MB in 1.9s)
+  ├─ [3/6] android-arm64-profile/linux-x64                       (2.5MB in 2.2s)
+  ├─ [4/6] android-arm64-release/linux-x64                       (2.1MB in 2.6s)
+  ├─ [5/6] android-x64-profile/linux-x64                         (2.5MB in 2.5s)
+  └─ [6/6] android-x64-release/linux-x64                         (2.1MB in 1.8s)
+[2/5] Web SDK                                                  (32.4MB in 63.0s)
+[3/5] Linux SDK
+  ├─ [1/3] linux-x64-debug/linux-x64-flutter-gtk               (17.6MB in 28.9s)
+  ├─ [2/3] linux-x64-profile/linux-x64-flutter-gtk              (9.3MB in 16.8s)
+  └─ [3/3] linux-x64-release/linux-x64-flutter-gtk              (8.7MB in 13.7s)
+Launching lib/main.dart on SM A528B in debug mode...
+Upgrading gradle.properties
+Upgrading gradle.properties
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/home/ongtiu-ti/.gradle/wrapper/dists/gradle-8.12-all/ejduaidbjup3bmmkhw3rie4zb/gradle-8.12/lib/native-platform-0.22-milestone-27.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+25.0.3
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 14m 28s
+Running Gradle task 'assembleDebug'...                            870.9s
+Error: Gradle build failed due to Java/Gradle incompatibility.
+The Java version used for the build is 25.0.3, which is incompatible with Gradle 8.12.
+To fix this, you can either:
+  1. Upgrade your project's Gradle version (typically in gradle-wrapper.properties to a version matching the
+  range: compatible Gradle versions for Java 25.0.3 are 9.1.0 or newer).
+  2. Use a different Java version for Flutter by running `flutter config --jdk-dir=<path>`.
+ongtiu-ti@ongtiu-ti:~/Pictures/teste/Etapa_VI$
