@@ -5,6 +5,7 @@ Aplicativo Flutter demonstrativo para organizar cuidados acessíveis de pets, co
 - [Até a versão 3d(Possui .zip)](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/App_PetCuida/Alpha_3c)
 - 3e2 --> Arquivo .zip
 - [3g2 e 3h2](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/App_PetCuida/Alpha_3_G_H2)
+- [3i](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/App_PetCuida/Alpha_3_I) --> Preparação para próxima etapa
 ## Arquitetura
 
 O projeto segue uma estrutura modular por *feature*, com o núcleo compartilhado isolado em `core/`:
