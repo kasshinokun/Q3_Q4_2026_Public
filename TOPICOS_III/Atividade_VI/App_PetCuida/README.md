@@ -1,7 +1,10 @@
 # PetCuida — versão alfa Android
 
 Aplicativo Flutter demonstrativo para organizar cuidados acessíveis de pets, com dados genéricos locais e sem dependências de backend. Esta entrega cobre o fluxo completo do diagrama de telas: autenticação, onboarding, dashboard, área do pet (vacinas, prontuário, QR Code), triagem orientativa (por perguntas e por chat), rede solidária (clínicas, mapa, agendamento, check-out híbrido, mural) e perfil do tutor (saldo/extrato, agendamentos, configurações, suporte).
-
+## Versões
+- [Até a versão 3d(Possui .zip)](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/App_PetCuida/Alpha_3c)
+- 3e2 --> Arquivo .zip
+- [3g2 e 3h2](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/App_PetCuida/Alpha_3_G_H2)
 ## Arquitetura
 
 O projeto segue uma estrutura modular por *feature*, com o núcleo compartilhado isolado em `core/`:
