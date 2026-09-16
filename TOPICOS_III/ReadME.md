@@ -7,7 +7,7 @@
 - Pontifícia Universidade Católica de Minas Gerais - PUC MINAS 
 ## Alunos:
 - [Giovanna]()
-- [Gabriel Cassino]()
+- [Gabriel Cassino](https://github.com/kasshinokun)
 - [Kathleen Rodrigues](https://github.com/Neelhtak2001)
 - [Júlia]()
 
