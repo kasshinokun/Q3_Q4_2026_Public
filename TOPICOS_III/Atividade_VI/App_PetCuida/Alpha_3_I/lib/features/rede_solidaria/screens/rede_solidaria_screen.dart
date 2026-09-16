@@ -5,91 +5,196 @@ import 'package:provider/provider.dart';
 import '../../../core/routes/app_router.dart';
 import '../../../core/services/app_data_service.dart';
 import '../../../core/theme/app_colors.dart';
-import '../../../core/widgets/app_list_card.dart';
-import '../../../core/widgets/colored_head.dart';
-import '../../../core/widgets/section_header.dart';
-import '../../../core/widgets/stat_tile.dart';
-import '../../../core/widgets/tag_chip.dart';
 
-/// Hub da Rede Solidária: saldo de créditos, serviços com preço social
-/// disponíveis para agendamento e uma prévia do mural de pedidos.
+/// Tela principal da Rede Solidária reconstruída para seguir o wireframe
+/// com o mapa em destaque, mas mantendo a identidade visual do app.
 class RedeSolidariaScreen extends StatelessWidget {
   const RedeSolidariaScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final data = context.watch<AppDataService>();
-    final perfil = data.perfil;
+    final perfil = context.watch<AppDataService>().perfil;
 
-    return ListView(
-      padding: const EdgeInsets.fromLTRB(18, 18, 18, 28),
-      children: [
-        const ColoredHead(
-          eyebrow: 'Rede solidária',
-          title: 'Cuidado acessível perto de você',
-          description: 'Encontre parceiros, use créditos e participe do banco de horas da sua região.',
-          background: AppColors.navySoft,
-          foreground: AppColors.navy,
+    return Scaffold(
+      backgroundColor: AppColors.cream,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              // 1. TOPO: BOTÃO VOLTAR E SALDO (Estilizado)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.arrow_back_ios, color: AppColors.ink),
+                    onPressed: () {
+                      if (context.canPop()) context.pop();
+                    },
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: AppColors.yellow, // Corzinha amarela do app
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(Icons.monetization_on_outlined, size: 20, color: AppColors.yellowInk),
+                        const SizedBox(width: 8),
+                        Text(
+                          'Saldo: ${perfil.saldoCreditos}',
+                          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: AppColors.yellowInk),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+
+              // 2. BARRA DE PESQUISA (Estilizada com bordas arredondadas)
+              TextField(
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(Icons.search, color: AppColors.navy),
+                  hintText: 'Buscar clínicas ou pedidos...',
+                  hintStyle: const TextStyle(color: AppColors.muted),
+                  filled: true,
+                  fillColor: Colors.white,
+                  contentPadding: const EdgeInsets.symmetric(vertical: 0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: const BorderSide(color: AppColors.line),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: const BorderSide(color: AppColors.line),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+
+              // 3. ÁREA DO MAPA COM OS PINS COLORIDOS
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: AppColors.navySoft, // Fundo simulando mapa
+                    borderRadius: BorderRadius.circular(22),
+                    border: Border.all(color: AppColors.line, width: 1.5),
+                  ),
+                  child: Stack(
+                    children: [
+                      // Ícone central de localização
+                      const Center(
+                        child: Icon(Icons.location_on, size: 56, color: AppColors.navy),
+                      ),
+                      // Pin Clínica 1 (Rosa)
+                      Positioned(
+                        top: 30,
+                        right: 30,
+                        child: _CaixaMapa(
+                          icone: Icons.favorite_border,
+                          texto: 'Clínica 1',
+                          corFundo: AppColors.pink,
+                          corIcone: AppColors.pinkInk,
+                          aoClicar: () => context.push(AppRoutes.redeClinicas),
+                        ),
+                      ),
+                      // Pin Clínica 2 (Lilás)
+                      Positioned(
+                        bottom: 100,
+                        left: 20,
+                        child: _CaixaMapa(
+                          icone: Icons.favorite_border,
+                          texto: 'Clínica 2',
+                          corFundo: AppColors.lavender,
+                          corIcone: AppColors.lavenderInk,
+                          aoClicar: () => context.push(AppRoutes.redeClinicas),
+                        ),
+                      ),
+                      // Pin Ajuda (Amarelo)
+                      Positioned(
+                        bottom: 40,
+                        right: 20,
+                        child: _CaixaMapa(
+                          icone: Icons.error_outline,
+                          texto: 'Ajuda',
+                          corFundo: AppColors.yellow,
+                          corIcone: AppColors.yellowInk,
+                          aoClicar: () => context.push(AppRoutes.redeMural),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+
+              // 4. BOTÃO INFERIOR (Oferecer Ajuda - Azul Navy)
+              FilledButton.icon(
+                onPressed: () => context.push(AppRoutes.redeMural),
+                style: FilledButton.styleFrom(
+                  backgroundColor: AppColors.navy,
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                ),
+                icon: const Icon(Icons.pets, color: Colors.white, size: 24),
+                label: const Text(
+                  'Oferecer Ajuda',
+                  style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
+              const SizedBox(height: 10),
+            ],
+          ),
         ),
-        const SizedBox(height: 15),
-        Row(
-          children: [
-            Expanded(child: StatTile(value: '${perfil.saldoCreditos}', label: 'créditos')),
-            const SizedBox(width: 9),
-            const Expanded(child: StatTile(value: '12', label: 'parceiros')),
-            const SizedBox(width: 9),
-            const Expanded(child: StatTile(value: '4,9', label: 'avaliação')),
+      ),
+    );
+  }
+}
+
+// Widget auxiliar para desenhar as caixinhas coloridas dentro do mapa
+class _CaixaMapa extends StatelessWidget {
+  final IconData icone;
+  final String texto;
+  final Color corFundo;
+  final Color corIcone;
+  final VoidCallback aoClicar;
+
+  const _CaixaMapa({
+    required this.icone,
+    required this.texto,
+    required this.corFundo,
+    required this.corIcone,
+    required this.aoClicar,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: aoClicar,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        decoration: BoxDecoration(
+          color: corFundo,
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: const [
+            BoxShadow(color: Color(0x1A2F3E58), blurRadius: 10, offset: Offset(0, 4)),
           ],
         ),
-        SectionHeader(
-          title: 'Serviços para agendar',
-          actionLabel: 'Ver todos',
-          onAction: () => context.push(AppRoutes.redeClinicas),
-        ),
-        ...data.servicos.take(3).map(
-              (s) => Padding(
-                padding: const EdgeInsets.only(bottom: 11),
-                child: AppListCard(
-                  leadingEmoji: '♡',
-                  leadingBackground: AppColors.navySoft,
-                  title: s.nome,
-                  subtitle: '${s.prestador} · ${s.local}',
-                  trailingText: s.preco,
-                  tagLabel: 'Preço social',
-                  actionLabel: s.agendado ? 'Agendado ✓' : 'Agendar',
-                  actionDisabled: s.agendado,
-                  onAction: () => context.push(AppRoutes.redeAgendamento, extra: s),
-                ),
-              ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icone, size: 18, color: corIcone),
+            const SizedBox(width: 6),
+            Text(
+              texto,
+              style: TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: corIcone),
             ),
-        SectionHeader(
-          title: 'Pedidos de ajuda',
-          actionLabel: 'Ver todos',
-          onAction: () => context.push(AppRoutes.redeMural),
+          ],
         ),
-        ...data.pedidos.take(2).map(
-              (p) => Padding(
-                padding: const EdgeInsets.only(bottom: 11),
-                child: AppListCard(
-                  leadingEmoji: '♧',
-                  leadingBackground: AppColors.yellow,
-                  title: p.titulo,
-                  subtitle: '${p.local} · +${p.recompensa} créditos',
-                  tagLabel: 'Banco de horas',
-                  tagVariant: TagVariant.warn,
-                  actionLabel: p.candidatado ? 'Enviado ✓' : 'Ajudar',
-                  actionDisabled: p.candidatado,
-                  onAction: () => data.candidatarPedido(p.id),
-                ),
-              ),
-            ),
-        const SizedBox(height: 6),
-        OutlinedButton.icon(
-          onPressed: () => context.push(AppRoutes.redeMapa),
-          icon: const Icon(Icons.map_outlined),
-          label: const Text('Ver mapa de clínicas e preços sociais'),
-        ),
-      ],
+      ),
     );
   }
 }

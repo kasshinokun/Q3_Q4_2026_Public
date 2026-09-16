@@ -46,7 +46,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
     // Verificação inserida IMEDIATAMENTE após o await:
     if (!mounted) return;
 
-    final error = context.read().register(
+    final error = context.read<AuthService>().register(
           username: _usernameController.text.trim(),
           password: _passwordController.text,
           confirmPassword: _confirmController.text,
