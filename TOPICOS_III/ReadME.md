@@ -1,0 +1,33 @@
+# Trabalho prático em Sprints
+## Sprint
+- A partir da Sprint 6
+## Período 
+- 2026: 2º Semetre de 2026
+## Instituição
+- Pontifícia Universidade Católica de Minas Gerais - PUC MINAS 
+## Alunos:
+- [Giovanna]()
+- [Gabriel Cassino]()
+- [Kathleen Rodrigues](https://github.com/Neelhtak2001)
+- [Júlia]()
+
+## Professores
+- Principal: João Carlos
+- Auxiliar: Paulo Mattos
+
+## Graduação:
+- Engenharia da Computação
+- Ciências da Computação
+
+## Matéria:
+- Tópicos III - Empreendedorismo e Inovação
+
+# Pasta do Projeto
+
+- [Pasta do Projeto](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI)
+- [Um pouco sobre o projeto](https://github.com/kasshinokun/Q3_Q4_2026_Public/blob/main/TOPICOS_III/Atividade_VI/App_PetCuida/README.md)
+- [Preparação do OS](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/Preludio)
+- [Código-Fonte](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/App_PetCuida)
+- [Imagens - base](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/base_projeto)
+- [Imagens - versão Alpha 3 e](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/execucao_v3e)
+- [Vídeo - versão Alpha 3i]()
