@@ -1,4 +1,5 @@
 #!/bin/bash
+# Especifico para usar em Ubuntu x64
 
 # Inicializa as variáveis
 COMANDO=""
