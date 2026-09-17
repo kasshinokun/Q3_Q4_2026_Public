@@ -17,8 +17,10 @@ class MuralPedidosOfertasScreen extends StatelessWidget {
 
     return AppScaffold(
       title: 'Pedidos disponíveis',
-      body: ListView.separated(
-        padding: const EdgeInsets.all(18),
+      body: Stack(
+        children: [
+          ListView.separated(
+            padding: const EdgeInsets.all(18),
         itemCount: data.pedidos.length,
         separatorBuilder: (_, __) => const SizedBox(height: 12),
         itemBuilder: (context, index) {
@@ -67,6 +69,22 @@ class MuralPedidosOfertasScreen extends StatelessWidget {
             ),
           );
         },
+          ),
+          Positioned(
+            right: 18,
+            bottom: 18,
+            child: FloatingActionButton.extended(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Em breve: Formulário de criação de pedido')),
+                );
+              },
+              backgroundColor: AppColors.navy,
+              icon: const Icon(Icons.add, color: Colors.white),
+              label: const Text('Criar Pedido', style: TextStyle(color: Colors.white)),
+            ),
+          ),
+        ],
       ),
     );
   }

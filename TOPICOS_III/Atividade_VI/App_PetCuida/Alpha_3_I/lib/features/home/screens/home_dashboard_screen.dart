@@ -77,13 +77,8 @@ class HomeDashboardScreen extends StatelessWidget {
           ),
         ),
         const SectionHeader(title: 'O que você precisa hoje?'),
-        GridView.count(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          crossAxisCount: 2,
-          crossAxisSpacing: 11,
-          mainAxisSpacing: 11,
-          childAspectRatio: 1.4,
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             FeatureTile(
               icon: Icons.favorite_outline,
@@ -93,6 +88,7 @@ class HomeDashboardScreen extends StatelessWidget {
               foreground: AppColors.pinkInk,
               onTap: () => context.go(AppRoutes.pet),
             ),
+            const SizedBox(height: 11), // Espaçamento entre os cards
             FeatureTile(
               icon: Icons.auto_awesome_outlined,
               title: 'Triagem orientativa',
@@ -101,6 +97,7 @@ class HomeDashboardScreen extends StatelessWidget {
               foreground: AppColors.yellowInk,
               onTap: () => context.go(AppRoutes.triagem),
             ),
+            const SizedBox(height: 11), // Espaçamento entre os cards
             FeatureTile(
               icon: Icons.volunteer_activism_outlined,
               title: 'Rede solidária',
@@ -108,14 +105,6 @@ class HomeDashboardScreen extends StatelessWidget {
               background: AppColors.navySoft,
               foreground: AppColors.navy,
               onTap: () => context.go(AppRoutes.rede),
-            ),
-            FeatureTile(
-              icon: Icons.person_outline,
-              title: 'Meu perfil',
-              subtitle: 'Dados e histórico do tutor',
-              background: AppColors.lavender,
-              foreground: AppColors.lavenderInk,
-              onTap: () => context.push(AppRoutes.perfil),
             ),
           ],
         ),

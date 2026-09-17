@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
     // Verificação inserida IMEDIATAMENTE após o await:
     if (!mounted) return;
 
-    final error = context.read().login(
+    final error = context.read<AuthService>().login(
           username: _usernameController.text.trim(),
           password: _passwordController.text,
         );

@@ -1,12 +1,12 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/home/ongtiu-ti/development/flutter"
-export "FLUTTER_APPLICATION_PATH=/home/ongtiu-ti/Pictures/teste/manual/petcuida"
-export "FLUTTER_FRAMEWORK_SWIFT_PACKAGE_PATH=/home/ongtiu-ti/Pictures/teste/manual/petcuida/ios/Flutter/ephemeral/Packages/.packages/FlutterFramework"
+export "FLUTTER_ROOT=D:\dev\flutter"
+export "FLUTTER_APPLICATION_PATH=D:\dev\petcuidaTopicos3\Q3_Q4_2026_Public\TOPICOS_III\Atividade_VI\App_PetCuida\Alpha_3_I"
+export "FLUTTER_FRAMEWORK_SWIFT_PACKAGE_PATH=D:\dev\petcuidaTopicos3\Q3_Q4_2026_Public\TOPICOS_III\Atividade_VI\App_PetCuida\Alpha_3_I\ios\Flutter\ephemeral\Packages\.packages\FlutterFramework"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
-export "FLUTTER_TARGET=lib/main.dart"
+export "FLUTTER_TARGET=lib\main.dart"
 export "FLUTTER_BUILD_DIR=build"
-export "FLUTTER_BUILD_NAME=1.0.0"
+export "FLUTTER_BUILD_NAME=1.3.0"
 export "FLUTTER_BUILD_NUMBER=1"
 export "DART_OBFUSCATION=false"
 export "TRACK_WIDGET_CREATION=true"
