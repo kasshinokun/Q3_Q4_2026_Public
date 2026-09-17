@@ -6,6 +6,7 @@ Aplicativo Flutter demonstrativo para organizar cuidados acessíveis de pets, co
 - 3e2 --> Arquivo .zip
 - [3g2 e 3h2](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/App_PetCuida/Alpha_3_G_H2)
 - [3i](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/App_PetCuida/Alpha_3_I) --> Preparação para próxima etapa
+- [3i 2 rev K]([https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/App_PetCuida/Alpha_3_I_2_rev_K](https://github.com/kasshinokun/Q3_Q4_2026_Public/blob/main/TOPICOS_III/Atividade_VI/App_PetCuida/Alpha_3_I_2_rev_K.zip)) --> Adaptação da Revisão de Kathleen - Versão agora é uma variavel e calendario com regex brasileiro.
 ## Arquitetura
 
 O projeto segue uma estrutura modular por *feature*, com o núcleo compartilhado isolado em `core/`:
