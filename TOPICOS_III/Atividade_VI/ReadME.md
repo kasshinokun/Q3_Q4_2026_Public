@@ -28,4 +28,5 @@
 - [Código-Fonte](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/App_PetCuida)
 - [Imagens - base](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/base_projeto)
 - [Imagens - versão Alpha 3 e](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/execucao_v3e)
-- [Vídeo - versão Alpha 3i]()
+- [Imagens - Mudanças 3i -> versão Alpha 3 i_2_k](https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI/execucao_3i2k)
+- [Vídeo - versão Alpha 3i](https://youtu.be/uS83wGpVHdg?is=tqFQW779sQhcYLk4)
