@@ -4,10 +4,10 @@
 ## Instituição
 - Pontifícia Universidade Católica de Minas Gerais - PUC MINAS 
 ## Alunos:
-- [Giovanna]()
+- [Giovanna](https://github.com/giovannanaves)
 - [Gabriel Cassino](https://github.com/kasshinokun)
 - [Kathleen Rodrigues](https://github.com/Neelhtak2001)
-- [Júlia]()
+- [Júlia](https://github.com/juliarvm)
 
 ## Professores
 - Principal: João Carlos
