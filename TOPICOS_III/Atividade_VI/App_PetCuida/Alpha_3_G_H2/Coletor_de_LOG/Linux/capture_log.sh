@@ -26,8 +26,8 @@ fi
 # Cria o diretório do arquivo de saída se não existir
 mkdir -p "$(dirname "$ARQUIVO_SAIDA")"
 
-
-START_CAPTURE="$(date '+%Y-%m-%d %H:%M:%S')$EXTENSION"
+# Mudança para se assemelha a Windows
+START_CAPTURE="$(date '+%Y-%m-%d_%H-%M-%S')$EXTENSION"
 
 # Escreve um cabeçalho no log com o momento do início
 echo "=== INÍCIO DO LOG: $(date '+%Y-%m-%d %H:%M:%S') ===" >> "$ARQUIVO_SAIDA$START_CAPTURE"

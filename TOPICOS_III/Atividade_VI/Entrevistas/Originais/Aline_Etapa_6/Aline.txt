@@ -1,0 +1,179 @@
+// Transcriçao por IA pode conter erro
+
+
+
+tô aqui ó, ô donali a questão é que depois daquela conversa que a gente teve,
+
+hum, a gente acabou criando um uma prévia do programa final né,
+
+para justamente seguir a proposta de trabalho da gente que é ter
+
+um uma espécie de um aplicativo que aí por exemplo tem tanto a
+
+as pessoas que precisam do serviço e podem ofertar algum tipo de serviço.
+
+quanto também, por exemplo, no caso, se a gente se pessoa, se alguém aceitar a ideia né,
+
+uhum, é fazer um convênio com no caso com clínica veterinária e outros
+
+tipos de pessoa para justamente atender a as pessoas eh também
+
+se alguém quiser trabalhar basicamente como se fosse um uber de mão
+
+dupla né uhum que aí por exemplo pessoa ele pode e ofertar o serviço dele como por...
+
+exemplo é passear com cachorro,
+
+ficar com cachorro, às vezes transportar o animal, uhum, né, se pessoa é veterinário,
+
+ele pode seria basicamente ele atenderia pela plataforma do aplicativo né,
+
+aí de acordo com a situação sugeraria um certo crédito
+
+pra pessoa utilizar para poder conseguir cuidar do bichinho,
+
+uhum, né?
+
+aí em geral aqui, deixa eu só apanhar um pouco aqui do telefone.
+
+né,
+
+deixa eu pegar aqui,
+
+ele funciona da seguinte maneira, ele é dessa maneira, você clica para abrir né,
+
+uhum, essa que é tela descarregamento, é a opção do...
+
+pessoa colocar usuário e senha ou também entrar pelo google,
+
+no caso que quando pessoa entra né, expectativa é vir por aqui em criar conta,
+
+coloca aqui os dados né, também tem a questão de registrar pelo pelo google né,
+
+uhum, no caso aqui que a gente conseguiu reorganizar de ontem
+
+para hoje hum foi só a simulação de por exemplo login com o google tá,
+
+o pessoal entra ele vai dar um feedback aqui que tá.
+
+tá pronto para entrar uhum aí quando
+
+pessoa entra ele tem a opção de escolher seguinte entre cão,
+
+gato, pássaro ou outro né, uhum, no caso aqui,
+
+se por exemplo, se for um caso de um como que sal o caso do cachorro né,
+
+uhum e pessoa coloca nome do cachorro né, um nome bem sugestivo aqui rex né,
+
+meu chama tob, podemos deixar como tob né?
+
+engraçado que eu vi a sua mãe comentando isso comigo, ela assim tobi,
+
+vem cá, é tob é aí aqui na parte de de de raça né,
+
+aqui é um detalhe opcional, mas vamos deixar aqui famoso né,
+
+sem raça definido é srd da vida né,
+
+é um arrasta específico, aí geralmente também o sistema ele pede pra gente colocar a data,
+
+como não deu para brasileirar, por enquanto ele tá no padrão americano.
+
+mas em geral ele mostra aqui o calendário clicando aqui no caso aqui mais fácil aqui
+
+a gente escolhe o ano né vamos citar aqui suponhamos que ele tem nascido em 2010 uhum
+
+tá você acha que basicamente o ano aí a questão
+
+da movimentação de mesa é paraa frente para trás suponhamos que ele tenha nascido
+
+também em setembro né de 2010 na mesma data de hoje uhum você aperta aqui
+
+ok né tem opção de escolher na galeria ou bater a foto né,
+
+uhum aí no caso aqui a gente acha alguma coisa, bate a foto né,
+
+esse cachorro tá diferente,
+
+pessoa aperta ok, uhum e aí feito isso ele vai abre tá,
+
+isso aqui é a interface que a gente acabou montando, uhum, dentro dele aqui ó,
+
+tem a questão da área de cuidados do bichinho né que
+
+aí tem a a questão de mostrar a vacinação dele como é que tá,
+
+a questão no calendário de vacina né, se ele precisa fazer alguma coisa,
+
+tem alguma agendamento, uhum, também tem a questão de ver o prontuário do bicho,
+
+o que que ele já tomou de agulhada né, o que que tem para fazer, uhum,
+
+né, tem a opção também de editar aqueles dados que você colocou né,
+
+aí voltando aqui, aí aqui embaixo né, opa, aqui embaixo você:
+
+muda entre as opções né que é início, a parte do animal,
+
+uhum aqui é a parte de triagem de serviço, ou seja, pré-seleção que precisa fazer, né?
+
+a ideia é que também,
+
+por exemplo, pessoa converse com alguém por aqui uhum né aí voltando para
+
+cá aqui na parte fica nessa parte de rede aqui solidária fica mostrando
+
+os tipos de serviço que tá disponível aqui né e quando alguém também pede
+
+solicita algum serviço né a senhorita tem opção de deixa eu ver
+
+tá tem um mapazinho aqui né que tá bem genérico mas para mostrar as pessoas disponíveis
+
+tá vindo aqui a gente tem a configuração da pessoa em questão né hum aqui tá como
+
+esse aqui é um nome genérico mas tem a mesma coisa lá do do animal se pessoa quiser
+
+pesquisar na galeria ou tirar uma foto pessoa pode tirar uma foto entendeu
+
+aí voltando aqui para trás quando pessoa ele clica aqui do lado ele já tem
+
+a opção de ver as informações do do do...
+
+programa, questão de termos de uso, como é que ele funciona, né, também como de prática,
+
+todo programa exige as políticas de privacidade, tem né,
+
+com relação assim ao que você viu assim do do aplicativo,
+
+qual a sua percepção e você acha?
+
+eu acho que foi bom, é bom e para mim é fácil,
+
+uhum, para mim é tipo um whatsapp, certo, não é?
+
+é basicamente isso, porque não é muito complexo.
+
+né, assim, se por acaso fosse colocado um serviço desse tipo assim,
+
+seria interessante para você?
+
+seria, uhum, muito interessante, né, muito interessante, né, então tá ok,
+
+com isso terminamos essa nossa entrevista, como é só é só isso,
+
+é porque dessa vez é só apresentação
+
+da proposta e coleta de feedback se pessoa achou interessante né,
+
+por exemplo, igual se você tiver um ponto de vista,
+
+ou seja, de uma parte que você acha que você pode melhorar.
+
+você pode falar, uhum, entendeu?
+
+uhum, então tá bom, para mim deu bom, para mim é igual whatsapp mesmo,
+
+tá bem prático né,
+
+tem muita complicação, tá bem fácil, graças a Deus uma mente assim.
