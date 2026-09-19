@@ -1,0 +1,252 @@
+% =============================================================
+%  Relatorio de Pesquisa de Satisfacao - PetCuida (versao Alpha 3i)
+%  Registro formalizado de entrevista semiestruturada
+% =============================================================
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{lmodern}
+\usepackage[margin=3cm]{geometry}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\onehalfspacing
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize Pesquisa de satisfação --- PetCuida \textit{Alpha 3i}}
+\fancyhead[R]{\footnotesize \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Ambiente para os turnos de fala da transcricao
+\newenvironment{turnos}
+  {\begin{list}{}{%
+     \setlength{\leftmargin}{2.2cm}%
+     \setlength{\labelwidth}{2.0cm}%
+     \setlength{\labelsep}{0.2cm}%
+     \setlength{\itemsep}{0.6em}%
+     \setlength{\parsep}{0pt}}}
+  {\end{list}}
+\newcommand{\fala}[1]{\item[\textbf{#1}\hfill]}
+
+\newcommand{\entrevistador}{Julia}
+\newcommand{\participante}{Participante}
+
+\title{\textbf{Avaliação de Satisfação e Usabilidade Percebida do\\
+Aplicativo PetCuida (versão \textit{Alpha 3i})}\\[0.4cm]
+\large Registro formalizado de entrevista com usuário potencial}
+\author{Entrevistadora: \entrevistador{} (aluna responsável pela coleta)\\
+Participante: \participante{} (usuário potencial)}
+\date{Belo Horizonte, 16 de setembro de 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent Este documento formaliza, para fins acadêmicos, o registro de uma avaliação realizada com um usuário potencial do aplicativo \textbf{PetCuida}, em sua versão \textit{Alpha 3i}. A sessão teve por objetivo apresentar a proposta funcional do \textit{software} e coletar a percepção do participante quanto à utilidade das funcionalidades, eficiência da interface e conceito do produto. Os dados foram obtidos de forma remota, seguidos de coleta de relatos abertos sobre a usabilidade. O participante apresentou avaliação altamente positiva quanto à proposta de valor, destacando a praticidade de obter orientação rápida em situações de necessidade e a centralização de múltiplas funções em uma única plataforma. A interface foi elogiada por sua estética e navegabilidade, não sendo relatados atritos cognitivos durante o uso. 
+
+\vspace{0.4cm}
+\noindent\textbf{Palavras-chave:} usabilidade percebida; pesquisa de satisfação; avaliação de interface; aplicativos móveis; bem-estar animal; PetCuida.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% =============================================================
+\section{Identificação da Coleta}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.8cm}>{\raggedright\arraybackslash}p{8.9cm}@{}}
+\toprule
+\textbf{Item} & \textbf{Descrição} \\
+\midrule
+Objeto avaliado & Aplicativo PetCuida - versão \textit{Alpha 3i} (protótipo funcional Flutter/Android) \\
+Instrumento & Navegação autônoma seguida de entrevista com coleta de relatos abertos \\
+Entrevistadora & \entrevistador{} (aluna responsável) \\
+Participante & \participante{} (identificado de forma não nominal) \\
+Perfil do participante & Usuário potencial, tutor de animal de estimação \\
+Data da coleta & 16 de setembro de 2026 \\
+Duração aproximada & Avaliação assíncrona de navegação livre \\
+Local & Ambiente remoto \\
+Registro & Registros textuais dos relatos \\
+Modalidade de análise & Análise qualitativa de conteúdo, por categorização temática \\
+\bottomrule
+\end{tabular}
+\caption{Ficha técnica da coleta de dados.}
+\end{table}
+
+% =============================================================
+\section{Objetivo da Pesquisa}
+
+A presente coleta teve como objetivo geral \textbf{verificar a aceitação e a satisfação percebida de um usuário potencial diante da proposta funcional do aplicativo PetCuida em estágio alfa}. Como objetivos específicos, delimitam-se:
+
+\begin{enumerate}[label=\alph*)]
+  \item registrar a percepção do participante quanto à utilidade e praticidade do \textit{software};
+  \item avaliar a aceitação da proposta de centralizar serviços de saúde e orientação veterinária;
+  \item analisar o nível de clareza da \textit{interface} gráfica e a facilidade de navegação;
+  \item coletar percepções espontâneas de usabilidade.
+\end{enumerate}
+
+Ressalta-se que \textbf{esta rodada priorizou a coleta de percepções declaradas (relatos)}, onde o participante navegou pelo protótipo e enviou seu \textit{feedback} focando na utilidade geral e na estética estrutural do artefato.
+
+% =============================================================
+\section{Descrição do Objeto Avaliado}
+
+O PetCuida é um aplicativo móvel cuja proposta consiste em intermediar, em uma mesma plataforma, a demanda e a oferta de serviços de cuidado com animais de estimação, além de fornecer suporte para a rotina de tutores. 
+
+A versão \textit{Alpha 3i} implementa, com dados locais e sem dependência de \textit{backend}, o fluxo completo do diagrama de telas, destacando-se para esta avaliação:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Área do pet:} Painel de cuidados, calendário de vacinas, lembretes e prontuário.
+    \item \textbf{Triagem de serviço:} Pré-seleção orientativa da necessidade do usuário (orientação rápida para situações cotidianas).
+    \item \textbf{Rede solidária:} Funcionalidades baseadas na economia de créditos e mapa de serviços parceiros.
+\end{itemize}
+
+% =============================================================
+\section{Procedimentos Metodológicos}
+
+\subsection{Abordagem}
+
+Adotou-se abordagem \textbf{qualitativa}, de caráter \textbf{exploratório}. O foco foi capturar a compreensão, a expectativa e a reação espontânea do usuário após o contato com a proposta de valor, mensurando a carga cognitiva exigida pela \textit{interface}.
+
+\subsection{Instrumento e condução}
+
+A sessão foi organizada em torno da coleta de relatos:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item o participante interagiu com o escopo do protótipo;
+  \item o usuário formulou relatos abertos abordando dois eixos propostos pela entrevistadora: percepção geral da solução e percepção sobre a \textit{interface}.
+\end{enumerate}
+
+\subsection{Tratamento dos dados}
+
+Os relatos originais foram analisados e organizados tematicamente. Para a formatação acadêmica deste relatório (Seção~\ref{sec:transcricao}), os relatos fornecidos em monólogo foram convertidos para uma estrutura de entrevista semiestruturada, preservando integralmente a escolha lexical, o conteúdo proposicional e a intencionalidade do participante.
+
+% =============================================================
+\section{Transcrição Formalizada da Entrevista}
+\label{sec:transcricao}
+
+\noindent\textit{Convenções:} \textbf{E} designa a entrevistadora (\entrevistador{}) e \textbf{P} designa o participante (\participante{}). 
+
+\begin{turnos}
+
+\fala{E:} Qual foi a sua percepção geral sobre a proposta do aplicativo e o que ele oferece?
+
+\fala{P:} Eu achei a proposta bem interessante, principalmente porque é voltada para uma coisa que às vezes é difícil de encontrar, que é orientação rápida quando acontece alguma coisa com o animal. Gostei da ideia de reunir várias funções em um lugar só, porque não fica sendo um aplicativo que serve apenas para uma coisa.
+
+\fala{E:} E no que diz respeito à interface e ao uso do aplicativo na prática, qual foi a sua impressão?
+
+\fala{P:} No geral achei bem tranquila de usar. As opções principais são fáceis de encontrar e não fiquei muito perdido navegando. É uma interface bem bonita também e uma solução bem útil.
+
+\end{turnos}
+
+% =============================================================
+\section{Análise dos Resultados}
+
+\subsection{Categorização temática}
+
+A partir das falas do participante, identificaram-se três categorias principais de análise, sintetizadas na Tabela~\ref{tab:categorias}.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{4.8cm}>{\raggedright\arraybackslash}p{5.5cm}@{}}
+\toprule
+\textbf{Categoria} & \textbf{Evidência na fala} & \textbf{Interpretação} \\
+\midrule
+Orientação Rápida e Segurança &
+\enquote{orientação rápida quando acontece alguma coisa com o animal} &
+O participante validou fortemente a utilidade da Triagem Orientativa, enxergando-a como um diferencial resolutivo em situações de incerteza do tutor. \\
+\addlinespace
+Centralização de Funcionalidades &
+\enquote{reunir várias funções em um lugar só}; \enquote{não fica sendo um aplicativo que serve apenas para uma coisa} &
+A proposta de criar um \textit{hub} (\enquote{all-in-one}) de cuidados foi percebida como um fator que agrega valor e reduz a necessidade de múltiplos aplicativos. \\
+\addlinespace
+Navegabilidade e Estética &
+\enquote{opções principais são fáceis de encontrar}; \enquote{não fiquei muito perdido}; \enquote{interface bem bonita} &
+A Arquitetura de Informação foi validada positivamente. O design visual (UI) contribuiu para uma \textit{interface} de baixa fricção e fácil operação. \\
+\bottomrule
+\end{tabular}
+\caption{Categorias emergentes da análise de conteúdo da entrevista.}
+\label{tab:categorias}
+\end{table}
+
+\subsection{Discussão}
+
+A avaliação do participante apontou diretamente para o acerto do escopo definido pelo projeto. A declaração de que é "difícil encontrar orientação rápida" justifica a existência da funcionalidade de \textit{Triagem Orientativa} e prova que a dor do usuário foi corretamente mapeada pela equipe de \textit{design}.
+
+Além disso, a satisfação com a centralização de ferramentas corrobora a utilidade do módulo "Área do Pet" junto à "Rede Solidária". No campo da Interação Humano-Computador (IHC), a fala "não fiquei muito perdido navegando" é o indicativo mais claro de que a carga cognitiva imposta pela \textit{interface} está adequada, validando os padrões de navegação e a hierarquia visual (\textit{UI}) adotados na versão \textit{Alpha 3i}.
+
+\subsection{Pontos de atenção identificados}
+
+Nesta rodada específica de avaliação, o participante manifestou alto grau de satisfação e clareza, não relatando pontos de atrito, confusões ou fornecendo sugestões diretas de melhoria estrutural.
+
+% =============================================================
+\section{Limitações Metodológicas}
+
+O presente registro deve ser lido com as seguintes ressalvas:
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*]
+  \item \textbf{Amostra reduzida.} O relato representa a percepção de um único participante, possuindo caráter indicativo e não generalizável.
+  \item \textbf{Ausência de atritos.} A ausência de críticas pode indicar tanto a maturidade da \textit{interface} quanto a presença de viés de cortesia.
+  \item \textbf{Ausência de instrumento padronizado.} Não foi aplicada escala validada quantitativa para suporte às impressões subjetivas declaradas.
+\end{enumerate}
+
+% =============================================================
+\section{Considerações Finais e Recomendações}
+
+A coleta realizada pela entrevistadora atingiu o objetivo central de validar a aceitação da proposta de valor. O participante confirmou que a abordagem centralizada ("várias funções em um lugar só") aliada ao \textit{design} agradável ("interface bem bonita") entrega utilidade imediata para o usuário final, com destaque absoluto para o potencial da Triagem Orientativa.
+
+Para as próximas rodadas, recomenda-se:
+
+\begin{enumerate}[label=\textbf{R\arabic*.},leftmargin=1.6cm]
+  \item manter a identidade visual e os princípios de navegação atuais, uma vez que provaram ter baixa curva de aprendizado;
+  \item criar cenários de uso induzido focados em tarefas complexas (ex: marcar um agendamento ou cadastrar vacinas) para verificar se a facilidade de uso declarada se sustenta sob estresse operacional;
+  \item ampliar a amostra de participantes.
+\end{enumerate}
+
+% =============================================================
+\appendix
+\section{Termo de Registro e Uso dos Dados}
+
+O participante foi devidamente informado sobre a finalidade acadêmica da coleta e sobre o uso restrito dos dados para fins de avaliação do projeto, manifestando concordância.
+
+\section{Ficha Técnica do Artefato Avaliado}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{9.0cm}@{}}
+\toprule
+\textbf{Item} & \textbf{Descrição} \\
+\midrule
+Denominação & PetCuida \\
+Versão avaliada & \textit{Alpha 3i} \\
+Plataforma & Android \\
+Tecnologia & Flutter/Dart, com navegação por rotas \\
+Escopo implementado & Autenticação, \textit{onboarding}, painel inicial, área do pet, triagem, rede solidária e perfil do tutor \\
+\bottomrule
+\end{tabular}
+\caption{Ficha técnica resumida da versão avaliada.}
+\end{table}
+
+\section{Fontes Primárias do Registro}
+
+\begin{itemize}[leftmargin=*]
+  \item Relatos textuais coletados pela entrevistadora em 16 de setembro de 2026;
+  \item Código-fonte e documentação da versão \textit{Alpha 3i} do aplicativo.
+\end{itemize}
+
+\end{document}
