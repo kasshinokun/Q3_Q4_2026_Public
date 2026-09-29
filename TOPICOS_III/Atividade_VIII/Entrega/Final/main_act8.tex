@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[brazil,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{float}
+
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+
+\begin{document}
+
+\selectlanguage{brazil}
+
+\input{./partes/capa.tex}
+
+\input{./partes/contracapa.tex}
+
+\input{./partes/canais.tex}
+
+% tirei pois ja embuti na seção de canais, dentro da tabela \input{./partes/justificativa.tex}
+
+\input{./partes/metricas.tex}
+
+\input{./partes/validacao.tex}
+
+\end{document}

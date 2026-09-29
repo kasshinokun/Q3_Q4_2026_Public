@@ -1,0 +1,77 @@
+\section{Métricas de eficácia}
+\label{sec:metricas}
+
+Foram selecionadas métricas de três naturezas, alinhadas aos exemplos da atividade: taxa de
+conversão, custo de aquisição e engajamento. Em um estágio inicial, os valores abaixo são
+\emph{metas-hipótese} a calibrar com os dados do piloto.
+
+\subsection{Métricas selecionadas}
+
+\begin{longtable}{L{3.1cm} L{5.9cm} L{5.0cm}}
+\toprule
+\cabfundo \cab{Métrica} & \cab{Definição} & \cab{O que indica} \\
+\midrule
+\endfirsthead
+\toprule
+\cabfundo \cab{Métrica} & \cab{Definição} & \cab{O que indica} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\textbf{Taxa de conversão} & Percentual dos contatos do canal (convites, \emph{scans}, visitantes) que concluem o cadastro do primeiro pet. & Se o canal transforma alcance em usuário ativado. \\
+\textbf{CAC por canal} & Custo total do canal no período dividido pelos usuários ativados por ele. Inclui o custo de horas de voluntários e da equipe. & Se o canal é economicamente sustentável. \\
+\textbf{Ativação} & Percentual dos usuários que cadastram o pet e recebem o calendário preventivo em até 7 dias. & Se o canal traz o perfil certo. \\
+\textbf{Engajamento} & Taxa de abertura de notificações e proporção de vacinas previstas que são registradas ou agendadas. & Se o relacionamento sustenta a prevenção. \\
+\textbf{Retenção em 30 dias} & Percentual dos usuários ativados que voltam a usar o app entre o dia 25 e o dia 35. & Se o valor é percebido de forma recorrente. \\
+\textbf{Satisfação (NPS/CSAT)} & Nota de recomendação e de satisfação após atendimento, troca de créditos ou suporte. & Se a confiança está sendo construída. \\
+\end{longtable}
+
+\subsection{Fórmulas}
+
+\begin{equation}
+\text{Conversão} = \frac{\text{cadastros de pet concluídos}}{\text{contatos do canal}} \times 100
+\end{equation}
+
+\begin{equation}
+\text{CAC}_{\text{canal}} = \frac{\text{custos monetários} + (\text{horas de trabalho} \times \text{valor-hora})}{\text{usuários ativados pelo canal}}
+\end{equation}
+
+Como o valor-hora de voluntários e da equipe é uma estimativa, recomenda-se reportar o
+CAC com e sem o custo de horas.
+
+\subsection{Métricas e metas-hipótese por canal}
+
+\begin{longtable}{L{3.8cm} L{4.3cm} L{3.4cm} L{2.4cm}}
+\toprule
+\cabfundo \cab{Canal} & \cab{Métrica principal} & \cab{Métrica secundária} & \cab{Meta-hipótese} \\
+\midrule
+\endfirsthead
+\toprule
+\cabfundo \cab{Canal} & \cab{Métrica principal} & \cab{Métrica secundária} & \cab{Meta-hipótese} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{4}{l}{\textit{Comunicação}} \\
+Boca a boca e ONGs & Conversão convite $\rightarrow$ cadastro de pet & CAC (horas) & $\geq 30\%$ \\
+Pontos parceiros & Conversão \emph{scan} $\rightarrow$ cadastro de pet & \emph{Scans} por ponto/semana & $\geq 15\%$ \\
+Eventos presenciais & Cadastros completos por evento & Retenção em 30 dias & $\geq 40$ cadastros \\
+\midrule
+\multicolumn{4}{l}{\textit{Distribuição}} \\
+Google Play Store & Conversão instalação $\rightarrow$ cadastro & Taxa de abandono no \emph{onboarding} & $\geq 60\%$ \\
+Clínicas parceiras & Créditos resgatados em atendimentos & Comparecimento aos agendamentos & $\geq 70\%$ \\
+Cadastro assistido & Ativação (assistido vs. sozinho) & Tempo médio de cadastro & $+20$ p.p. \\
+\midrule
+\multicolumn{4}{l}{\textit{Relacionamento}} \\
+Notificações push & Taxa de abertura e agendamento pós-lembrete & Vacinas registradas / previstas & $\geq 40\%$ abertura \\
+Comunidade e banco de horas & Trocas concluídas por usuário ativo & Tempo até o primeiro crédito & $\geq 1$ troca/mês \\
+Suporte humano & Tempo médio de primeira resposta & CSAT & $\leq 2$ h \\
+\end{longtable}
+
+\subsection{Critério de decisão econômico}
+
+Além das metas por canal, um canal só é escalado se o CAC for inferior ao valor esperado do
+usuário ao longo de sua permanência ($\text{CAC} < \text{LTV}$). Como a maior parte dos
+serviços do \projeto{} é gratuita para o tutor, o LTV inicial será estimado a partir da
+receita por atendimento intermediado, da assinatura e dos planos para clínicas, conforme o
+Modelo de Negócio.

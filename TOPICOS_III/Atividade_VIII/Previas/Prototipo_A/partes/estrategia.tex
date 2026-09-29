@@ -1,0 +1,75 @@
+\section{Estratégia: canais prioritários}
+\label{sec:estrategia}
+
+Para cada categoria foram selecionados três canais prioritários. A escolha considerou os três
+critérios da atividade: \textbf{alinhamento com a proposta de valor}, \textbf{adequação ao
+cliente-alvo} e \textbf{viabilidade para a startup} no estágio atual (pré-lançamento, equipe
+pequena e baixo orçamento). Os argumentos completos estão no Capítulo~\ref{sec:justificativa}.
+
+\begin{longtable}{L{3.3cm} L{3.9cm} L{6.8cm}}
+\toprule
+\cabfundo \cab{Categoria} & \cab{Canal prioritário} & \cab{Papel na estratégia} \\
+\midrule
+\endfirsthead
+\toprule
+\cabfundo \cab{Categoria} & \cab{Canal prioritário} & \cab{Papel na estratégia} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multirow{3}{*}{\textbf{Comunicação}} & 1. Boca a boca comunitário e ONGs & Porta de entrada de confiança, com o menor custo de aquisição. \\
+ & 2. Pontos de atendimento parceiros & Capta o tutor exatamente quando surge a necessidade de cuidado. \\
+ & 3. Eventos presenciais & Combina divulgação, cadastro assistido e prova social. \\
+\midrule
+\multirow{3}{*}{\textbf{Distribuição}} & 1. Google Play Store & Entrega o aplicativo em escala, sem custo de infraestrutura própria. \\
+ & 2. Rede de clínicas e veterinários parceiros & Entrega o valor final: atendimento acessível com créditos e preço social. \\
+ & 3. Cadastro e instalação assistidos & Remove a barreira digital na primeira utilização. \\
+\midrule
+\multirow{3}{*}{\textbf{Relacionamento}} & 1. Notificações push automatizadas & Sustenta a rotina preventiva e o retorno recorrente. \\
+ & 2. Comunidade de tutores e banco de horas & Cria pertencimento e alimenta a economia solidária de créditos. \\
+ & 3. Suporte humano assistido & Gera confiança em casos sensíveis e resolve disputas de crédito. \\
+\end{longtable}
+
+\subsection{Visão integrada dos canais}
+
+A Figura~\ref{fig:jornada} mostra como os nove canais se encadeiam ao longo da jornada do
+tutor, da descoberta ao uso contínuo.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.5cm and 0.9cm,
+    cat/.style={rectangle, rounded corners, fill=pucazul, text=white, font=\bfseries\small,
+                minimum width=4.4cm, minimum height=0.8cm, align=center},
+    can/.style={rectangle, rounded corners, draw=pucazul, fill=destaque, font=\footnotesize,
+                minimum width=4.4cm, minimum height=0.85cm, align=center, text width=4.1cm},
+    seta/.style={-{Stealth[length=2.5mm]}, thick, pucazul}
+]
+\node[cat] (c1) {Comunicação\\[-1pt]\footnotesize\mdseries ``fico sabendo''};
+\node[can, below=of c1] (c2) {Boca a boca e ONGs};
+\node[can, below=of c2] (c3) {Pontos parceiros (QR code)};
+\node[can, below=of c3] (c4) {Eventos presenciais};
+
+\node[cat, right=of c1] (d1) {Distribuição\\[-1pt]\footnotesize\mdseries ``recebo a solução''};
+\node[can, below=of d1] (d2) {Google Play Store};
+\node[can, below=of d2] (d3) {Clínicas e veterinários parceiros};
+\node[can, below=of d3] (d4) {Cadastro e instalação assistidos};
+
+\node[cat, right=of d1] (r1) {Relacionamento\\[-1pt]\footnotesize\mdseries ``continuo cuidando''};
+\node[can, below=of r1] (r2) {Notificações push};
+\node[can, below=of r2] (r3) {Comunidade e banco de horas};
+\node[can, below=of r3] (r4) {Suporte humano assistido};
+
+\draw[seta] (c1) -- (d1);
+\draw[seta] (d1) -- (r1);
+\end{tikzpicture}
+\caption{Canais prioritários organizados pela jornada do tutor.}
+\label{fig:jornada}
+\end{figure}
+
+\subsection{Canais não priorizados neste estágio}
+
+Redes sociais orgânicas, programa de indicação e parcerias com o poder público seguem como
+canais complementares, com baixo esforço de manutenção. Mídia paga, influenciadores e mídia
+local dependem de orçamento que a startup ainda não possui, e a versão iOS e a aplicação web
+ficam para fases posteriores.
