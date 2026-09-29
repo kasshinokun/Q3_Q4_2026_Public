@@ -1,0 +1,51 @@
+Ô, Dona Aline. A questão é que, depois daquela conversa que a gente teve, a gente acabou criando uma prévia do programa final, né, para justamente seguir a proposta de trabalho da gente, que é ter uma espécie de aplicativo que, por exemplo, atenda tanto às pessoas que precisam do serviço quanto às que podem ofertar algum tipo de serviço.
+
+Quanto também, por exemplo, ao caso de, se a pessoa aceitar a ideia, fazer um convênio com uma clínica veterinária e outro tipo de profissional, para justamente atender as pessoas. E também, se alguém quiser trabalhar, basicamente como se fosse um Uber de mão dupla, né? Uhum. Aí, por exemplo, a pessoa pode ofertar o serviço dela, como passear com o cachorro, ficar com o cachorro e, às vezes, transportar o animal. Uhum, né? Se a pessoa é veterinária, ela pode atender — basicamente, atenderia pela plataforma do aplicativo, né? E aí, de acordo com a situação, isso geraria um certo crédito para a pessoa utilizar e conseguir cuidar do bichinho. Uhum, né?
+
+Aí, em geral, aqui... Deixa eu só pegar um pouco aqui do telefone. Né? Deixa eu pegar aqui.
+
+Ele funciona da seguinte maneira: você clica para abrir, né? Uhum. Essa aqui é a tela de carregamento. Tem a opção de a pessoa colocar usuário e senha ou também entrar pelo Google. No caso aqui, quando a pessoa entra, né, a expectativa é vir para cá, em “Criar conta”, e colocar os dados. Também tem a opção de registrar pelo Google, né?
+
+Uhum. No caso aqui, o que a gente conseguiu reorganizar de ontem para hoje foi só a simulação, por exemplo, do login com o Google, tá? A pessoa entra e ele dá um feedback aqui, informando que está pronto para entrar. Uhum.
+
+Aí, quando a pessoa entra, ela tem a opção de escolher entre cão, gato, pássaro ou outro, né? Uhum. No caso aqui, se, por exemplo, for o caso de um cachorro, né? Uhum. A pessoa coloca o nome do cachorro, né? Um nome bem sugestivo aqui: Rex. O meu se chama Tobby. Podemos deixar como Tobby, né?
+
+Engraçado que eu vi a sua mãe comentando isso comigo. Ela falou assim: “Tobby, vem cá, Tobby”. É o Tobby. É. Aí, aqui, na parte de raça, né, é um detalhe opcional, mas vamos deixar aqui o famoso “sem raça definida”. É SRD da vida, né? É uma raça específica. Uhum.
+
+Aí, geralmente, o sistema também pede para a gente colocar a data. Como não deu para abrasileirar, por enquanto ele está no padrão americano. Mas, em geral, ele mostra aqui o calendário; clicando aqui, fica muito mais fácil. Aqui a gente escolhe o ano, né? Vamos citar aqui: suponhamos que ele tenha nascido em 2010. Uhum. Tá? Aí você acha aqui, basicamente, o ano. E a questão da movimentação de mesa é para a frente e para trás. Suponhamos que ele tenha nascido também em setembro de 2010, na mesma data de hoje. Uhum. Você aperta aqui: “OK”.
+
+Né? Tem a opção de escolher na galeria ou bater a foto, né? Uhum. Aí, no caso, a gente acha alguma coisa e bate a foto, né? Uhum. Os cachorros estão diferentes. Aqui, ó. A pessoa aperta “OK”, uhum, e, feito isso, ele vai e abre, tá?
+
+Isso aqui é a interface que a gente acabou montando. Uhum. Dentro dela, tem a área de cuidados do bichinho, né? Aí tem a questão de mostrar como está a vacinação dele, a questão do calendário de vacinas, se precisa fazer alguma coisa e se há algum agendamento. Uhum.
+
+Também tem a opção de ver o prontuário do bicho: o que ele já tomou de vacina e o que ainda tem para fazer. Uhum, né? Tem a opção também de editar aqueles dados que você colocou, né?
+
+Aí, voltando aqui... Aqui embaixo, você muda entre as opções, que são o início e a parte do animal. Uhum. Aqui é a parte de triagem de serviço, ou seja, a pré-seleção que precisa fazer, não é? A ideia é que também, por exemplo, às vezes a pessoa converse com alguém por aqui. Aham. Né?
+
+Aí, voltando para cá, nessa parte de rede solidária, ficam mostrando os tipos de serviço que estão disponíveis aqui, né? E, quando alguém pede ou solicita algum serviço, né, a senhorita tem a opção de... Deixa eu ver. Tá? Tem um mapazinho aqui, né, que está bem genérico, mas serve para mostrar as pessoas disponíveis, tá?
+
+Vindo aqui, a gente tem a configuração da pessoa em questão, né? É. Aqui está como... Aqui é um nome genérico, mas tem a mesma coisa lá do animal. Se a pessoa quiser pesquisar na galeria ou tirar uma foto, ela pode tirar uma foto. Ah, entendi. Entendeu?
+
+Aí, voltando aqui para trás, quando a pessoa clica aqui do lado, já tem a opção de ver as informações do programa, a questão dos termos de uso, como ele funciona, né? E também, como de praxe, todo programa exige as políticas de privacidade. Tem, né?
+
+Com relação ao que você viu do aplicativo, qual é a sua percepção e o que você acha?
+
+Eu acho que foi bom, é bom. Para mim, é fácil. Uhum. Para mim, é tipo um WhatsApp. Certo. Não é? É basicamente isso, porque não é muito complexo, né?
+
+Assim, se por acaso fosse oferecido um serviço desse tipo, seria interessante para você?
+
+Seria. Uhum. Muito interessante, né? Muito interessante, né? Então tá ok.
+
+Com isso, terminamos a nossa entrevista.
+
+“Mas é só?”
+
+“É só isso.”
+
+“Ah, tá.”
+
+É porque, dessa vez, é só apresentação da proposta e coleta de feedback, para saber se a pessoa achou interessante, né? Por exemplo, se você tiver um ponto de vista, ou seja, sobre uma parte que você acha que pode melhorar, você pode falar. Uhum. Entendeu?
+
+“Que é muito certinho.”
+
+Uhum. Então tá bom. Para mim, tá bom. Tá aí. Para mim, é igual ao WhatsApp mesmo. É que está bem prático, né? Praticíssimo. Sem muita complicação. Está bem fácil, né? Graças a Deus. Queria ter uma mente assim.

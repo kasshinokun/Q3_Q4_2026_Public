@@ -1,0 +1,464 @@
+% =============================================================
+%  Relatorio de Pesquisa de Satisfacao - PetCuida (versao Alpha 3i)
+%  Registro formalizado de entrevista semiestruturada
+%  Compilar com: pdflatex entrevista_petcuida_flavia.tex (2x)
+% =============================================================
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{lmodern}
+\usepackage[margin=3cm]{geometry}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\onehalfspacing
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize Pesquisa de satisfação --- PetCuida \textit{Alpha 3i}}
+\fancyhead[R]{\footnotesize \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Ambiente para os turnos de fala da transcricao
+\newenvironment{turnos}
+  {\begin{list}{}{%
+     \setlength{\leftmargin}{2.2cm}%
+     \setlength{\labelwidth}{2.0cm}%
+     \setlength{\labelsep}{0.2cm}%
+     \setlength{\itemsep}{0.6em}%
+     \setlength{\parsep}{0pt}}}
+  {\end{list}}
+
+\newcommand{\fala}[1]{\item[\textbf{#1}\hfill]}
+
+\newcommand{\entrevistador}{Giovanna}
+\newcommand{\participante}{Sra. Flavia}
+
+\title{\textbf{Avaliação de Satisfação e Usabilidade Percebida do\\
+Aplicativo PetCuida (versão \textit{Alpha 3i})}\\[0.4cm]
+\large Registro formalizado de entrevista semiestruturada com usuária potencial}
+
+\author{Entrevistadora: \entrevistador{} (aluna responsável pela coleta)\\
+Participante: \participante{} (usuária potencial)}
+
+\date{Belo Horizonte, 16 de setembro de 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent Este documento formaliza, para fins acadêmicos, o registro de uma entrevista
+semiestruturada realizada com uma usuária potencial do aplicativo \textbf{PetCuida}, em sua
+versão \textit{Alpha 3i}. A sessão teve por objetivo apresentar a proposta funcional do
+software e coletar a percepção da participante quanto à interface, às funcionalidades
+apresentadas, à utilidade percebida e às possibilidades de expansão da solução. Os dados
+foram obtidos de forma remota, por meio de chamada de vídeo, após a participante assistir
+a uma demonstração gravada do protótipo funcional. A participante apresentou avaliação
+positiva da interface, destacando seu caráter atrativo e a utilização de elementos gráficos.
+Também foram identificadas percepções favoráveis em relação às funcionalidades de vacinação,
+prontuário, calendário, suporte humano, notificações, triagem de sintomas e localização de
+clínicas. Como pontos de atenção, a participante relatou não compreender inicialmente o
+funcionamento dos créditos e questionou a finalidade do QR Code do pet. Foram ainda
+sugeridas novas funcionalidades relacionadas à alimentação durante períodos de doença,
+adoção de animais, lojas de produtos para pets, promoções e comparação de preços.
+
+\vspace{0.4cm}
+\noindent\textbf{Palavras-chave:} usabilidade percebida; pesquisa de satisfação; entrevista
+semiestruturada; aplicativos móveis; bem-estar animal; PetCuida.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% =============================================================
+\section{Identificação da Coleta}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{8.5cm}@{}}
+\toprule
+\textbf{Item} & \textbf{Descrição} \\
+\midrule
+Objeto avaliado & Aplicativo PetCuida - versão \textit{Alpha 3i} (protótipo funcional Flutter/Android) \\
+Instrumento & Entrevista semiestruturada com demonstração gravada do protótipo \\
+Entrevistadora & \entrevistador{} (aluna responsável) \\
+Participante & \participante{} \\
+Perfil da participante & Usuária potencial, aproximadamente 50 anos, tutora de um cachorro de pequeno porte \\
+Data da coleta & 16 de setembro de 2026 \\
+Duração aproximada & Duração do vídeo de demonstração acrescida de aproximadamente 3 minutos de entrevista \\
+Local & Entrevista remota realizada por chamada de vídeo \\
+Registro & Vídeo de demonstração e registro da entrevista \\
+Modalidade de análise & Análise qualitativa de conteúdo, por categorização temática \\
+\bottomrule
+\end{tabular}
+\caption{Ficha técnica da coleta de dados.}
+\end{table}
+
+% =============================================================
+\section{Objetivo da Pesquisa}
+
+A presente coleta teve como objetivo geral \textbf{verificar a aceitação e a satisfação
+percebida de uma usuária potencial diante da proposta funcional do aplicativo PetCuida em
+estágio alfa}. Como objetivos específicos, delimitam-se:
+
+\begin{enumerate}[label=\alph*)]
+  \item apresentar à participante o conceito do produto e suas principais funcionalidades;
+  \item permitir que a participante conhecesse o fluxo de telas implementado na versão
+        \textit{Alpha 3i} por meio de uma demonstração gravada;
+  \item registrar a percepção da participante quanto à interface e à apresentação visual
+        do software;
+  \item identificar as funcionalidades consideradas mais úteis ou relevantes;
+  \item coletar pontos de atenção, dúvidas e sugestões de melhoria;
+  \item identificar novas funcionalidades consideradas desejáveis pela participante.
+\end{enumerate}
+
+Ressalta-se que \textbf{esta rodada não constituiu teste de usabilidade com execução de
+tarefas pelo usuário}, uma vez que a participante assistiu a uma demonstração previamente
+gravada do protótipo e, posteriormente, participou de uma conversa remota para fornecer
+suas percepções.
+
+% =============================================================
+\section{Descrição do Objeto Avaliado}
+
+O PetCuida é um aplicativo móvel cuja proposta consiste em intermediar, em uma mesma
+plataforma, a demanda e a oferta de serviços de cuidado com animais de estimação. O modelo
+foi verbalizado por meio da analogia de um \enquote{\textit{Uber} de mão dupla}: o mesmo
+usuário pode figurar tanto como solicitante quanto como prestador de serviços - tais como
+passeio, hospedagem e transporte do animal -, enquanto profissionais da medicina
+veterinária e clínicas conveniadas podem prestar atendimento pela plataforma.
+
+A contrapartida pela prestação de serviços é convertida em \textbf{crédito} utilizável pelo
+próprio usuário para custear os cuidados de seu animal, constituindo o eixo de acessibilidade
+econômica da proposta.
+
+A versão \textit{Alpha 3i} implementa, com dados locais e sem dependência de
+\textit{backend}, o fluxo completo do diagrama de telas, conforme apresentado na
+Tabela~\ref{tab:modulos}.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.2cm}>{\raggedright\arraybackslash}p{9.5cm}@{}}
+\toprule
+\textbf{Módulo} & \textbf{Funcionalidades demonstradas na sessão} \\
+\midrule
+Autenticação & Tela de carregamento; acesso por usuário e senha; acesso e registro por conta Google; criação de conta. \\
+\textit{Onboarding} do pet & Seleção de espécie; cadastro de nome; campo opcional de raça; seleção de data de nascimento; definição de foto por galeria ou captura imediata. \\
+Área do pet & Painel de cuidados; situação vacinal; calendário de vacinas; agendamentos; prontuário do animal; edição dos dados cadastrados. \\
+Triagem de serviço & Pré-seleção orientativa da necessidade do usuário, com possibilidade de interação conversacional. \\
+Rede solidária & Listagem de serviços disponíveis; mapa esquemático de pessoas e prestadores próximos; solicitação de serviço. \\
+Perfil e configurações & Dados do tutor; definição de foto; informações do programa; termos de uso; políticas de privacidade. \\
+\bottomrule
+\end{tabular}
+\caption{Módulos do PetCuida \textit{Alpha 3i} percorridos durante a demonstração.}
+\label{tab:modulos}
+\end{table}
+
+% =============================================================
+\section{Procedimentos Metodológicos}
+
+\subsection{Abordagem}
+
+Adotou-se abordagem \textbf{qualitativa}, de caráter \textbf{exploratório}, por meio de
+entrevista semiestruturada conduzida remotamente. A opção por esse método decorre do
+estágio inicial de maturidade do artefato: em versões alfa, interessa menos a mensuração
+estatística de desempenho e mais a captura da compreensão, da expectativa e da reação
+espontânea do público-alvo diante da proposta de valor.
+
+\subsection{Instrumento e condução}
+
+A sessão foi organizada em três momentos:
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{Apresentação} - a participante assistiu a um vídeo gravado contendo a
+        demonstração do aplicativo PetCuida e de suas principais funcionalidades;
+  \item \textbf{Observação} - durante a apresentação, a participante acompanhou os fluxos
+        e recursos disponíveis na versão \textit{Alpha 3i};
+  \item \textbf{Coleta de percepção} - após a demonstração, foi realizada uma conversa
+        remota de aproximadamente três minutos, organizada a partir de quatro tópicos:
+        percepção geral da interface, funcionalidades de destaque, pontos positivos e
+        possibilidades de melhoria, e sugestões de novas funcionalidades.
+\end{enumerate}
+
+\subsection{Roteiro aplicado}
+
+O roteiro foi organizado em quatro perguntas abertas:
+
+\begin{enumerate}[label=\textbf{Q\arabic*.},leftmargin=1.6cm]
+  \item Após assistir à demonstração do aplicativo, qual é a sua percepção sobre a interface
+        e a facilidade de uso?
+  \item Quais funcionalidades apresentadas chamaram mais a sua atenção ou você considera
+        mais úteis?
+  \item Existe alguma funcionalidade que você considera especialmente importante ou algum
+        ponto que poderia ser melhorado?
+  \item Existe alguma outra funcionalidade que você gostaria de encontrar em um aplicativo
+        desse tipo?
+\end{enumerate}
+
+\subsection{Tratamento dos dados}
+
+O registro da entrevista foi analisado qualitativamente, considerando as manifestações
+espontâneas da participante após a apresentação do protótipo. Para fins de sistematização,
+as respostas foram organizadas em quatro tópicos correspondentes ao roteiro da entrevista.
+
+A transcrição formalizada apresentada na Seção~\ref{sec:transcricao} preserva o conteúdo
+proposicional das manifestações da participante, realizando apenas edição de superfície
+para adequação à redação acadêmica, sem alteração do sentido das respostas.
+
+% =============================================================
+\section{Transcrição Formalizada da Entrevista}
+\label{sec:transcricao}
+
+\noindent\textit{Convenções:} \textbf{E} designa a entrevistadora (\entrevistador{}) e
+\textbf{P} designa a participante (\participante{}). As falas foram organizadas a partir
+dos quatro tópicos do roteiro. Intervenções sem conteúdo proposicional foram suprimidas.
+
+\begin{turnos}
+
+\fala{E:} Após assistir à demonstração do aplicativo, qual é a sua percepção sobre a
+interface e a facilidade de uso?
+
+\fala{P:} O processo de login achei bem normal, mas a interface é bonita e atrativa,
+com desenhos super legais.
+
+\fala{E:} Quais funcionalidades apresentadas chamaram mais a sua atenção ou você considera
+mais úteis?
+
+\fala{P:} Achei legal a questão das vacinas, prontuário e calendário. O QR Code do pet
+eu não sei bem para que serve, mas vi também aqui. Os créditos eu não entendi bem como
+funcionam. Achei o tutor ter foto ali muito legal.
+
+\fala{E:} Existe alguma funcionalidade que você considera especialmente importante ou
+algum ponto que poderia ser melhorado?
+
+\fala{P:} Achei legal ter suporte humano, porque é importante. Notificações e lembretes
+ajudam muito o dono do pet. Eu acho que deveria ter um controle de alimentação para pets
+quando ele fica doente. A triagem de sintomas acho muito legal mesmo, porque aí a gente
+pode tentar entender o problema do pet. O mapa de clínicas é muito útil, principalmente
+se tiver horário.
+
+\fala{E:} Existe alguma outra funcionalidade que você gostaria de encontrar em um aplicativo
+desse tipo?
+
+\fala{P:} Poderia ter algo de adoção também de pets, lista de lojas para comprar artigos
+de pet, oferta de promoções destas lojas participantes e pesquisa de preços de artigos de
+pet mais baratos no mercado, onde a gente coloca o tipo de produto que quer e ele mostra
+todas as lojas que têm para vender e quanto custa.
+
+\end{turnos}
+
+% =============================================================
+\section{Análise dos Resultados}
+
+\subsection{Categorização temática}
+
+A partir das falas da participante, identificaram-se seis categorias principais de análise,
+sintetizadas na Tabela~\ref{tab:categorias}.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{5.3cm}>{\raggedright\arraybackslash}p{4.5cm}@{}}
+\toprule
+\textbf{Categoria} & \textbf{Evidência na fala} & \textbf{Interpretação} \\
+\midrule
+
+Percepção visual positiva &
+\enquote{a interface é bonita e atrativa}; \enquote{desenhos super legais} &
+A participante demonstrou percepção positiva em relação à apresentação visual do aplicativo,
+associando a interface a uma experiência atrativa. \\
+
+\addlinespace
+
+Gestão da saúde do pet &
+\enquote{vacinas, prontuário e calendário}; \enquote{notificações e lembretes} &
+As funcionalidades relacionadas ao acompanhamento da saúde e à organização dos cuidados
+foram percebidas como relevantes para a rotina do tutor. \\
+
+\addlinespace
+
+Suporte e orientação &
+\enquote{suporte humano}; \enquote{triagem de sintomas} &
+A participante valorizou recursos que oferecem orientação ao tutor, especialmente diante
+de dúvidas ou possíveis problemas de saúde do animal. \\
+
+\addlinespace
+
+Utilidade do mapa de clínicas &
+\enquote{O mapa de clínicas é muito útil, principalmente se tiver horário} &
+A funcionalidade de localização foi considerada útil, com destaque para a possibilidade
+de consultar os horários de atendimento. \\
+
+\addlinespace
+
+Dificuldades de compreensão &
+\enquote{não sei bem para que serve}; \enquote{não entendi bem como funcionam} &
+O QR Code do pet e o sistema de créditos não foram compreendidos de forma imediata,
+indicando necessidade de maior clareza na comunicação dessas funcionalidades. \\
+
+\addlinespace
+
+Ampliação do ecossistema &
+\enquote{adoção}; \enquote{lista de lojas}; \enquote{promoções}; \enquote{pesquisa de preços} &
+A participante sugeriu ampliar o aplicativo para além dos cuidados veterinários, incorporando
+serviços de adoção e recursos relacionados à aquisição de produtos para pets. \\
+
+\bottomrule
+\end{tabular}
+\caption{Categorias emergentes da análise de conteúdo da entrevista com a participante.}
+\label{tab:categorias}
+\end{table}
+
+\subsection{Discussão}
+
+A avaliação da participante apresentou percepção positiva em relação à interface do
+PetCuida. O destaque dado à aparência visual, caracterizada como \enquote{bonita e
+atrativa}, indica que os elementos gráficos utilizados na apresentação do aplicativo
+contribuíram para uma primeira impressão favorável.
+
+Entre as funcionalidades existentes, a participante destacou principalmente os recursos
+relacionados à gestão da saúde do animal, como vacinação, prontuário e calendário. Também
+foram valorizados recursos de notificações e lembretes, considerados úteis para auxiliar
+o tutor na organização dos cuidados com o pet.
+
+A presença de suporte humano foi considerada importante pela participante. De maneira
+semelhante, a triagem de sintomas foi percebida como uma funcionalidade relevante por
+possibilitar uma tentativa inicial de compreensão de possíveis problemas enfrentados pelo
+animal. O mapa de clínicas também recebeu avaliação positiva, especialmente quando
+associado à possibilidade de apresentar os horários de atendimento dos estabelecimentos.
+
+Por outro lado, foram identificados dois pontos de compreensão que merecem atenção. A
+participante declarou não compreender bem a finalidade do QR Code do pet e afirmou não
+ter entendido inicialmente como funcionam os créditos. Esses comentários indicam que
+determinadas funcionalidades podem necessitar de explicações adicionais ou de uma
+apresentação mais clara dentro da interface.
+
+Por fim, a participante apresentou diversas sugestões de expansão da proposta. Entre elas,
+destacam-se um controle de alimentação específico para períodos em que o pet esteja doente,
+um espaço destinado à adoção de animais, uma lista de lojas de produtos para pets,
+promoções de estabelecimentos participantes e uma ferramenta de comparação de preços.
+Essas sugestões apontam para uma expectativa de que o aplicativo possa reunir, em uma
+mesma plataforma, diferentes necessidades relacionadas à rotina de tutores de animais.
+
+% =============================================================
+\subsection{Pontos de atenção identificados}
+
+A partir da entrevista, os principais pontos que podem ser considerados para futuras
+iterações do artefato são:
+
+\begin{itemize}[leftmargin=*]
+  \item fornecer uma explicação mais clara sobre a finalidade do QR Code associado ao pet;
+  \item incluir explicações sobre o funcionamento e a utilização dos créditos;
+  \item avaliar a possibilidade de apresentar horários de funcionamento junto ao mapa de
+        clínicas;
+  \item considerar a inclusão de recursos de controle de alimentação, especialmente em
+        situações de doença do animal;
+  \item avaliar a criação de uma área destinada à adoção de pets;
+  \item avaliar a inclusão de lojas participantes e ofertas promocionais;
+  \item estudar a viabilidade de uma funcionalidade de comparação de preços de produtos
+        para pets.
+\end{itemize}
+
+% =============================================================
+\section{Limitações Metodológicas}
+
+O presente registro deve ser lido com as seguintes ressalvas:
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Amostra reduzida.} A entrevista representa a percepção de uma única
+        participante e, portanto, não permite generalização estatística. Os resultados
+        possuem caráter indicativo e exploratório.
+
+  \item \textbf{Avaliação baseada em demonstração.} A participante assistiu a um vídeo
+        contendo a demonstração do protótipo e não realizou tarefas diretamente no
+        aplicativo. Dessa forma, as observações registradas representam percepção e
+        expectativa, e não métricas objetivas de usabilidade.
+
+  \item \textbf{Ausência de instrumento padronizado.} Não foi aplicada escala validada,
+        como SUS ou escala Likert de satisfação, o que impede uma comparação quantitativa
+        direta com outras versões do software.
+
+  \item \textbf{Tempo reduzido de interação.} A etapa de conversa após a demonstração
+        teve duração aproximada de três minutos, restringindo a quantidade de questões
+        que poderiam ser aprofundadas.
+\end{enumerate}
+
+% =============================================================
+\section{Considerações Finais e Recomendações}
+
+A entrevista cumpriu o objetivo de coletar a percepção de uma potencial usuária sobre a
+versão \textit{Alpha 3i} do PetCuida. A participante apresentou percepção positiva quanto
+à interface visual e identificou como relevantes diversas funcionalidades relacionadas
+à saúde e ao acompanhamento do animal.
+
+Os principais pontos de atenção encontrados estão relacionados à compreensão de determinadas
+funcionalidades, especialmente o QR Code do pet e o sistema de créditos. Ao mesmo tempo,
+a participante apresentou sugestões de expansão que podem contribuir para ampliar o
+conjunto de necessidades atendidas pelo aplicativo.
+
+Para as próximas rodadas, recomenda-se:
+
+\begin{enumerate}[label=\textbf{R\arabic*.},leftmargin=1.6cm]
+  \item ampliar a amostra, contemplando diferentes perfis de tutores de animais;
+  \item realizar testes de usabilidade com execução direta de tarefas no protótipo;
+  \item avaliar a inclusão de explicações sobre o sistema de créditos;
+  \item tornar mais clara a finalidade do QR Code do pet;
+  \item estudar a apresentação de horários de atendimento no mapa de clínicas;
+  \item avaliar a viabilidade de recursos de controle de alimentação durante períodos
+        de doença do animal;
+  \item analisar a possibilidade de incluir uma área de adoção de pets;
+  \item avaliar a inclusão de lojas, promoções e mecanismos de comparação de preços de
+        produtos para animais.
+\end{enumerate}
+
+% =============================================================
+\appendix
+
+\section{Termo de Registro e Uso dos Dados}
+
+A participante foi informada sobre a finalidade acadêmica da coleta e sobre o uso restrito
+dos dados para fins de avaliação do artefato desenvolvido, manifestando concordância.
+Dados pessoais identificáveis foram tratados de forma restrita no registro da pesquisa.
+
+\section{Ficha Técnica do Artefato Avaliado}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{9.0cm}@{}}
+\toprule
+\textbf{Item} & \textbf{Descrição} \\
+\midrule
+Denominação & PetCuida \\
+Versão avaliada & \textit{Alpha 3i} \\
+Plataforma & Android \\
+Tecnologia & Flutter/Dart, com navegação por rotas e gerência de estado por notificadores \\
+Persistência & Dados locais e demonstrativos, sem \textit{backend} \\
+Escopo implementado & Autenticação, \textit{onboarding}, painel inicial, área do pet, triagem, rede solidária e perfil do tutor \\
+\bottomrule
+\end{tabular}
+\caption{Ficha técnica resumida da versão avaliada.}
+\end{table}
+
+\section{Fontes Primárias do Registro}
+
+\begin{itemize}[leftmargin=*]
+  \item Vídeo de demonstração da versão \textit{Alpha 3i} do aplicativo;
+  \item Registro da entrevista remota realizada com a participante em 16 de setembro
+        de 2026;
+  \item Código-fonte e documentação da versão \textit{Alpha 3i} do aplicativo.
+\end{itemize}
+
+\end{document}

@@ -85,3 +85,17 @@ Créditos: [Kathleen Rodrigues](https://github.com/Neelhtak2001)
     </td>
   </tr>
 </table>
+
+## Atualização Alpha 3 i2 revisão Kathleen
+### Mudança no Calendário, Versão como Variavel de Model
+
+<table>
+  <tr>
+    <td>
+    <img src="https://github.com/kasshinokun/Q3_Q4_2026_Public/blob/main/TOPICOS_III/Atividade_VI/execucao_3i2k/calendar_as_br.jpg" alt="Mudança Calendario" width="378" height="1058" />
+    </td>
+    <td>
+    <img src="https://github.com/kasshinokun/Q3_Q4_2026_Public/blob/main/TOPICOS_III/Atividade_VI/execucao_3i2k/versao_as_var.jpg" alt="Versão como Variavel" width="378" height="1058" />
+    </td>
+  </tr>
+</table>
