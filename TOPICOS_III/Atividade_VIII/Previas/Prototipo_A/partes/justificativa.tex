@@ -1,0 +1,124 @@
+\section{Justificativas de alinhamento}
+\label{sec:justificativa}
+
+Cada canal prioritário é avaliado pelos três critérios da atividade. A proposta de valor do
+\projeto{} combina quatro elementos: \emph{prevenção automatizada}, \emph{orientação
+confiável}, \emph{pagamento possível} (créditos e preços sociais) e \emph{histórico digital do
+pet}. O cliente-alvo principal é o tutor de baixa renda (classes C, D e E), que adia
+tratamentos por restrição financeira e recorre à automedicação, conforme as entrevistas.
+
+% ---------------------------------------------------------------------
+\subsection{Canais de comunicação}
+
+\justcanal{Boca a boca comunitário e ONGs}
+{A proposta depende de confiança: o tutor precisa acreditar que os créditos e os preços
+sociais são reais. Quando ONGs e protetores recomendam o aplicativo, a mensagem de acesso
+financeiro e orientação confiável chega já validada por quem o tutor conhece.}
+{ONGs e protetores independentes atendem justamente famílias de baixa renda e tutores
+engajados com o bem-estar animal. Grupos de WhatsApp de bairro são o meio de comunicação já
+usado por esse perfil.}
+{Custo monetário próximo de zero. Exige tempo da equipe para construir parcerias, mas cada ONG
+funciona como multiplicador. É o canal de menor custo de aquisição no estágio atual.}
+
+\justcanal{Pontos de atendimento parceiros}
+{O tutor descobre o aplicativo no momento em que a dor aparece (consulta, vacina, dúvida), e a
+mensagem ``pague de forma possível'' responde diretamente à necessidade daquele instante.}
+{Clínicas de bairro, pet shops e agropecuárias são frequentados pelo tutor de baixa renda; o
+QR code reduz o atrito do cadastro.}
+{Custo limitado a impressão de cartazes. Interessa ao parceiro, que ganha novos clientes e
+ocupação de horários ociosos, então a adesão tende a ser espontânea.}
+
+\justcanal{Eventos presenciais}
+{Campanhas de vacinação e feiras de adoção reforçam o valor de prevenção e permitem
+demonstrar o aplicativo na prática, com cadastro do pet e geração imediata do calendário
+vacinal.}
+{Reúnem tutores já interessados em cuidado animal, inclusive os que nunca levaram o pet ao
+veterinário, e permitem ajuda presencial a quem tem menos familiaridade digital.}
+{Pode ser feito como convidado de eventos já existentes (poder público, ONGs), sem organizar
+evento próprio. O custo é o tempo de uma pequena equipe de voluntários.}
+
+% ---------------------------------------------------------------------
+\subsection{Canais de distribuição/entrega}
+
+\justcanal{Google Play Store}
+{É o canal em que o aplicativo (calendário, triagem, carteira de créditos e prontuário)
+chega ao tutor. Sem ele nenhum elemento da proposta é entregue.}
+{Android predomina entre usuários de baixa renda no Brasil, e a primeira fase do produto é
+100\% mobile justamente para facilitar a adesão imediata desse público.}
+{A publicação é simples, de baixo custo, e o Flutter permite manter uma única base de código.
+Faixas de teste fechado permitem validar o produto antes do lançamento amplo.}
+
+\justcanal{Rede de clínicas e veterinários parceiros}
+{É onde o valor final é entregue: o tutor troca créditos e preços sociais por atendimento
+real. Sem uma rede local ativa, a promessa de pagar de forma possível não se cumpre.}
+{Os parceiros são regionais e próximos ao tutor, o que reduz custo de deslocamento e reforça o
+caráter comunitário da proposta.}
+{O modelo é viável porque o prestador ganha ocupação de janelas ociosas e novos clientes. O
+esforço é concentrado em poucos parceiros na fase inicial, com um piloto local.}
+
+\justcanal{Cadastro e instalação assistidos}
+{A primeira experiência define a retenção: ao sair do cadastro com o calendário preventivo do
+pet já gerado, o tutor percebe o valor imediatamente.}
+{Tutores com pouca familiaridade digital ou pouco espaço de armazenamento no celular
+precisam de ajuda para instalar e cadastrar; o assistente presencial elimina essa barreira.}
+{Realizado por voluntários e pela própria equipe durante eventos e visitas a parceiros, sem
+custo adicional de estrutura.}
+
+% ---------------------------------------------------------------------
+\subsection{Canais de relacionamento}
+
+\justcanal{Notificações push automatizadas}
+{Lembretes de vacinação, vermifugação e retorno transformam o cuidado em rotina
+acompanhada, atacando diretamente o esquecimento do calendário vacinal relatado nas
+entrevistas.}
+{Notificações no celular chegam sem custo ao tutor e não dependem de conexão contínua ou de
+leitura de conteúdo longo.}
+{Custo praticamente nulo com o Firebase Cloud Messaging, e o calendário é gerado
+automaticamente a partir do cadastro do pet.}
+
+\justcanal{Comunidade de tutores e banco de horas}
+{É o diferencial em relação a um marketplace comum: a troca de serviços entre vizinhos gera
+os créditos usados no atendimento veterinário e cria pertencimento e reputação.}
+{Atende ao tutor voluntário (com tempo e pouco dinheiro) e ao tutor de baixa renda que quer
+cuidar do pet sem desestabilizar o orçamento.}
+{Custo operacional baixo, pois a rede é mantida pelos próprios usuários. Exige regras claras de
+conversão de créditos e moderação inicial.}
+
+\justcanal{Suporte humano assistido}
+{Casos sensíveis (emergência, disputa de crédito, dúvida sobre triagem) exigem resposta
+humana para preservar a confiança, além de reforçar que a triagem é orientativa e não
+substitui o veterinário.}
+{WhatsApp é o canal de mensagens mais familiar ao público-alvo e dispensa aprendizado de
+nova ferramenta.}
+{Pode começar com atendimento pela própria equipe em horário limitado, com respostas
+prontas para as dúvidas mais frequentes, e ser ampliado conforme o volume.}
+
+% ---------------------------------------------------------------------
+\subsection{Matriz de alinhamento entre canais e proposta de valor}
+
+A Tabela~\ref{tab:matriz} resume qualitativamente quais elementos da proposta cada canal
+prioritário reforça ($\checkmark$ contribuição direta, $\circ$ contribuição indireta).
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Matriz de alinhamento entre os canais prioritários e a proposta de valor.}
+\label{tab:matriz}
+\begin{tabular}{L{4.6cm} C{2.1cm} C{2.1cm} C{2.5cm} C{2.1cm}}
+\toprule
+\cabfundo \cab{Canal} & \cab{Prevenção} & \cab{Orientação} & \cab{Pagamento possível} & \cab{Histórico digital} \\
+\midrule
+Boca a boca e ONGs & $\circ$ & $\checkmark$ & $\checkmark$ & $\circ$ \\
+Pontos parceiros (QR) & $\circ$ & $\circ$ & $\checkmark$ & $\checkmark$ \\
+Eventos presenciais & $\checkmark$ & $\checkmark$ & $\circ$ & $\checkmark$ \\
+\midrule
+Google Play Store & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+Clínicas parceiras & $\checkmark$ & $\circ$ & $\checkmark$ & $\checkmark$ \\
+Cadastro assistido & $\checkmark$ & $\circ$ & $\circ$ & $\checkmark$ \\
+\midrule
+Notificações push & $\checkmark$ & $\circ$ & $\circ$ & $\circ$ \\
+Comunidade e banco de horas & $\circ$ & $\circ$ & $\checkmark$ & \\
+Suporte humano & & $\checkmark$ & $\checkmark$ & \\
+\bottomrule
+\end{tabular}
+\end{table}

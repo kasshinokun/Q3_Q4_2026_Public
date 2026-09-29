@@ -1,0 +1,79 @@
+% ---------------------------------------------------------------------
+% Preâmbulo: pacotes, geometria, cores, macros e ambientes
+% ---------------------------------------------------------------------
+\usepackage[brazil,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, fit, backgrounds}
+\usepackage{hyperref}
+
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% ---------- Cores ----------
+\definecolor{pucazul}{HTML}{0B5A85}
+\definecolor{cinzaclaro}{HTML}{EEF2F6}
+\definecolor{destaque}{HTML}{DCEAF5}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=pucazul,
+    urlcolor=pucazul,
+    pdftitle={Canais, estratégia e alinhamento com a proposta de valor -- PetCuida},
+    pdfauthor={Grupo 4 -- Tópicos III},
+}
+
+% ---------- Espaçamento ----------
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.25}
+\setlist{itemsep=2pt, topsep=4pt}
+
+% ---------- Dados do trabalho (edite aqui, reflete na capa e folha de rosto) ----------
+\newcommand{\projeto}{PetCuida}
+\newcommand{\tituloatividade}{Canais, estratégia e alinhamento com a proposta de valor}
+\newcommand{\tipoatividade}{(ATIVIDADE EM GRUPO)}
+\newcommand{\anoentrega}{2026}
+\newcommand{\orientador}{João Carlos Oliveira Caetano}
+\newcommand{\tutor}{Paulo Mattos}
+
+% ---------- Ambientes de elementos pré-textuais ----------
+\newenvironment{capa}{\thispagestyle{empty}}{\clearpage}
+\newenvironment{folhaderosto}{\thispagestyle{empty}}{\clearpage}
+
+% ---------- Macros de conteúdo ----------
+% Marca de canal priorizado
+\newcommand{\prio}{\textcolor{pucazul}{$\bigstar$}}
+% Nome de canal em negrito
+\newcommand{\canal}[1]{\textbf{#1}}
+
+% Colunas de tabelas longas (p{} com alinhamento à esquerda)
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% Cabeçalho de tabela com fundo colorido
+\newcommand{\cab}[1]{\textbf{\color{white}#1}}
+\newcommand{\cabfundo}{\rowcolor{pucazul}}
+
+% Justificativa de um canal: \justcanal{Nome}{alinhamento}{adequação}{viabilidade}
+\newcommand{\justcanal}[4]{%
+  \subsubsection{#1}
+  \begin{description}[font=\bfseries\itshape, leftmargin=1.2em, style=unboxed, itemsep=3pt]
+    \item[Alinhamento com a proposta de valor.] #2
+    \item[Adequação ao cliente-alvo.] #3
+    \item[Viabilidade para a startup.] #4
+  \end{description}
+}

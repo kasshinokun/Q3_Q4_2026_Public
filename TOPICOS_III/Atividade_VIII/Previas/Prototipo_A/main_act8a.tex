@@ -1,0 +1,33 @@
+% =====================================================================
+% Atividade 8 -- Canais, estratégia e alinhamento com a proposta de valor
+% PetCuida | Tópicos III -- Empreendedorismo e Inovação | PUC Minas
+%
+% Compilação:  latexmk -pdf main_act8.tex     (ou pdflatex 2x)
+% Estrutura modular: cada parte da entrega é um arquivo em partes/
+% =====================================================================
+\documentclass[12pt,a4paper]{article}
+
+\input{./partes/preambulo.tex}
+
+\begin{document}
+\selectlanguage{brazil}
+
+% ---------- Elementos pré-textuais ----------
+\pagenumbering{roman}
+\input{./partes/capa.tex}
+\input{./partes/contracapa.tex}
+\input{./partes/sumario.tex}
+
+% ---------- Elementos textuais ----------
+\pagenumbering{arabic}
+\input{./partes/canais.tex}          % 1. Mapeamento de canais
+\clearpage
+\input{./partes/estrategia.tex}      % 2. Canais estratégicos selecionados
+\clearpage
+\input{./partes/justificativa.tex}   % 3. Justificativas de alinhamento
+\clearpage
+\input{./partes/validacao.tex}       % 4. Ideia inicial de teste
+\clearpage
+\input{./partes/metricas.tex}        % 5. Métricas de eficácia
+
+\end{document}

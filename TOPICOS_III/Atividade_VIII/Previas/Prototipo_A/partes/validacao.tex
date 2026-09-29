@@ -1,0 +1,67 @@
+\section{Validação dos canais}
+\label{sec:validacao}
+
+A validação segue o ciclo construir--medir--aprender: experimentos pequenos e baratos,
+com atribuição clara de cada usuário ao seu canal de origem, e decisão baseada em métricas
+definidas antes do teste (Capítulo~\ref{sec:metricas}).
+
+\subsection{Ideia inicial de teste: piloto integrado}
+
+Propõe-se um piloto de 4 a 6 semanas em um bairro de Belo Horizonte, com:
+
+\begin{itemize}
+  \item 2 ONGs ou protetores independentes parceiros;
+  \item 3 clínicas ou pet shops com cartaz e QR code;
+  \item 1 campanha de vacinação ou feira de adoção com cadastro assistido;
+  \item 10 a 20 tutores voluntários para testar a comunidade de créditos.
+\end{itemize}
+
+\textbf{Atribuição por canal.} Cada canal recebe um link ou QR code próprio da Google Play
+com parâmetros de campanha (\emph{referrer}), lidos no Firebase Analytics. Assim, cada
+instalação e cadastro é associado ao canal de origem, e o CAC e a conversão por canal podem
+ser comparados.
+
+\textbf{Se o aplicativo ainda não estiver publicado.} O aplicativo pode ser distribuído em
+faixa de teste fechado da Google Play, ou o piloto pode ser feito como \emph{teste de
+fumaça}: os mesmos canais direcionam o tutor a um formulário de pré-cadastro (nome, bairro,
+espécie do pet), e a conversão é medida pelo número de pré-cadastros por canal.
+
+\subsection{Experimento por canal}
+
+\begin{longtable}{L{3.1cm} L{5.1cm} L{5.8cm}}
+\toprule
+\cabfundo \cab{Canal} & \cab{Hipótese} & \cab{Experimento} \\
+\midrule
+\endfirsthead
+\toprule
+\cabfundo \cab{Canal} & \cab{Hipótese} & \cab{Experimento} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{3}{l}{\textit{Comunicação}} \\
+Boca a boca e ONGs & Convites de ONGs convertem mais que canais frios por virem de fonte confiável. & Cada ONG divulga um link rastreável em grupos de WhatsApp; conta-se convites, instalações e pets cadastrados. \\
+Pontos parceiros & O tutor escaneia o QR code no momento da necessidade. & Cartaz com QR code em 3 pontos por 4 semanas; mede-se \emph{scans}, instalações e cadastros por ponto. \\
+Eventos presenciais & O cadastro assistido gera mais usuários ativos que a divulgação sem ajuda. & Uma campanha com equipe de voluntários; conta-se cadastros completos e ativos após 30 dias. \\
+\midrule
+\multicolumn{3}{l}{\textit{Distribuição}} \\
+Google Play Store & O onboarding é simples o bastante para o cadastro do pet ser concluído sem ajuda. & Faixa de teste fechado com usuários reais; mede-se instalação $\rightarrow$ cadastro concluído e pontos de abandono. \\
+Clínicas parceiras & Janelas ociosas atraem tutores e os créditos são efetivamente resgatados. & Três clínicas oferecem horários com preço social; mede-se agendamentos, comparecimento e créditos resgatados. \\
+Cadastro assistido & O cadastro assistido eleva a ativação frente à instalação sozinho. & Teste A/B: metade dos tutores é atendida por voluntário e a outra recebe apenas o link; compara-se a ativação. \\
+\midrule
+\multicolumn{3}{l}{\textit{Relacionamento}} \\
+Notificações push & Lembretes aumentam o retorno e a adesão ao calendário vacinal. & Teste A/B de mensagem e horário; mede-se abertura e agendamento após o lembrete. \\
+Comunidade e banco de horas & Tutores voluntários conseguem trocar serviços e acumular créditos. & Grupo de 10 a 20 voluntários; mede-se trocas concluídas e tempo até o primeiro crédito. \\
+Suporte humano & O suporte por mensagens resolve as dúvidas com rapidez. & Piloto de WhatsApp Business em horário fixo; mede-se tempo de resposta e satisfação. \\
+\end{longtable}
+
+\subsection{Regra de decisão}
+
+Ao final do piloto, cada canal é classificado por comparação com as metas definidas no
+Capítulo~\ref{sec:metricas}:
+
+\begin{itemize}
+  \item \textbf{Escalar:} atinge a meta de conversão e o CAC está dentro do teto;
+  \item \textbf{Iterar:} atinge uma das duas condições; ajustar mensagem, local ou processo e repetir o teste;
+  \item \textbf{Reduzir ou abandonar:} não atinge nenhuma; realocar esforço para os canais que funcionaram.
+\end{itemize}
