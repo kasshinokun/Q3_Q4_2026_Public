@@ -1,0 +1,100 @@
+\section{Estratégia de precificação}
+\label{sec:precificacao}
+
+\subsection{Preço de venda definido}
+\label{sec:preco-venda}
+
+O \projeto{} adota um modelo em que \textbf{o tutor de baixa renda não paga para usar o núcleo do
+produto}. A receita vem do fluxo financeiro, de uma assinatura opcional e do lado dos prestadores,
+conforme a Atividade~III.
+
+\begin{longtable}{L{3.4cm} L{3.7cm} L{3.2cm} L{3.4cm}}
+\toprule
+\cabfundo \cab{Oferta} & \cab{Quem paga} & \cab{Preço} & \cab{Modelo} \\
+\midrule
+\endfirsthead
+\toprule
+\cabfundo \cab{Oferta} & \cab{Quem paga} & \cab{Preço} & \cab{Modelo} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\textbf{PetCuida Básico} (cadastro, lembretes, triagem, créditos) & Tutor & \textbf{Gratuito} & Gratuidade estratégica \\
+\textbf{PetCuida+} (múltiplos pets, prontuário ampliado, descontos em parceiros) & Tutor assinante & \textbf{R\$~12,90/mês} ou \textbf{R\$~119,00/ano} & Assinatura \\
+\textbf{Comissão de intermediação} & Tutor, sobre a parte paga em dinheiro & \textbf{10\%} (faixa de 8\% a 12\%) & \emph{Take rate} \\
+\textbf{Plano Parceiro} (destaque no mapa e agenda) & Clínica ou veterinário & \textbf{R\$~79,90/mês}; 3 meses grátis no piloto & Mensalidade \\
+\textbf{Tabela social} (preço final ao tutor) & Tutor, ao clínico parceiro & Meta: pelo menos 30\% abaixo do mercado local; ticket de referência R\$~110,00 & Preço social \\
+\end{longtable}
+
+A assinatura anual equivale a 23\% de desconto sobre doze mensalidades (R\$~154,80). Os valores
+da assinatura e do Plano Parceiro estão dentro da faixa prevista no modelo de negócio e serão
+testados (Capítulo~\ref{sec:teste}).
+
+\subsection{Economia unitária}
+\label{sec:unitaria}
+
+\begin{table}[htbp]
+\centering
+\caption{Margem de contribuição por unidade vendida (R\$).}
+\label{tab:unitaria}
+\begin{tabular}{L{4.1cm} R{2.5cm} R{2.6cm} R{3.0cm}}
+\toprule
+\cabfundo \cab{Item} & \cab{Assinatura} & \cab{Atendimento} & \cab{Plano Parceiro} \\
+\midrule
+Receita unitária & 12,90 & 7,70 & 79,90 \\
+(--) Taxa de pagamento ou da loja & (1,94) & (1,99) & (3,98) \\
+(--) Imposto (6\%) & (0,77) & (0,46) & (4,79) \\
+(--) Infraestrutura e suporte & (0,30) & -- & -- \\
+\midrule
+\totalfundo \textbf{Margem de contribuição} & \textbf{9,89} & \textbf{5,25} & \textbf{71,13} \\
+\totalfundo \textbf{Em \% da receita} & \textbf{76,7\%} & \textbf{68,1\%} & \textbf{89,0\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+O atendimento rende R\$~7,70 porque a comissão de 10\% incide sobre os R\$~77,00 pagos em
+dinheiro (70\% de R\$~110,00); os créditos solidários não geram comissão.
+
+\subsection{Ponto de equilíbrio}
+\label{sec:equilibrio}
+
+Com 1 clínica parceira para cada 150 usuários ativos, a margem de contribuição por usuário ativo
+é de cerca de R\$~0,55 sem convênios. O número de usuários ativos (MAU) para cobrir os custos fixos:
+
+\begin{table}[htbp]
+\centering
+\caption{Usuários ativos necessários para o ponto de equilíbrio.}
+\label{tab:equilibrio}
+\begin{tabular}{L{5.0cm} R{3.3cm} R{3.3cm}}
+\toprule
+\cabfundo \cab{Cenário} & \cab{Com convênio (R\$~1.500)} & \cab{Sem convênio} \\
+\midrule
+A -- enxuto & 310 & 2.880 \\
+B -- equipe remunerada & 10.340 & 12.910 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Sensibilidade do preço da assinatura}
+
+Resultado mensal do cenário A no mês 12, variando o preço do PetCuida+ e a proporção de
+assinantes entre os usuários ativos (R\$):
+
+\begin{table}[htbp]
+\centering
+\caption{Resultado mensal (cenário A, mês 12) por preço e taxa de assinatura.}
+\label{tab:sens}
+\begin{tabular}{L{3.2cm} R{2.6cm} R{2.6cm} R{2.6cm}}
+\toprule
+\cabfundo \cab{Preço} & \cab{3\% assinam} & \cab{5\% assinam} & \cab{8\% assinam} \\
+\midrule
+R\$~9,90 & 253 & 479 & 817 \\
+\totalfundo R\$~12,90 & 360 & \textbf{657} & 1.102 \\
+R\$~14,90 & 431 & 775 & 1.291 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Em todos os cenários testados o resultado permanece positivo; a conversão em assinante pesa
+mais que o preço. Por isso o teste de aceitação (Capítulo~\ref{sec:teste}) mede tanto a
+disposição a pagar quanto a intenção de assinar.

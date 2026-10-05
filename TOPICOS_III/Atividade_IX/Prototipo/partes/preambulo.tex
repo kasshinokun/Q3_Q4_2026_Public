@@ -1,0 +1,75 @@
+% ---------------------------------------------------------------------
+% Preâmbulo: pacotes, geometria, cores, macros e ambientes
+% ---------------------------------------------------------------------
+\usepackage[brazilian,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\Urlmuskip=0mu plus 1mu\relax
+
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% ---------- Cores ----------
+\definecolor{pucazul}{HTML}{0B5A85}
+\definecolor{destaque}{HTML}{DCEAF5}
+\definecolor{cinzaclaro}{HTML}{EEF2F6}
+\definecolor{verdeP}{HTML}{1B7F3B}
+\definecolor{laranjaH}{HTML}{C26A00}
+\definecolor{vermelhoC}{HTML}{B3261E}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=pucazul,
+    urlcolor=pucazul,
+    pdftitle={Levantamento de custos e precificação -- PetCuida},
+    pdfauthor={Grupo 4 -- Tópicos III},
+}
+
+% ---------- Espaçamento ----------
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.25}
+\setlist{itemsep=2pt, topsep=4pt}
+
+% ---------- Dados do trabalho (edite aqui; reflete na capa e folha de rosto) ----------
+\newcommand{\projeto}{PetCuida}
+\newcommand{\tituloatividade}{Levantamento de custos e precificação}
+\newcommand{\tipoatividade}{(ATIVIDADE EM GRUPO)}
+\newcommand{\anoentrega}{2026}
+\newcommand{\orientador}{João Carlos Oliveira Caetano}
+\newcommand{\tutor}{Paulo Mattos}
+\newcommand{\cambio}{5,20}   % R$/US$ de referência (PTAX de 02/10/2026: 5,2238)
+
+% ---------- Ambientes de elementos pré-textuais ----------
+\newenvironment{capa}{\thispagestyle{empty}}{\clearpage}
+\newenvironment{folhaderosto}{\thispagestyle{empty}}{\clearpage}
+
+% ---------- Origem de cada número ----------
+% [P] = pesquisa em fonte pública (ver Referências)
+% [H] = hipótese do grupo, a validar
+% [C] = a cotar/confirmar com fornecedor, contador ou política vigente
+\newcommand{\bP}{\textcolor{verdeP}{\textbf{[P]}}}
+\newcommand{\bH}{\textcolor{laranjaH}{\textbf{[H]}}}
+\newcommand{\bC}{\textcolor{vermelhoC}{\textbf{[C]}}}
+
+% ---------- Colunas e cabeçalhos de tabela ----------
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcommand{\cab}[1]{\textbf{\color{white}#1}}
+\newcommand{\cabfundo}{\rowcolor{pucazul}}
+\newcommand{\totalfundo}{\rowcolor{destaque}}

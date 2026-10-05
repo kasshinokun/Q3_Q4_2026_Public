@@ -1,0 +1,122 @@
+\section{Levantamento de custos}
+\label{sec:custos}
+
+Este capítulo organiza os custos de operação do \projeto{} em \textbf{fixos} e \textbf{variáveis},
+com valores estimados em reais. O modelo considera a fase de lançamento hiperlocal em Belo
+Horizonte (Atividade~III) e o \textbf{mês~12} de operação como referência de regime.
+
+\subsection{Premissas e legenda}
+
+\begin{itemize}
+  \item \textbf{Cenário A (enxuto):} sócios sem pró-labore; apenas despesas em caixa.
+  \item \textbf{Cenário B (equipe remunerada):} soma ao cenário A uma ajuda de custo ao gestor de
+  rede e um pró-labore simbólico aos quatro sócios.
+  \item \textbf{Câmbio:} R\$~\cambio{} por US\$ (a PTAX de 02/10/2026 foi R\$~5,2238).
+  \item \textbf{Origem de cada número:} \bP{} pesquisa em fonte pública (ver Referências);
+  \bH{} hipótese do grupo a validar; \bC{} valor a cotar ou confirmar com fornecedor ou contador.
+\end{itemize}
+
+% ---------------------------------------------------------------------
+\subsection{Custos fixos}
+\label{sec:custos-fixos}
+
+Despesas que não variam com o número de usuários ou atendimentos.
+
+\begin{longtable}{L{5.5cm} R{2.1cm} C{1.6cm} L{3.8cm}}
+\toprule
+\cabfundo \cab{Item} & \cab{R\$/mês} & \cab{Base} & \cab{Observação} \\
+\midrule
+\endfirsthead
+\toprule
+\cabfundo \cab{Item} & \cab{R\$/mês} & \cab{Base} & \cab{Observação} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Contabilidade e formalização (ME/Simples) & 300,00 & \bC & Cotar com contador \\
+Infraestrutura de backend & 100,00 & \bP\,\bH & Firebase Blaze ou VPS para Flask \\
+Google Maps Platform (busca geolocalizada) & 100,00 & \bH & Depende do uso da busca \\
+Domínio, e-mail e ferramentas de produto & 65,00 & \bH & Figma, GitHub e Canva \\
+Consultoria veterinária (curadoria da triagem) & 600,00 & \bH & Pode cair com parceria de faculdade \\
+Jurídico e LGPD (R\$~3.000 em 12 meses) & 250,00 & \bC & Termos, privacidade e parecer CFMV \\
+Materiais de divulgação (cartazes e QR) & 150,00 & \bH & Canais da Atividade~8 \\
+Conta de desenvolvedor Google Play (US\$~25 em 12 meses) & 10,83 & \bP & Taxa única, diluída \\
+\midrule
+\totalfundo \textbf{Total do cenário A} & \textbf{1.575,83} & & \\
+\midrule
+Ajuda de custo do gestor de rede (meio período) & 1.500,00 & \bH & Só no cenário B \\
+Pró-labore simbólico (4 sócios $\times$ R\$~1.000) & 4.000,00 & \bH & Só no cenário B \\
+\midrule
+\totalfundo \textbf{Total do cenário B} & \textbf{7.075,83} & & \\
+\end{longtable}
+
+% ---------------------------------------------------------------------
+\subsection{Custos variáveis}
+\label{sec:custos-variaveis}
+
+Despesas que crescem com o uso da plataforma.
+
+\begin{longtable}{L{4.4cm} R{2.8cm} C{1.6cm} L{3.9cm}}
+\toprule
+\cabfundo \cab{Item} & \cab{Valor} & \cab{Base} & \cab{Observação} \\
+\midrule
+\endfirsthead
+\toprule
+\cabfundo \cab{Item} & \cab{Valor} & \cab{Base} & \cab{Observação} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Taxa de pagamento via Pix & 0,99\% & \bP & Sobre a parte paga em dinheiro \\
+Taxa de pagamento via cartão de crédito à vista & 4,98\% & \bP & Idem \\
+\textbf{Taxa média de pagamento} (60\% Pix / 40\% cartão) & 2,59\% & \bH & Mix de pagamento a validar \\
+Imposto sobre receita (Simples Nacional) & 6,00\% & \bC & Pode chegar a 15,5\% conforme o enquadramento \\
+Taxa da loja sobre assinaturas (Google Play) & 15,00\% & \bC & Confirmar na política vigente \\
+Infraestrutura por usuário ativo & R\$~0,10/MAU & \bH & Notificações push do Firebase não têm custo \\
+Suporte e moderação por usuário ativo & R\$~0,20/MAU & \bH & Horas de atendimento \\
+Fundo de liquidação de créditos solidários & R\$~6,60/atend. & \bH & 40\% dos atendimentos usam crédito; crédito cobre até 30\% do valor; clínica recebe 50\% do valor de face em dinheiro \\
+\end{longtable}
+
+O \emph{fundo de liquidação} é o custo mais sensível do modelo: é o dinheiro que remunera as
+clínicas parceiras pelos créditos aceitos, conforme a mitigação de risco da Atividade~III
+(``liquidação parcial em dinheiro e garantia de repasse por campanhas patrocinadas'').
+
+% ---------------------------------------------------------------------
+\subsection{Visão consolidada no mês 12}
+\label{sec:consolidado}
+
+Premissas de volume ($\bH$): 1.500 usuários ativos por mês (MAU); 10\% fazem um atendimento
+intermediado por mês (150); ticket médio de R\$~110,00 com 70\% pagos em dinheiro; 5\% assinam o
+PetCuida+ (75); 10 clínicas parceiras; R\$~1.500,00/mês de convênios e patrocínio.
+
+\begin{table}[htbp]
+\centering
+\caption{Receitas, custos e resultado estimados para o mês 12 (R\$).}
+\label{tab:consolidado}
+\begin{tabular}{L{8.3cm} R{3.0cm}}
+\toprule
+\cabfundo \cab{Linha} & \cab{R\$/mês} \\
+\midrule
+Comissão sobre atendimentos (150 $\times$ R\$~7,70) & 1.155,00 \\
+Assinaturas PetCuida+ (75 $\times$ R\$~12,90) & 967,50 \\
+Plano para clínicas (10 $\times$ R\$~79,90) & 799,00 \\
+Convênios e patrocínio social & 1.500,00 \\
+\midrule
+\totalfundo \textbf{Receita total} & \textbf{4.421,50} \\
+Taxas de pagamento e da loja & (483,60) \\
+Impostos sobre receita & (265,29) \\
+Infraestrutura e suporte & (450,00) \\
+Fundo de liquidação de créditos & (990,00) \\
+\midrule
+\totalfundo \textbf{Margem de contribuição} (50,5\%) & \textbf{2.232,61} \\
+Custos fixos -- cenário A & (1.575,83) \\
+\totalfundo \textbf{Resultado -- cenário A} (margem líquida de 14,9\%) & \textbf{656,78} \\
+Custos fixos -- cenário B & (7.075,83) \\
+\totalfundo \textbf{Resultado -- cenário B} & \textbf{(4.843,22)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+No cenário A o negócio se sustenta com receita modesta, pois os custos fixos são baixos. No
+cenário B, com equipe remunerada, o modelo só fecha com mais usuários ou com financiamento
+externo (ponto de equilíbrio na Seção~\ref{sec:equilibrio}).
