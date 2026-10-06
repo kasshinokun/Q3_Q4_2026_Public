@@ -5,8 +5,7 @@
 \label{sec:preco-venda}
 
 O \projeto{} adota um modelo em que \textbf{o tutor de baixa renda não paga para usar o núcleo do
-produto}. A receita vem do fluxo financeiro, de uma assinatura opcional e do lado dos prestadores,
-conforme a Atividade~III.
+produto}. A receita provém do fluxo financeiro de intermediação, de uma assinatura opcional de conveniência e da mensalidade cobrada dos prestadores parceiros, conforme definido na Atividade~III.
 
 \begin{longtable}{L{3.4cm} L{3.7cm} L{3.2cm} L{3.4cm}}
 \toprule
@@ -20,30 +19,31 @@ conforme a Atividade~III.
 \bottomrule
 \endfoot
 \textbf{PetCuida Básico} (cadastro, lembretes, triagem, créditos) & Tutor & \textbf{Gratuito} & Gratuidade estratégica \\
-\textbf{PetCuida+} (múltiplos pets, prontuário ampliado, descontos em parceiros) & Tutor assinante & \textbf{R\$~12,90/mês} ou \textbf{R\$~119,00/ano} & Assinatura \\
-\textbf{Comissão de intermediação} & Tutor, sobre a parte paga em dinheiro & \textbf{10\%} (faixa de 8\% a 12\%) & \emph{Take rate} \\
-\textbf{Plano Parceiro} (destaque no mapa e agenda) & Clínica ou veterinário & \textbf{R\$~79,90/mês}; 3 meses grátis no piloto & Mensalidade \\
-\textbf{Tabela social} (preço final ao tutor) & Tutor, ao clínico parceiro & Meta: pelo menos 30\% abaixo do mercado local; ticket de referência R\$~110,00 & Preço social \\
+\textbf{PetCuida+} (múltiplos pets, prontuário ampliado, descontos) & Tutor assinante & \textbf{R\$~12,90/mês} ou \textbf{R\$~119,00/ano} & Assinatura (In-App) \\
+\textbf{Comissão de intermediação} & Tutor, sobre a parte paga em dinheiro & \textbf{10\%} (faixa de 8\% a 12\%) & \emph{Take rate} (Gateway) \\
+\textbf{Plano Parceiro} (destaque no mapa e gestão de agenda) & Clínica ou veterinário & \textbf{R\$~79,90/mês}; 3 meses grátis no piloto & Mensalidade SaaS \\
+\textbf{Tabela social} (preço final do atendimento ao tutor) & Tutor, ao clínico parceiro & Meta: pelo menos 30\% abaixo do mercado local; ticket de referência R\$~110,00 & Preço social \\
 \end{longtable}
 
-A assinatura anual equivale a 23\% de desconto sobre doze mensalidades (R\$~154,80). Os valores
-da assinatura e do Plano Parceiro estão dentro da faixa prevista no modelo de negócio e serão
-testados (Capítulo~\ref{sec:teste}).
+A assinatura anual do PetCuida+ equivale a 23\% de desconto sobre doze mensalidades individuais (R\$~154,80). Os valores
+da assinatura e do Plano Parceiro estão alinhados com as referências do mercado veterinário e de softwares de gestão, sendo submetidos à validação empírica no Capítulo~\ref{sec:teste}.
 
 \subsection{Economia unitária}
 \label{sec:unitaria}
+
+A análise de economia unitária (\emph{unit economics}) detalha a margem de contribuição direta de cada linha de receita oferecida pela plataforma, considerando as taxas operacionais de cobrança e tributação aplicáveis.
 
 \begin{table}[htbp]
 \centering
 \caption{Margem de contribuição por unidade vendida (R\$).}
 \label{tab:unitaria}
-\begin{tabular}{L{4.1cm} R{2.5cm} R{2.6cm} R{3.0cm}}
+\begin{tabular}{L{4.2cm} R{2.5cm} R{2.5cm} R{2.8cm}}
 \toprule
-\cabfundo \cab{Item} & \cab{Assinatura} & \cab{Atendimento} & \cab{Plano Parceiro} \\
+\cabfundo \cab{Item} & \cab{Assinatura\textsuperscript{(1)}} & \cab{Atendimento\textsuperscript{(2)}} & \cab{Plano Parceiro\textsuperscript{(3)}} \\
 \midrule
 Receita unitária & 12,90 & 7,70 & 79,90 \\
-(--) Taxa de pagamento ou da loja & (1,94) & (1,99) & (3,98) \\
-(--) Imposto (6\%) & (0,77) & (0,46) & (4,79) \\
+(--) Taxa de processamento & (1,94) & (1,99) & (3,98) \\
+(--) Imposto (6\% -- Anexo III) & (0,77) & (0,46) & (4,79) \\
 (--) Infraestrutura e suporte & (0,30) & -- & -- \\
 \midrule
 \totalfundo \textbf{Margem de contribuição} & \textbf{9,89} & \textbf{5,25} & \textbf{71,13} \\
@@ -52,18 +52,21 @@ Receita unitária & 12,90 & 7,70 & 79,90 \\
 \end{tabular}
 \end{table}
 
-O atendimento rende R\$~7,70 porque a comissão de 10\% incide sobre os R\$~77,00 pagos em
-dinheiro (70\% de R\$~110,00); os créditos solidários não geram comissão.
+\noindent\small{\textsuperscript{(1)} Reflete a taxa de 15\% cobrada pela loja de aplicativos (Google Play Store) em assinaturas digitais.\\
+\textsuperscript{(2)} Considera a taxa de gateway de pagamento de 2,59\% aplicada sobre o valor total em dinheiro intermediado na transação (70\% de R\$~110,00 = R\$~77,00), e não apenas sobre a comissão retida pela plataforma.\\
+\textsuperscript{(3)} Considera a taxa média de cartão de crédito à vista (4,98\%) cobrada via gateway externo para planos B2B.}
+\vspace{0.3cm}
+
+O atendimento gera uma receita líquida de comissão de R\$~7,70 porque a taxa de intermediação de 10\% incide unicamente sobre a parcela de R\$~77,00 paga em moeda corrente; a fração liquidada por créditos solidários (30\%) é isenta da cobrança de comissão.
 
 \subsection{Ponto de equilíbrio}
 \label{sec:equilibrio}
 
-Com 1 clínica parceira para cada 150 usuários ativos, a margem de contribuição por usuário ativo
-é de cerca de R\$~0,55 sem convênios. O número de usuários ativos (MAU) para cobrir os custos fixos:
+Assumindo a proporção de 1 clínica parceira cadastrada para cada 150 usuários ativos (MAU), a margem de contribuição média ponderada por usuário ativo é de aproximadamente R\$~0,55 (desconsiderando convênios externos). A Tabela~\ref{tab:equilibrio} aponta o volume necessário de MAUs para cobrir integralmente as despesas fixas operacionais.
 
 \begin{table}[htbp]
 \centering
-\caption{Usuários ativos necessários para o ponto de equilíbrio.}
+\caption{Usuários ativos (MAU) necessários para atingir o ponto de equilíbrio.}
 \label{tab:equilibrio}
 \begin{tabular}{L{5.0cm} R{3.3cm} R{3.3cm}}
 \toprule
@@ -75,18 +78,19 @@ B -- equipe remunerada & 10.340 & 12.910 \\
 \end{tabular}
 \end{table}
 
+A forte variação no Cenário A (de 310 para 2.880 MAU) evidencia a relevância dos convênios e patrocínios sociais no início da operação, atuando como alavanca para cobrir custos fixos e financiar o fundo de liquidação de créditos solidários enquanto a base de usuários atinge escala.
+
 \subsection{Sensibilidade do preço da assinatura}
 
-Resultado mensal do cenário A no mês 12, variando o preço do PetCuida+ e a proporção de
-assinantes entre os usuários ativos (R\$):
+A Tabela~\ref{tab:sens} apresenta a análise de sensibilidade do resultado mensal para o Cenário A no mês 12, correlacionando variações na mensalidade do PetCuida+ com a taxa de conversão de assinantes da base ativa:
 
 \begin{table}[htbp]
 \centering
-\caption{Resultado mensal (cenário A, mês 12) por preço e taxa de assinatura.}
+\caption{Resultado mensal (cenário A, mês 12) por preço e taxa de conversão de assinantes (R\$).}
 \label{tab:sens}
 \begin{tabular}{L{3.2cm} R{2.6cm} R{2.6cm} R{2.6cm}}
 \toprule
-\cabfundo \cab{Preço} & \cab{3\% assinam} & \cab{5\% assinam} & \cab{8\% assinam} \\
+\cabfundo \cab{Preço da Assinatura} & \cab{3\% assinam} & \cab{5\% assinam} & \cab{8\% assinam} \\
 \midrule
 R\$~9,90 & 253 & 479 & 817 \\
 \totalfundo R\$~12,90 & 360 & \textbf{657} & 1.102 \\
@@ -95,6 +99,4 @@ R\$~14,90 & 431 & 775 & 1.291 \\
 \end{tabular}
 \end{table}
 
-Em todos os cenários testados o resultado permanece positivo; a conversão em assinante pesa
-mais que o preço. Por isso o teste de aceitação (Capítulo~\ref{sec:teste}) mede tanto a
-disposição a pagar quanto a intenção de assinar.
+A simulação indica resiliência financeira e resultado positivo em todas as combinações testadas. Observa-se que a taxa de conversão de usuários para o plano pago exerce maior impacto no resultado financeiro final do que o preço unitário da assinatura. Tal comportamento fundamenta a realização do teste de aceitação descrito no Capítulo~\ref{sec:teste}.
