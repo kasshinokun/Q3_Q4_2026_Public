@@ -1,0 +1,355 @@
+﻿//Transcriçao por IA pode conter erros
+
+
+
+1
+00:00:01,520 --> 00:00:08,950
+tô aqui ó, ô donali a questão é que depois daquela conversa que a gente teve,
+
+2
+00:00:08,960 --> 00:00:15,110
+hum, a gente acabou criando um uma prévia do programa final né,
+
+3
+00:00:15,120 --> 00:00:19,150
+para justamente seguir a proposta de trabalho da gente que é ter
+
+4
+00:00:19,160 --> 00:00:24,950
+um uma espécie de um aplicativo que aí por exemplo tem tanto a
+
+5
+00:00:24,960 --> 00:00:29,910
+as pessoas que precisam do serviço e podem ofertar algum tipo de serviço.
+
+6
+00:00:30,440 --> 00:00:36,430
+quanto também, por exemplo, no caso, se a gente se pessoa, se alguém aceitar a ideia né,
+
+7
+00:00:36,440 --> 00:00:42,870
+uhum, é fazer um convênio com no caso com clínica veterinária e outros
+
+8
+00:00:42,880 --> 00:00:49,550
+tipos de pessoa para justamente atender a as pessoas eh também
+
+9
+00:00:49,560 --> 00:00:53,510
+se alguém quiser trabalhar basicamente como se fosse um uber de mão
+
+10
+00:00:53,520 --> 00:00:59,910
+dupla né uhum que aí por exemplo pessoa ele pode e ofertar o serviço dele como por...
+
+11
+00:01:00,200 --> 00:01:02,990
+exemplo é passear com cachorro,
+
+12
+00:01:03,000 --> 00:01:08,190
+ficar com cachorro, às vezes transportar o animal, uhum, né, se pessoa é veterinário,
+
+13
+00:01:08,200 --> 00:01:13,950
+ele pode seria basicamente ele atenderia pela plataforma do aplicativo né,
+
+14
+00:01:14,000 --> 00:01:16,910
+aí de acordo com a situação sugeraria um certo crédito
+
+15
+00:01:16,920 --> 00:01:20,190
+pra pessoa utilizar para poder conseguir cuidar do bichinho,
+
+16
+00:01:20,200 --> 00:01:22,590
+uhum, né?
+
+17
+00:01:22,600 --> 00:01:29,910
+aí em geral aqui, deixa eu só apanhar um pouco aqui do telefone.
+
+18
+00:01:31,800 --> 00:01:44,470
+né,
+
+19
+00:01:44,480 --> 00:01:51,870
+deixa eu pegar aqui,
+
+20
+00:01:51,880 --> 00:01:56,390
+ele funciona da seguinte maneira, ele é dessa maneira, você clica para abrir né,
+
+21
+00:01:56,400 --> 00:01:59,910
+uhum, essa que é tela descarregamento, é a opção do...
+
+22
+00:02:00,120 --> 00:02:05,550
+pessoa colocar usuário e senha ou também entrar pelo google,
+
+23
+00:02:05,560 --> 00:02:10,830
+no caso que quando pessoa entra né, expectativa é vir por aqui em criar conta,
+
+24
+00:02:10,840 --> 00:02:16,470
+coloca aqui os dados né, também tem a questão de registrar pelo pelo google né,
+
+25
+00:02:16,480 --> 00:02:20,830
+uhum, no caso aqui que a gente conseguiu reorganizar de ontem
+
+26
+00:02:20,840 --> 00:02:26,790
+para hoje hum foi só a simulação de por exemplo login com o google tá,
+
+27
+00:02:26,800 --> 00:02:29,910
+o pessoal entra ele vai dar um feedback aqui que tá.
+
+28
+00:02:30,680 --> 00:02:33,750
+tá pronto para entrar uhum aí quando
+
+29
+00:02:33,800 --> 00:02:38,390
+pessoa entra ele tem a opção de escolher seguinte entre cão,
+
+30
+00:02:38,400 --> 00:02:44,390
+gato, pássaro ou outro né, uhum, no caso aqui,
+
+31
+00:02:44,400 --> 00:02:48,390
+se por exemplo, se for um caso de um como que sal o caso do cachorro né,
+
+32
+00:02:48,400 --> 00:02:55,310
+uhum e pessoa coloca nome do cachorro né, um nome bem sugestivo aqui rex né,
+
+33
+00:02:55,320 --> 00:02:59,910
+meu chama tob, podemos deixar como tob né?
+
+34
+00:03:01,320 --> 00:03:05,790
+engraçado que eu vi a sua mãe comentando isso comigo, ela assim tobi,
+
+35
+00:03:05,800 --> 00:03:11,710
+vem cá, é tob é aí aqui na parte de de de raça né,
+
+36
+00:03:11,720 --> 00:03:14,950
+aqui é um detalhe opcional, mas vamos deixar aqui famoso né,
+
+37
+00:03:14,960 --> 00:03:20,230
+sem raça definido é srd da vida né,
+
+38
+00:03:20,240 --> 00:03:25,950
+é um arrasta específico, aí geralmente também o sistema ele pede pra gente colocar a data,
+
+39
+00:03:25,960 --> 00:03:29,910
+como não deu para brasileirar, por enquanto ele tá no padrão americano.
+
+40
+00:03:30,240 --> 00:03:36,110
+mas em geral ele mostra aqui o calendário clicando aqui no caso aqui mais fácil aqui
+
+41
+00:03:36,120 --> 00:03:41,270
+a gente escolhe o ano né vamos citar aqui suponhamos que ele tem nascido em 2010 uhum
+
+42
+00:03:41,280 --> 00:03:47,430
+tá você acha que basicamente o ano aí a questão
+
+43
+00:03:47,440 --> 00:03:51,510
+da movimentação de mesa é paraa frente para trás suponhamos que ele tenha nascido
+
+44
+00:03:51,520 --> 00:03:56,350
+também em setembro né de 2010 na mesma data de hoje uhum você aperta aqui
+
+45
+00:03:56,360 --> 00:04:03,110
+ok né tem opção de escolher na galeria ou bater a foto né,
+
+46
+00:04:03,120 --> 00:04:09,390
+uhum aí no caso aqui a gente acha alguma coisa, bate a foto né,
+
+47
+00:04:09,400 --> 00:04:14,430
+esse cachorro tá diferente,
+
+48
+00:04:14,440 --> 00:04:20,589
+pessoa aperta ok, uhum e aí feito isso ele vai abre tá,
+
+49
+00:04:20,600 --> 00:04:25,830
+isso aqui é a interface que a gente acabou montando, uhum, dentro dele aqui ó,
+
+50
+00:04:25,840 --> 00:04:29,470
+tem a questão da área de cuidados do bichinho né que
+
+51
+00:04:29,480 --> 00:04:34,030
+aí tem a a questão de mostrar a vacinação dele como é que tá,
+
+52
+00:04:34,040 --> 00:04:37,710
+a questão no calendário de vacina né, se ele precisa fazer alguma coisa,
+
+53
+00:04:37,720 --> 00:04:42,670
+tem alguma agendamento, uhum, também tem a questão de ver o prontuário do bicho,
+
+54
+00:04:42,680 --> 00:04:48,350
+o que que ele já tomou de agulhada né, o que que tem para fazer, uhum,
+
+55
+00:04:48,360 --> 00:04:55,030
+né, tem a opção também de editar aqueles dados que você colocou né,
+
+56
+00:04:55,040 --> 00:04:59,910
+aí voltando aqui, aí aqui embaixo né, opa, aqui embaixo você:
+
+57
+00:05:00,120 --> 00:05:03,550
+muda entre as opções né que é início, a parte do animal,
+
+58
+00:05:03,560 --> 00:05:10,510
+uhum aqui é a parte de triagem de serviço, ou seja, pré-seleção que precisa fazer, né?
+
+59
+00:05:10,520 --> 00:05:11,750
+a ideia é que também,
+
+60
+00:05:11,760 --> 00:05:17,930
+por exemplo, pessoa converse com alguém por aqui uhum né aí voltando para
+
+61
+00:05:17,940 --> 00:05:24,050
+cá aqui na parte fica nessa parte de rede aqui solidária fica mostrando
+
+62
+00:05:24,060 --> 00:05:29,370
+os tipos de serviço que tá disponível aqui né e quando alguém também pede
+
+63
+00:05:29,380 --> 00:05:36,490
+solicita algum serviço né a senhorita tem opção de deixa eu ver
+
+64
+00:05:36,500 --> 00:05:42,410
+tá tem um mapazinho aqui né que tá bem genérico mas para mostrar as pessoas disponíveis
+
+65
+00:05:45,580 --> 00:05:51,970
+tá vindo aqui a gente tem a configuração da pessoa em questão né hum aqui tá como
+
+66
+00:05:51,980 --> 00:05:56,250
+esse aqui é um nome genérico mas tem a mesma coisa lá do do animal se pessoa quiser
+
+67
+00:05:56,260 --> 00:06:02,410
+pesquisar na galeria ou tirar uma foto pessoa pode tirar uma foto entendeu
+
+68
+00:06:02,420 --> 00:06:08,850
+aí voltando aqui para trás quando pessoa ele clica aqui do lado ele já tem
+
+69
+00:06:08,860 --> 00:06:12,410
+a opção de ver as informações do do do...
+
+70
+00:06:12,660 --> 00:06:18,530
+programa, questão de termos de uso, como é que ele funciona, né, também como de prática,
+
+71
+00:06:18,540 --> 00:06:23,650
+todo programa exige as políticas de privacidade, tem né,
+
+72
+00:06:23,660 --> 00:06:28,930
+com relação assim ao que você viu assim do do aplicativo,
+
+73
+00:06:28,940 --> 00:06:31,850
+qual a sua percepção e você acha?
+
+74
+00:06:31,860 --> 00:06:35,650
+eu acho que foi bom, é bom e para mim é fácil,
+
+75
+00:06:35,660 --> 00:06:39,290
+uhum, para mim é tipo um whatsapp, certo, não é?
+
+76
+00:06:39,300 --> 00:06:42,410
+é basicamente isso, porque não é muito complexo.
+
+77
+00:06:42,700 --> 00:06:48,410
+né, assim, se por acaso fosse colocado um serviço desse tipo assim,
+
+78
+00:06:48,420 --> 00:06:50,570
+seria interessante para você?
+
+79
+00:06:50,580 --> 00:06:55,650
+seria, uhum, muito interessante, né, muito interessante, né, então tá ok,
+
+80
+00:06:55,660 --> 00:06:59,290
+com isso terminamos essa nossa entrevista, como é só é só isso,
+
+81
+00:06:59,300 --> 00:07:01,770
+é porque dessa vez é só apresentação
+
+82
+00:07:01,780 --> 00:07:07,570
+da proposta e coleta de feedback se pessoa achou interessante né,
+
+83
+00:07:07,580 --> 00:07:10,370
+por exemplo, igual se você tiver um ponto de vista,
+
+84
+00:07:10,380 --> 00:07:12,410
+ou seja, de uma parte que você acha que você pode melhorar.
+
+85
+00:07:12,580 --> 00:07:16,730
+você pode falar, uhum, entendeu?
+
+86
+00:07:16,740 --> 00:07:22,010
+uhum, então tá bom, para mim deu bom, para mim é igual whatsapp mesmo,
+
+87
+00:07:22,020 --> 00:07:26,010
+tá bem prático né,
+
+88
+00:07:26,020 --> 00:07:31,730
+tem muita complicação, tá bem fácil, graças a Deus uma mente assim.

@@ -1,0 +1,266 @@
+% =============================================================
+%  Relatorio de Pesquisa de Satisfacao - PetCuida (versao Alpha 3i)
+%  Registro formalizado de entrevista semiestruturada
+% =============================================================
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{lmodern}
+\usepackage[margin=3cm]{geometry}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\onehalfspacing
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize Pesquisa de satisfação --- PetCuida \textit{Alpha 3i}}
+\fancyhead[R]{\footnotesize \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Ambiente para os turnos de fala da transcricao
+\newenvironment{turnos}
+  {\begin{list}{}{%
+     \setlength{\leftmargin}{2.2cm}%
+     \setlength{\labelwidth}{2.0cm}%
+     \setlength{\labelsep}{0.2cm}%
+     \setlength{\itemsep}{0.6em}%
+     \setlength{\parsep}{0pt}}}
+  {\end{list}}
+\newcommand{\fala}[1]{\item[\textbf{#1}\hfill]}
+
+\newcommand{\entrevistador}{Kathleen Rodrigues}
+\newcommand{\participante}{Calebe}
+
+\title{\textbf{Avaliação de Satisfação e Usabilidade Percebida do\\
+Aplicativo PetCuida (versão \textit{Alpha 3i})}\\[0.4cm]
+\large Registro formalizado de entrevista com usuário potencial}
+\author{Entrevistador(a): \entrevistador{} (aluno(a) responsável pela coleta)\\
+Participante: \participante{} (usuário potencial)}
+\date{Belo Horizonte, 16 de setembro de 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent Este documento formaliza, para fins acadêmicos, o registro de uma avaliação realizada com um usuário potencial do aplicativo \textbf{PetCuida}, em sua versão \textit{Alpha 3i}. A sessão teve por objetivo apresentar a proposta funcional do \textit{software} e coletar a percepção do participante quanto à utilidade das funcionalidades, eficiência da interface e compreensão do modelo de negócio. Os dados foram obtidos de forma remota, por meio de mensageria assíncrona (WhatsApp), após o participante navegar livremente pelo protótipo. O participante apresentou avaliação altamente positiva quanto ao senso de comunidade e à praticidade da solução. Foram identificadas percepções favoráveis específicas em relação às funcionalidades de Triagem Orientativa e Lembretes. Como ponto de atenção crítico, o participante relatou não compreender o funcionamento do sistema financeiro, sugerindo a criação de um passo a passo (tutorial) para a utilização dos créditos solidários.
+
+\vspace{0.4cm}
+\noindent\textbf{Palavras-chave:} usabilidade percebida; pesquisa de satisfação; avaliação autônoma; aplicativos móveis; bem-estar animal; PetCuida.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% =============================================================
+\section{Identificação da Coleta}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.8cm}>{\raggedright\arraybackslash}p{8.9cm}@{}}
+\toprule
+\textbf{Item} & \textbf{Descrição} \\
+\midrule
+Objeto avaliado & Aplicativo PetCuida - versão \textit{Alpha 3i} (protótipo funcional Flutter/Android) \\
+Instrumento & Navegação autônoma seguida de entrevista assíncrona via aplicativo de mensagens (WhatsApp) \\
+Entrevistador(a) & \entrevistador{} (aluno(a) responsável) \\
+Participante & \participante{} \\
+Perfil do participante & Jovem de 16 anos, perfil sistemático e analítico, tutor potencial \\
+Data da coleta & 16 de setembro de 2026 \\
+Duração aproximada & Avaliação assíncrona de navegação livre \\
+Local & Ambiente remoto (coleta via WhatsApp) \\
+Registro & Registros textuais de mensageria e capturas de tela \\
+Modalidade de análise & Análise qualitativa de conteúdo, por categorização temática \\
+\bottomrule
+\end{tabular}
+\caption{Ficha técnica da coleta de dados.}
+\end{table}
+
+% =============================================================
+\section{Objetivo da Pesquisa}
+
+A presente coleta teve como objetivo geral \textbf{verificar a aceitação e a satisfação percebida de um usuário potencial diante da proposta funcional do aplicativo PetCuida em estágio alfa}. Como objetivos específicos, delimitam-se:
+
+\begin{enumerate}[label=\alph*)]
+  \item registrar a percepção do participante quanto à utilidade e praticidade do \textit{software};
+  \item identificar as funcionalidades consideradas mais eficientes para a resolução de problemas do dia a dia;
+  \item coletar pontos de atenção, dúvidas e sugestões de melhoria focadas na curva de aprendizado do sistema;
+  \item verificar o nível de clareza do modelo de negócio (créditos solidários).
+\end{enumerate}
+
+Ressalta-se que \textbf{esta rodada constituiu uma avaliação autônoma}, onde o participante navegou livremente pelo protótipo sem a condução do pesquisador, enviando posteriormente seu \textit{feedback} perceptivo e analítico.
+
+% =============================================================
+\section{Descrição do Objeto Avaliado}
+
+O PetCuida é um aplicativo móvel cuja proposta consiste em intermediar, em uma mesma plataforma, a demanda e a oferta de serviços de cuidado com animais de estimação. A contrapartida pela prestação de serviços é convertida em \textbf{crédito} utilizável pelo próprio usuário para custear os cuidados de seu animal, constituindo o eixo de acessibilidade econômica da proposta.
+
+A versão \textit{Alpha 3i} implementa, com dados locais e sem dependência de \textit{backend}, o fluxo completo do diagrama de telas, destacando-se para esta avaliação:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Área do pet:} Painel de cuidados, calendário de vacinas, lembretes.
+    \item \textbf{Triagem de serviço:} Pré-seleção orientativa da necessidade do usuário e direcionamento prático.
+    \item \textbf{Rede solidária:} Funcionalidades baseadas na economia de créditos e mapa de serviços.
+\end{itemize}
+
+% =============================================================
+\section{Procedimentos Metodológicos}
+
+\subsection{Abordagem}
+
+Adotou-se abordagem \textbf{qualitativa}, de caráter \textbf{exploratório}, conduzida remotamente. O foco foi capturar a compreensão, a expectativa e a reação espontânea do usuário após o contato não guiado com a proposta de valor.
+
+\subsection{Instrumento e condução}
+
+A sessão foi organizada de forma assíncrona:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item o participante recebeu o acesso ao protótipo;
+  \item navegou livremente pelas telas sem a intervenção ou narração do pesquisador;
+  \item enviou suas percepções gerais, destaques positivos e sugestões de melhoria via aplicativo de mensagens (WhatsApp).
+\end{enumerate}
+
+\subsection{Tratamento dos dados}
+
+Os registros originais (mensagens de texto) foram analisados e adaptados para o formato de turnos de fala, preservando integralmente o conteúdo proposicional, o tom do participante e as expressões avaliativas, com ajustes de superfície apenas para estruturação em formato de entrevista na Seção~\ref{sec:transcricao}.
+
+% =============================================================
+\section{Transcrição Formalizada da Entrevista}
+\label{sec:transcricao}
+
+\noindent\textit{Convenções:} \textbf{E} designa o/a entrevistador(a) (\entrevistador{}) e \textbf{P} designa o participante (\participante{}). Intervenções sem conteúdo proposicional foram suprimidas.
+
+\begin{turnos}
+
+\fala{E:} Calebe, depois de dar uma olhada no aplicativo, o que você achou da ideia no geral?
+
+\fala{P:} Cara, gostei muito do app, acho que pode ajudar bastante. A ideia cria uma comunidade bem legal com cada um ajudando e fazendo a sua parte, sabe? Fez sentido pra mim.
+
+\fala{E:} Teve alguma funcionalidade específica que chamou mais a sua atenção?
+
+\fala{P:} Sim, especialmente nessa área de triagem, onde você dá uma breve explicação do problema do pet em questão e o site já recomenda uma clínica. Achei isso bem prático e eficiente, vai direto ao ponto. E a parte dos lembretes também ajuda muito para não perder o prazo das coisas.
+
+\fala{E:} E tem algum ponto que você achou confuso ou que a gente precisaria melhorar no app?
+
+\fala{P:} Faltou uma aba de explicação, tipo um passo a passo para a utilização de créditos e o seu sistema. Do jeito que tá, você não entende de cara como essa moeda funciona. Tem que ter uma explicação mais sistemática de como usar isso na prática.
+
+\end{turnos}
+
+% =============================================================
+\section{Análise dos Resultados}
+
+\subsection{Categorização temática}
+
+A partir das falas do participante, identificaram-se quatro categorias principais de análise, sintetizadas na Tabela~\ref{tab:categorias}.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{4.8cm}>{\raggedright\arraybackslash}p{5.5cm}@{}}
+\toprule
+\textbf{Categoria} & \textbf{Evidência na fala} & \textbf{Interpretação} \\
+\midrule
+Senso de Comunidade e Valor &
+\enquote{cria uma comunidade bem legal com cada um ajudando e fazendo a sua parte} &
+O participante compreendeu e validou a proposta de valor central, reconhecendo a utilidade e o apelo social da plataforma. \\
+\addlinespace
+Eficiência e Direcionamento &
+\enquote{breve explicação do problema [...] já recomenda uma clínica}; \enquote{prático e eficiente} &
+A Triagem Orientativa foi percebida como uma ferramenta de alta resolutividade, poupando tempo e esforço cognitivo do usuário. \\
+\addlinespace
+Prevenção e Utilidade &
+\enquote{os lembretes também ajudam para n perder o prazo} &
+As funcionalidades de gestão de saúde validam a proposta de cuidado contínuo e preventivo estipulada pelo projeto. \\
+\addlinespace
+Curva de Aprendizado Financeiro &
+\enquote{Faltou uma aba de explicação [...] para a utilização de créditos}; \enquote{não entende de cara como essa moeda funciona} &
+O modelo de negócios (economia de créditos) gerou atrito inicial, evidenciando a necessidade de comunicação instrucional clara na \textit{interface}. \\
+\bottomrule
+\end{tabular}
+\caption{Categorias emergentes da análise de conteúdo da entrevista.}
+\label{tab:categorias}
+\end{table}
+
+\subsection{Discussão}
+
+A avaliação autônoma validou a utilidade percebida e a eficiência da proposta. O destaque para a resolutividade da \textit{Triagem Orientativa} e a conveniência dos \textit{Lembretes} comprova que a solução atende a dores reais dos tutores, mantendo uma abordagem direta e prática. A percepção do participante sobre o \enquote{senso de comunidade} indica sucesso na transmissão da identidade do PetCuida.
+
+No entanto, a navegação livre revelou um ponto de atrito crítico: a ausência de clareza imediata sobre o funcionamento do sistema financeiro. Isso evidencia que, embora a interface seja prática para as funções de saúde animal, o modelo de negócios da rede solidária (obtenção e uso de créditos) exige uma curva de aprendizado que o artefato atual não suporta sem material instrucional de apoio (\textit{onboarding}).
+
+\subsection{Pontos de atenção identificados}
+
+A partir da análise, o principal ponto a ser considerado para futuras iterações do artefato é:
+
+\begin{itemize}[leftmargin=*]
+  \item a necessidade imperativa de incluir uma aba explicativa (tutorial ou fluxo passo a passo) detalhando como adquirir, utilizar e gerenciar o sistema de créditos solidários dentro do ecossistema do aplicativo.
+\end{itemize}
+
+% =============================================================
+\section{Limitações Metodológicas}
+
+O presente registro deve ser lido com as seguintes ressalvas:
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*]
+  \item \textbf{Amostra reduzida.} A entrevista representa a percepção de um único participante, possuindo caráter indicativo e não permitindo generalização estatística.
+  \item \textbf{Avaliação assíncrona não observada.} O participante navegou pelo protótipo de forma independente. Não foi possível mensurar o tempo de execução de tarefas específicas, registrar expressões faciais ou rastrear caminhos incorretos durante o uso.
+  \item \textbf{Ausência de instrumento padronizado.} Não foi aplicada escala validada quantitativa (como a escala SUS), o que impede uma comparação paramétrica direta com outras avaliações.
+\end{enumerate}
+
+% =============================================================
+\section{Considerações Finais e Recomendações}
+
+A coleta cumpriu o objetivo de validar a inteligibilidade e o valor prático da proposta do PetCuida (versão \textit{Alpha 3i}) junto a um potencial usuário. O participante demonstrou alta satisfação com o conceito colaborativo e com a eficiência técnica das ferramentas de triagem e lembretes. O principal obstáculo levantado recaiu exclusivamente sobre a barreira de entrada conceitual relacionada à economia de \enquote{créditos}.
+
+Para as próximas rodadas, recomenda-se:
+
+\begin{enumerate}[label=\textbf{R\arabic*.},leftmargin=1.6cm]
+  \item \textbf{desenvolver um fluxo de \textit{onboarding}} focado exclusivamente na economia e dinâmica dos créditos solidários, conforme sugerido pelo participante;
+  \item realizar testes de usabilidade com observação síncrona de tela para mapear o comportamento exato de navegação;
+  \item aplicar formulários padronizados para obter métricas quantitativas de satisfação;
+  \item ampliar a amostra de participantes.
+\end{enumerate}
+
+% =============================================================
+\appendix
+\section{Termo de Registro e Uso dos Dados}
+
+O participante foi informado sobre a finalidade acadêmica da coleta e sobre o uso restrito dos dados para fins de avaliação do artefato desenvolvido, manifestando concordância.
+
+\section{Ficha Técnica do Artefato Avaliado}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{9.0cm}@{}}
+\toprule
+\textbf{Item} & \textbf{Descrição} \\
+\midrule
+Denominação & PetCuida \\
+Versão avaliada & \textit{Alpha 3i} \\
+Plataforma & Android \\
+Tecnologia & Flutter/Dart, com navegação por rotas \\
+Escopo implementado & Autenticação, \textit{onboarding}, painel inicial, área do pet, triagem, rede solidária e perfil do tutor \\
+\bottomrule
+\end{tabular}
+\caption{Ficha técnica resumida da versão avaliada.}
+\end{table}
+
+\section{Fontes Primárias do Registro}
+
+\begin{itemize}[leftmargin=*]
+  \item Registros textuais de mensageria (WhatsApp) referentes à avaliação, recebidos em 16 de setembro de 2026;
+  \item Código-fonte e documentação da versão \textit{Alpha 3i} do aplicativo.
+\end{itemize}
+
+\end{document}
