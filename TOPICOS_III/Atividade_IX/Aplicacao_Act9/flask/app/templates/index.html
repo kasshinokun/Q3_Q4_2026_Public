@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4F6997">
+  <meta name="description" content="PetCuida — cuidado acessível, organizado e humano para pets.">
+  <title>PetCuida · Cuidado que acolhe</title>
+  <link rel="icon" href="/static/assets/petcuida-logo.png">
+  <link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+  <div id="app" class="app-shell">
+    {% raw %}
+    <Login v-if="!user" :on-login="login" :on-register="register"></Login>
+    <organization-dashboard v-else-if="user.account_type === 'organization' && organization" :user="user" :organization="organization" :professionals="professionals" :offers="offers" :demands="demands" :on-add-professional="addProfessional" :on-import="importProfessionals" :on-add-offer="addOffer" :on-accept="acceptDemand" :on-logout="logout"></organization-dashboard>
+    <section v-else-if="user.account_type === 'organization'" class="loading-screen"><div class="loading-mark">✦</div><h2>Preparando o painel da organização…</h2><p>Carregando equipe, serviços e demandas.</p></section>
+    <Dashboard v-else :user="user" :pets="pets" :services="services" :appointments="appointments" :loading="loading" @logout="logout" @book="book" @add-pet="showPet=true" @navigate="view=$event" @triage="runTriage"></Dashboard>
+    <div v-if="showPet" class="modal-backdrop" @click.self="showPet=false">
+      <form class="modal" @submit.prevent="addPet">
+        <button type="button" class="close" aria-label="Fechar" @click="showPet=false">×</button>
+        <p class="eyebrow">NOVO CADASTRO</p><h2>Adicionar pet</h2>
+        <p class="muted">Mantenha os dados essenciais sempre à mão para cuidar melhor.</p>
+        <label>Nome<input v-model.trim="newPet.name" required placeholder="Ex.: Mel"></label>
+        <div class="form-grid"><label>Espécie<select v-model="newPet.species"><option>Cão</option><option>Gato</option><option>Outro</option></select></label><label>Data de nascimento<input v-model="newPet.birth_date" type="date"></label></div>
+        <label>Raça<input v-model.trim="newPet.breed" placeholder="Ex.: SRD"></label>
+        <label>Observações<textarea v-model.trim="newPet.notes" rows="3" placeholder="Alergias, cuidados especiais..."></textarea></label>
+        <button class="primary full" :disabled="saving">{{saving ? 'Salvando…' : 'Salvar pet'}}</button>
+      </form>
+    </div>
+    <div v-if="message" class="toast" role="status"><span class="toast-check">✓</span>{{message}}</div>
+  {% endraw %}
+  </div>
+  <script type="module" src="/static/js/main.js"></script>
+</body>
+</html>
