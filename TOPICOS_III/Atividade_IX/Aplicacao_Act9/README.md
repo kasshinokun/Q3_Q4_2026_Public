@@ -2,6 +2,14 @@
 
 Versão de apresentação do PetCuida com interface web Flask/Vue e aplicativo Flutter de referência. O web demo usa SQLite local; o projeto Flutter permanece no modo local por padrão.
 
+## Arquivos Mobile 
+A aplicação em Flutter foi testada em um Samsung A10 Core(SM-A107M) e em um Samsung A52S(SM-A528B), os arquivos compilados estão no link abaixo:
+- [Pasta no Google Drive](https://drive.google.com/drive/folders/1ucK9MPxXM7AZeBhnduMgDH6oeOtt-P4X)
+- Por favor leia a descrição abaixo.
+### Sobre as versões 
+- A versão A107M é para celulares similares ao A10 Core
+- A versão A528B é para celulares similares ao A52S
+
 ## Logins de demonstração
 
 - Tutor: `petcuida` / `meu pet`
