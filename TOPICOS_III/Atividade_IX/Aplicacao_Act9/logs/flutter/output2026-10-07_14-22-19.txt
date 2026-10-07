@@ -1,0 +1,619 @@
+=== INÍCIO DO LOG: 2026-10-07 14:22:19 ===
+Comando executado: flutter pub get && flutter run
+--------------------------------------------------
+Resolving dependencies...
+Downloading packages...
+  _flutterfire_internals 1.3.59 (1.3.77 available)
+  app_links 7.2.1 (7.2.2 available)
+  app_links_linux 1.0.3 (1.0.4 available)
+  app_links_web 1.0.4 (1.0.5 available)
+  cloud_firestore 5.6.12 (6.10.0 available)
+  cloud_firestore_platform_interface 6.6.12 (8.0.7 available)
+  cloud_firestore_web 4.4.12 (5.7.3 available)
+  cross_file 0.3.5+5 (0.4.0 available)
+  cupertino_icons 1.0.9 (2.0.0 available)
+  firebase_core 3.15.2 (4.15.0 available)
+  firebase_core_platform_interface 6.0.3 (8.1.1 available)
+  firebase_core_web 2.24.1 (3.12.0 available)
+  go_router 14.8.1 (18.0.2 available)
+  image_picker 1.2.3 (1.2.4 available)
+  image_picker_android 0.8.13+23 (0.8.13+25 available)
+  image_picker_ios 0.8.13+7 (0.8.13+9 available)
+  image_picker_platform_interface 2.11.1 (2.11.2 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  qr 3.0.2 (4.0.0 available)
+  shared_preferences 2.5.5 (2.5.6 available)
+  storage_client 2.8.0 (2.8.1 available)
+  supabase 2.16.1 (2.16.2 available)
+  supabase_flutter 2.17.2 (2.18.0 available)
+  test_api 0.7.12 (0.7.14 available)
+  url_launcher 6.3.2 (6.3.3 available)
+  vector_math 2.4.2 (2.4.3 available)
+Got dependencies!
+27 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Launching lib/main.dart on SM A107M in debug mode...
+Running Gradle task 'assembleDebug'...                          
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Running Gradle task 'assembleDebug'...                             50.7s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...          15.6s
+I/FlutterActivityAndFragmentDelegate( 6029): If you are attempting to set --enable-dart-profiling via Intent extras to launch a Flutter component outside of using the Flutter CLI, note that support for setting engine flags on Android via Intent will soon be dropped; see https://github.com/flutter/flutter/issues/180686 for more information on this breaking change. To migrate, set --enable-dart-profiling or any other flags specified via Intent extras on the command line instead or see https://github.com/flutter/flutter/blob/main/docs/engine/Flutter-Android-Engine-Flags.md for alternative methods.
+D/FlutterJNI( 6029): Beginning load of flutter...
+D/FlutterJNI( 6029): flutter (null) was loaded normally!
+I/flutter ( 6029): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+D/FlutterRenderer( 6029): Width is zero. 0,0
+Syncing files to device SM A107M...                                 68ms
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on SM A107M is available at: http://127.0.0.1:39451/pWYURPA51ec=/
+The Flutter DevTools debugger and profiler on SM A107M is available at: http://127.0.0.1:39451/pWYURPA51ec=/devtools/?uri=ws://127.0.0.1:39451/pWYURPA51ec=/ws
+I/Choreographer( 6029): Skipped 558 frames!  The application may be doing too much work on its main thread.
+I/SurfaceView( 6029): onWindowVisibilityChanged(0) true io.flutter.embedding.android.FlutterSurfaceView{ec43339 V.E...... ......I. 0,0-0,0} of ViewRootImpl@e06a61b[MainActivity]
+D/FlutterRenderer( 6029): Width is zero. 0,0
+I/SurfaceControl( 6029): assignNativeObject: nativeObject = 0 Surface(name=null)/@0x83b5d7e / android.view.SurfaceControl.readFromParcel:1117 android.view.IWindowSession$Stub$Proxy.relayout:1836 android.view.ViewRootImpl.relayoutWindow:9005 android.view.ViewRootImpl.performTraversals:3360 android.view.ViewRootImpl.doTraversal:2618 android.view.ViewRootImpl$TraversalRunnable.run:9971 android.view.Choreographer$CallbackRecord.run:1010 android.view.Choreographer.doCallbacks:809 android.view.Choreographer.doFrame:744 android.view.Choreographer$FrameDisplayEventReceiver.run:995 
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): Relayout returned: old=(0,0,720,1520) new=(0,0,720,1520) req=(720,1520)0 dur=68 res=0x7 s={true 3001895936} ch=true fn=-1
+D/FlutterRenderer( 6029): Width is zero. 0,0
+I/SurfaceView( 6029): windowStopped(false) true io.flutter.embedding.android.FlutterSurfaceView{ec43339 V.E...... ......I. 0,0-0,0} of ViewRootImpl@e06a61b[MainActivity]
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+I/SurfaceView( 6029): surfaceCreated 1 #8 io.flutter.embedding.android.FlutterSurfaceView{ec43339 V.E...... ......ID 0,0-720,1436}
+E/ion     ( 6029): ioctl c0044901 failed with code -1: Invalid argument
+I/SurfaceView( 6029): surfaceChanged (720,1436) 1 #8 io.flutter.embedding.android.FlutterSurfaceView{ec43339 V.E...... ......ID 0,0-720,1436}
+I/Choreographer( 6029): Skipped 253 frames!  The application may be doing too much work on its main thread.
+D/PhoneWindow( 6029): forceLight changed to false [com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity] from com.android.internal.policy.PhoneWindow.updateForceLightNavigationBar:4229 com.android.internal.policy.PhoneWindow.setNavigationBarColor:4029 io.flutter.plugin.platform.PlatformPlugin.setSystemChromeSystemUIOverlayStyle:578 io.flutter.plugin.platform.PlatformPlugin.access$700:37 io.flutter.plugin.platform.PlatformPlugin$1.setSystemUiOverlayStyle:125 
+I/SurfaceControl( 6029): nativeRelease nativeObject s[4016850816]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[4016850816]
+I/SurfaceControl( 6029): assignNativeObject: nativeObject = 0 Surface(name=null)/@0x83b5d7e / android.view.SurfaceControl.readFromParcel:1117 android.view.IWindowSession$Stub$Proxy.relayout:1836 android.view.ViewRootImpl.relayoutWindow:9005 android.view.ViewRootImpl.performTraversals:3360 android.view.ViewRootImpl.doTraversal:2618 android.view.ViewRootImpl$TraversalRunnable.run:9971 android.view.Choreographer$CallbackRecord.run:1010 android.view.Choreographer.doCallbacks:809 android.view.Choreographer.doFrame:744 android.view.Choreographer$FrameDisplayEventReceiver.run:995 
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): Relayout returned: old=(0,0,720,1520) new=(0,0,720,1520) req=(720,1520)0 dur=14 res=0x3 s={true 3001895936} ch=false fn=1
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): updateBoundsLayer: shouldReparent = false t = android.view.SurfaceControl$Transaction@53762df sc = Surface(name=Bounds for - com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity@0)/@0x2f3b2c frame = 1
+I/SurfaceView( 6029): applySurfaceTransforms: t = android.view.SurfaceControl$Transaction@82bc9f5 surfaceControl = Surface(name=SurfaceView - com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity@ec43339@0)/@0xaabd38a frame = 1
+I/SurfaceControl( 6029): nativeRelease nativeObject s[4016852096]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[4016852096]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[4016850816]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[4016850816]
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): MSG_WINDOW_FOCUS_CHANGED 1 1
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=null mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=134
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=null mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/SurfaceControl( 6029): nativeRelease nativeObject s[4058616096]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[4058616096]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[4058617728]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[4058617728]
+D/ProfileInstaller( 6029): Installing profile for com.grupo4topicos3.petcuida.petcuida
+D/InputMethodManager( 6029): SSI - flag : 0 Pid : 6029 view : com.grupo4topicos3.petcuida.petcuida
+D/InputMethodManager( 6029): view is not EditText
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=io.flutter.plugin.editing.InputConnectionAdaptor@b8222e mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=145
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=134
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+D/InputMethodManager( 6029): SSI - flag : 0 Pid : 6029 view : com.grupo4topicos3.petcuida.petcuida
+D/InputMethodManager( 6029): view is not EditText
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+D/InputConnectionAdaptor( 6029): The input method toggled cursor monitoring on
+D/InsetsSourceConsumer( 6029): setRequestedVisible: visible=true, type=13, host=com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity, from=android.view.InsetsSourceConsumer.show:229 android.view.InsetsController.showDirectly:1437 android.view.InsetsController.controlAnimationUnchecked:1110 android.view.InsetsController.applyAnimation:1417 android.view.InsetsController.show:962 android.view.ViewRootImpl$ViewRootHandler.handleMessage:6146 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:246 android.app.ActivityThread.main:8653 java.lang.reflect.Method.invoke:-2 
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): MSG_RESIZED_REPORT: frame=(0,0,720,1520) ci=(0,56,0,654) vi=(0,56,0,654) or=1
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3465580960]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3465580960]
+I/SurfaceControl( 6029): assignNativeObject: nativeObject = 0 Surface(name=null)/@0x83b5d7e / android.view.SurfaceControl.readFromParcel:1117 android.view.IWindowSession$Stub$Proxy.relayout:1836 android.view.ViewRootImpl.relayoutWindow:9005 android.view.ViewRootImpl.performTraversals:3360 android.view.ViewRootImpl.doTraversal:2618 android.view.ViewRootImpl$TraversalRunnable.run:9971 android.view.Choreographer$CallbackRecord.run:1010 android.view.Choreographer.doCallbacks:809 android.view.Choreographer.doFrame:744 android.view.Choreographer$FrameDisplayEventReceiver.run:995 
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3819686016]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3819686016]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3819685952]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3819685952]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3819685888]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3819685888]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): Relayout returned: old=(0,0,720,1520) new=(0,0,720,1520) req=(720,1520)0 dur=14 res=0x1 s={true 3001895936} ch=false fn=4
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3234583296]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3234583296]
+D/InputConnectionAdaptor( 6029): The input method toggled text monitoring on
+D/InputMethodManager( 6029): SSI - flag : 0 Pid : 6029 view : com.grupo4topicos3.petcuida.petcuida
+D/InputMethodManager( 6029): view is not EditText
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+D/InputMethodManager( 6029): SSI - flag : 0 Pid : 6029 view : com.grupo4topicos3.petcuida.petcuida
+D/InputMethodManager( 6029): view is not EditText
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): The input has been finished in ImeInputStage.
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): The input has been finished in ImeInputStage.
+D/InsetsSourceConsumer( 6029): setRequestedVisible: visible=false, type=13, host=com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity, from=android.view.InsetsSourceConsumer.hide:236 android.view.ImeInsetsSourceConsumer.hide:101 android.view.InsetsController.hideDirectly:1430 android.view.InsetsController.controlAnimationUnchecked:1112 android.view.InsetsController.applyAnimation:1417 android.view.InsetsController.hide:984 android.view.ViewRootImpl$ViewRootHandler.handleMessage:6150 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:246 android.app.ActivityThread.main:8653 
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/InputConnectionAdaptor( 6029): The input method toggled cursor monitoring off
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=io.flutter.plugin.editing.InputConnectionAdaptor@40772de mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=129
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=145
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3192887584]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3192887584]
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=null mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=138
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=129
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=io.flutter.plugin.editing.InputConnectionAdaptor@27fbf8c mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=136
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=138
+D/InputMethodManager( 6029): SSI - flag : 0 Pid : 6029 view : com.grupo4topicos3.petcuida.petcuida
+D/InputMethodManager( 6029): view is not EditText
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+D/InputConnectionAdaptor( 6029): The input method toggled cursor monitoring on
+D/InsetsSourceConsumer( 6029): setRequestedVisible: visible=true, type=13, host=com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity, from=android.view.InsetsSourceConsumer.show:229 android.view.InsetsController.showDirectly:1437 android.view.InsetsController.controlAnimationUnchecked:1110 android.view.InsetsController.applyAnimation:1417 android.view.InsetsController.show:962 android.view.ViewRootImpl$ViewRootHandler.handleMessage:6146 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:246 android.app.ActivityThread.main:8653 java.lang.reflect.Method.invoke:-2 
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3192889184]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3192889184]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): The input has been finished in ImeInputStage.
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): The input has been finished in ImeInputStage.
+D/InsetsSourceConsumer( 6029): setRequestedVisible: visible=false, type=13, host=com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity, from=android.view.InsetsSourceConsumer.hide:236 android.view.ImeInsetsSourceConsumer.hide:101 android.view.InsetsController.hideDirectly:1430 android.view.InsetsController.controlAnimationUnchecked:1112 android.view.InsetsController.applyAnimation:1417 android.view.InsetsController.hide:984 android.view.ViewRootImpl$ViewRootHandler.handleMessage:6150 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:246 android.app.ActivityThread.main:8653 
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/InputConnectionAdaptor( 6029): The input method toggled cursor monitoring off
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=io.flutter.plugin.editing.InputConnectionAdaptor@ac8ffb6 mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=122
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=136
+I/SurfaceControl( 6029): nativeRelease nativeObject s[2976752512]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[2976752512]
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=null mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=142
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=122
+D/InputMethodManager( 6029): HSIFW - flag : 0
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3234417280]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3234417280]
+I/SurfaceControl( 6029): assignNativeObject: nativeObject = 0 Surface(name=null)/@0x83b5d7e / android.view.SurfaceControl.readFromParcel:1117 android.view.IWindowSession$Stub$Proxy.relayout:1836 android.view.ViewRootImpl.relayoutWindow:9005 android.view.ViewRootImpl.performTraversals:3360 android.view.ViewRootImpl.doTraversal:2618 android.view.ViewRootImpl$TraversalRunnable.run:9971 android.view.Choreographer$CallbackRecord.run:1010 android.view.Choreographer.doCallbacks:809 android.view.Choreographer.doFrame:744 android.view.Choreographer$FrameDisplayEventReceiver.run:995 
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3196097056]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3196097056]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3017555104]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3017555104]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3465580960]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3465580960]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): Relayout returned: old=(0,0,720,1520) new=(0,0,720,1520) req=(720,1520)0 dur=20 res=0x1 s={true 3001895936} ch=false fn=55
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+I/SurfaceControl( 6029): nativeRelease nativeObject s[4016849376]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[4016849376]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3234414848]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3234414848]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3234417280]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3234417280]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): MSG_WINDOW_FOCUS_CHANGED 0 1
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3819685760]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3819685760]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): MSG_WINDOW_FOCUS_CHANGED 1 1
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=null mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=122
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=142
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3819685888]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3819685888]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3968858112]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3968858112]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3968858016]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3968858016]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): MSG_WINDOW_FOCUS_CHANGED 0 1
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3819686176]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3819686176]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): MSG_WINDOW_FOCUS_CHANGED 1 1
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=null mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=136
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=122
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=io.flutter.plugin.editing.InputConnectionAdaptor@1e44f8e mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=155
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=136
+D/InputMethodManager( 6029): SSI - flag : 0 Pid : 6029 view : com.grupo4topicos3.petcuida.petcuida
+D/InputMethodManager( 6029): view is not EditText
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+D/InputConnectionAdaptor( 6029): The input method toggled cursor monitoring on
+D/InsetsSourceConsumer( 6029): setRequestedVisible: visible=true, type=13, host=com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity, from=android.view.InsetsSourceConsumer.show:229 android.view.InsetsController.showDirectly:1437 android.view.InsetsController.controlAnimationUnchecked:1110 android.view.InsetsController.applyAnimation:1417 android.view.InsetsController.show:962 android.view.ViewRootImpl$ViewRootHandler.handleMessage:6146 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:246 android.app.ActivityThread.main:8653 java.lang.reflect.Method.invoke:-2 
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3466728416]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3466728416]
+D/InputConnectionAdaptor( 6029): The input method toggled text monitoring on
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=io.flutter.plugin.editing.InputConnectionAdaptor@b59d69a mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=156
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=155
+D/InputMethodManager( 6029): SSI - flag : 0 Pid : 6029 view : com.grupo4topicos3.petcuida.petcuida
+D/InputMethodManager( 6029): view is not EditText
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+W/IInputConnectionWrapper( 6029): getExtractedText on inactive InputConnection
+D/InputConnectionAdaptor( 6029): The input method toggled cursor monitoring on
+D/InputConnectionAdaptor( 6029): The input method toggled text monitoring on
+D/InputMethodManager( 6029): HSIFW - flag : 0
+D/InsetsSourceConsumer( 6029): setRequestedVisible: visible=false, type=13, host=com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity, from=android.view.InsetsSourceConsumer.hide:236 android.view.ImeInsetsSourceConsumer.hide:101 android.view.InsetsController.hideDirectly:1430 android.view.InsetsController.controlAnimationUnchecked:1112 android.view.InsetsController.applyAnimation:1417 android.view.InsetsController.hide:984 android.view.ViewRootImpl$ViewRootHandler.handleMessage:6150 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:246 android.app.ActivityThread.main:8653 
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/InputConnectionAdaptor( 6029): The input method toggled cursor monitoring off
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/InputConnectionAdaptor( 6029): The input method toggled text monitoring off
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=null mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=143
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=156
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3017554592]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3017554592]
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=io.flutter.plugin.editing.InputConnectionAdaptor@b4809a7 mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=136
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=143
+D/InputMethodManager( 6029): SSI - flag : 0 Pid : 6029 view : com.grupo4topicos3.petcuida.petcuida
+D/InputMethodManager( 6029): view is not EditText
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+D/InputConnectionAdaptor( 6029): The input method toggled cursor monitoring on
+D/InsetsSourceConsumer( 6029): setRequestedVisible: visible=true, type=13, host=com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity, from=android.view.InsetsSourceConsumer.show:229 android.view.InsetsController.showDirectly:1437 android.view.InsetsController.controlAnimationUnchecked:1110 android.view.InsetsController.applyAnimation:1417 android.view.InsetsController.show:962 android.view.ViewRootImpl$ViewRootHandler.handleMessage:6146 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:246 android.app.ActivityThread.main:8653 java.lang.reflect.Method.invoke:-2 
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3192885376]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3192885376]
+D/InputMethodManager( 6029): HSIFW - flag : 0
+D/InsetsSourceConsumer( 6029): setRequestedVisible: visible=false, type=13, host=com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity, from=android.view.InsetsSourceConsumer.hide:236 android.view.ImeInsetsSourceConsumer.hide:101 android.view.InsetsController.hideDirectly:1430 android.view.InsetsController.controlAnimationUnchecked:1112 android.view.InsetsController.applyAnimation:1417 android.view.InsetsController.hide:984 android.view.ViewRootImpl$ViewRootHandler.handleMessage:6150 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:246 android.app.ActivityThread.main:8653 
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/InputConnectionAdaptor( 6029): The input method toggled cursor monitoring off
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/FlutterJNI( 6029): Sending viewport metrics to the engine.
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=null mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=121
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=136
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3975658080]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3975658080]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): ViewPostIme key 0
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): ViewPostIme key 1
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): ViewPostIme key 0
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): ViewPostIme key 1
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): ViewPostIme key 0
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): ViewPostIme key 1
+F/droid.bluetoot(10090): [1007/142643.880282:FATAL:hci_layer_android.cc(102)] Check failed: status == Status::SUCCESS. 
+F/droid.bluetoot(10090): #00 0xc0bc93b3 /system/lib/libchrome.so+0x000823b3
+F/droid.bluetoot(10090): #01 0xc08d08bb /system/lib/libbluetooth.so+0x001bd8bb
+F/droid.bluetoot(10090): #02 0xc0664441 /system/lib/android.hardware.bluetooth@1.0.so+0x00011441
+F/droid.bluetoot(10090): #03 0xc05b067f /system/lib/android.hardware.bluetooth@1.1.so+0x0001267f
+F/droid.bluetoot(10090): #04 0xec95cf13 /system/lib/libhidlbase.so+0x0005bf13
+F/droid.bluetoot(10090): #05 0xec95f983 /system/lib/libhidlbase.so+0x0005e983
+F/droid.bluetoot(10090): #06 0xec96075f /system/lib/libhidlbase.so+0x0005f75f
+F/droid.bluetoot(10090): #07 0xec96c36b /system/lib/libhidlbase.so+0x0006b36b
+F/droid.bluetoot(10090): #08 0xf0551e85 /system/lib/libutils.so+0x0000de85
+F/droid.bluetoot(10090): #09 0xef2af02f /system/lib/libandroid_runtime.so+0x0006e02f
+F/droid.bluetoot(10090): #10 0xf05519cd /system/lib/libutils.so+0x0000d9cd
+F/droid.bluetoot(10090): #11 0xeea0ad13 /apex/com.android.runtime/lib/bionic/libc.so+0x000a9d13
+F/droid.bluetoot(10090): #12 0xee9c4193 /apex/com.android.runtime/lib/bionic/libc.so+0x00063193
+F/droid.bluetoot(10090): 
+F/droid.bluetoot(10176): [1007/142649.780987:FATAL:hci_layer_android.cc(102)] Check failed: status == Status::SUCCESS. 
+F/droid.bluetoot(10176): #00 0xc0c2a3b3 /system/lib/libchrome.so+0x000823b3
+F/droid.bluetoot(10176): #01 0xc08c68bb /system/lib/libbluetooth.so+0x001bd8bb
+F/droid.bluetoot(10176): #02 0xc0473441 /system/lib/android.hardware.bluetooth@1.0.so+0x00011441
+F/droid.bluetoot(10176): #03 0xc05ee67f /system/lib/android.hardware.bluetooth@1.1.so+0x0001267f
+F/droid.bluetoot(10176): #04 0xec95cf13 /system/lib/libhidlbase.so+0x0005bf13
+F/droid.bluetoot(10176): #05 0xec95f983 /system/lib/libhidlbase.so+0x0005e983
+F/droid.bluetoot(10176): #06 0xec96075f /system/lib/libhidlbase.so+0x0005f75f
+F/droid.bluetoot(10176): #07 0xec96c36b /system/lib/libhidlbase.so+0x0006b36b
+F/droid.bluetoot(10176): #08 0xf0551e85 /system/lib/libutils.so+0x0000de85
+F/droid.bluetoot(10176): #09 0xef2af02f /system/lib/libandroid_runtime.so+0x0006e02f
+F/droid.bluetoot(10176): #10 0xf05519cd /system/lib/libutils.so+0x0000d9cd
+F/droid.bluetoot(10176): #11 0xeea0ad13 /apex/com.android.runtime/lib/bionic/libc.so+0x000a9d13
+F/droid.bluetoot(10176): #12 0xee9c4193 /apex/com.android.runtime/lib/bionic/libc.so+0x00063193
+F/droid.bluetoot(10176): 
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3968859104]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3968859104]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3968859232]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3968859232]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3968859008]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3968859008]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): MSG_WINDOW_FOCUS_CHANGED 0 1
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3968859296]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3968859296]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): MSG_WINDOW_FOCUS_CHANGED 1 1
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+D/InputMethodManager( 6029): prepareNavigationBarInfo() DecorView@3399459[MainActivity]
+D/InputMethodManager( 6029): getNavigationBarColor() -16777216
+V/InputMethodManager( 6029): Starting input: tba=com.grupo4topicos3.petcuida.petcuida ic=null mNaviBarColor -16777216 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager( 6029): startInputInner - Id : 0
+I/InputMethodManager( 6029): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport( 6029): Input channel constructed: 'ClientS', fd=155
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=121
+F/droid.bluetoot(10255): [1007/142655.687441:FATAL:hci_layer_android.cc(102)] Check failed: status == Status::SUCCESS. 
+F/droid.bluetoot(10255): #00 0xc0ca43b3 /system/lib/libchrome.so+0x000823b3
+F/droid.bluetoot(10255): #01 0xc07c38bb /system/lib/libbluetooth.so+0x001bd8bb
+F/droid.bluetoot(10255): #02 0xc0aeb441 /system/lib/android.hardware.bluetooth@1.0.so+0x00011441
+F/droid.bluetoot(10255): #03 0xc049f67f /system/lib/android.hardware.bluetooth@1.1.so+0x0001267f
+F/droid.bluetoot(10255): #04 0xec95cf13 /system/lib/libhidlbase.so+0x0005bf13
+F/droid.bluetoot(10255): #05 0xec95f983 /system/lib/libhidlbase.so+0x0005e983
+F/droid.bluetoot(10255): #06 0xec96075f /system/lib/libhidlbase.so+0x0005f75f
+F/droid.bluetoot(10255): #07 0xec96c36b /system/lib/libhidlbase.so+0x0006b36b
+F/droid.bluetoot(10255): #08 0xf0551e85 /system/lib/libutils.so+0x0000de85
+F/droid.bluetoot(10255): #09 0xef2af02f /system/lib/libandroid_runtime.so+0x0006e02f
+F/droid.bluetoot(10255): #10 0xf05519cd /system/lib/libutils.so+0x0000d9cd
+F/droid.bluetoot(10255): #11 0xeea0ad13 /apex/com.android.runtime/lib/bionic/libc.so+0x000a9d13
+F/droid.bluetoot(10255): #12 0xee9c4193 /apex/com.android.runtime/lib/bionic/libc.so+0x00063193
+F/droid.bluetoot(10255): 
+F/droid.bluetoot(10324): [1007/142701.598129:FATAL:hci_layer_android.cc(102)] Check failed: status == Status::SUCCESS. 
+F/droid.bluetoot(10324): #00 0xc0d983b3 /system/lib/libchrome.so+0x000823b3
+F/droid.bluetoot(10324): #01 0xc08878bb /system/lib/libbluetooth.so+0x001bd8bb
+F/droid.bluetoot(10324): #02 0xc065e441 /system/lib/android.hardware.bluetooth@1.0.so+0x00011441
+F/droid.bluetoot(10324): #03 0xc0c1e67f /system/lib/android.hardware.bluetooth@1.1.so+0x0001267f
+F/droid.bluetoot(10324): #04 0xec95cf13 /system/lib/libhidlbase.so+0x0005bf13
+F/droid.bluetoot(10324): #05 0xec95f983 /system/lib/libhidlbase.so+0x0005e983
+F/droid.bluetoot(10324): #06 0xec96075f /system/lib/libhidlbase.so+0x0005f75f
+F/droid.bluetoot(10324): #07 0xec96c36b /system/lib/libhidlbase.so+0x0006b36b
+F/droid.bluetoot(10324): #08 0xf0551e85 /system/lib/libutils.so+0x0000de85
+F/droid.bluetoot(10324): #09 0xef2af02f /system/lib/libandroid_runtime.so+0x0006e02f
+F/droid.bluetoot(10324): #10 0xf05519cd /system/lib/libutils.so+0x0000d9cd
+F/droid.bluetoot(10324): #11 0xeea0ad13 /apex/com.android.runtime/lib/bionic/libc.so+0x000a9d13
+F/droid.bluetoot(10324): #12 0xee9c4193 /apex/com.android.runtime/lib/bionic/libc.so+0x00063193
+F/droid.bluetoot(10324): 
+F/droid.bluetoot(10415): [1007/142707.541637:FATAL:hci_layer_android.cc(102)] Check failed: status == Status::SUCCESS. 
+F/droid.bluetoot(10415): #00 0xc0c0a3b3 /system/lib/libchrome.so+0x000823b3
+F/droid.bluetoot(10415): #01 0xc08c58bb /system/lib/libbluetooth.so+0x001bd8bb
+F/droid.bluetoot(10415): #02 0xc0615441 /system/lib/android.hardware.bluetooth@1.0.so+0x00011441
+F/droid.bluetoot(10415): #03 0xc04b167f /system/lib/android.hardware.bluetooth@1.1.so+0x0001267f
+F/droid.bluetoot(10415): #04 0xec95cf13 /system/lib/libhidlbase.so+0x0005bf13
+F/droid.bluetoot(10415): #05 0xec95f983 /system/lib/libhidlbase.so+0x0005e983
+F/droid.bluetoot(10415): #06 0xec96075f /system/lib/libhidlbase.so+0x0005f75f
+F/droid.bluetoot(10415): #07 0xec96c36b /system/lib/libhidlbase.so+0x0006b36b
+F/droid.bluetoot(10415): #08 0xf0551e85 /system/lib/libutils.so+0x0000de85
+F/droid.bluetoot(10415): #09 0xef2af02f /system/lib/libandroid_runtime.so+0x0006e02f
+F/droid.bluetoot(10415): #10 0xf05519cd /system/lib/libutils.so+0x0000d9cd
+F/droid.bluetoot(10415): #11 0xeea0ad13 /apex/com.android.runtime/lib/bionic/libc.so+0x000a9d13
+F/droid.bluetoot(10415): #12 0xee9c4193 /apex/com.android.runtime/lib/bionic/libc.so+0x00063193
+F/droid.bluetoot(10415): 
+F/droid.bluetoot(10516): [1007/142713.543497:FATAL:hci_layer_android.cc(102)] Check failed: status == Status::SUCCESS. 
+F/droid.bluetoot(10516): #00 0xc0bcc3b3 /system/lib/libchrome.so+0x000823b3
+F/droid.bluetoot(10516): #01 0xc080c8bb /system/lib/libbluetooth.so+0x001bd8bb
+F/droid.bluetoot(10516): #02 0xc053a441 /system/lib/android.hardware.bluetooth@1.0.so+0x00011441
+F/droid.bluetoot(10516): #03 0xc04e067f /system/lib/android.hardware.bluetooth@1.1.so+0x0001267f
+F/droid.bluetoot(10516): #04 0xec95cf13 /system/lib/libhidlbase.so+0x0005bf13
+F/droid.bluetoot(10516): #05 0xec95f983 /system/lib/libhidlbase.so+0x0005e983
+F/droid.bluetoot(10516): #06 0xec96075f /system/lib/libhidlbase.so+0x0005f75f
+F/droid.bluetoot(10516): #07 0xec96c36b /system/lib/libhidlbase.so+0x0006b36b
+F/droid.bluetoot(10516): #08 0xf0551e85 /system/lib/libutils.so+0x0000de85
+F/droid.bluetoot(10516): #09 0xef2af02f /system/lib/libandroid_runtime.so+0x0006e02f
+F/droid.bluetoot(10516): #10 0xf05519cd /system/lib/libutils.so+0x0000d9cd
+F/droid.bluetoot(10516): #11 0xeea0ad13 /apex/com.android.runtime/lib/bionic/libc.so+0x000a9d13
+F/droid.bluetoot(10516): #12 0xee9c4193 /apex/com.android.runtime/lib/bionic/libc.so+0x00063193
+F/droid.bluetoot(10516): 
+F/droid.bluetoot(10587): [1007/142719.463345:FATAL:hci_layer_android.cc(102)] Check failed: status == Status::SUCCESS. 
+F/droid.bluetoot(10587): #00 0xc0cd03b3 /system/lib/libchrome.so+0x000823b3
+F/droid.bluetoot(10587): #01 0xc08108bb /system/lib/libbluetooth.so+0x001bd8bb
+F/droid.bluetoot(10587): #02 0xc0b54441 /system/lib/android.hardware.bluetooth@1.0.so+0x00011441
+F/droid.bluetoot(10587): #03 0xc0bdc67f /system/lib/android.hardware.bluetooth@1.1.so+0x0001267f
+F/droid.bluetoot(10587): #04 0xec95cf13 /system/lib/libhidlbase.so+0x0005bf13
+F/droid.bluetoot(10587): #05 0xec95f983 /system/lib/libhidlbase.so+0x0005e983
+F/droid.bluetoot(10587): #06 0xec96075f /system/lib/libhidlbase.so+0x0005f75f
+F/droid.bluetoot(10587): #07 0xec96c36b /system/lib/libhidlbase.so+0x0006b36b
+F/droid.bluetoot(10587): #08 0xf0551e85 /system/lib/libutils.so+0x0000de85
+F/droid.bluetoot(10587): #09 0xef2af02f /system/lib/libandroid_runtime.so+0x0006e02f
+F/droid.bluetoot(10587): #10 0xf05519cd /system/lib/libutils.so+0x0000d9cd
+F/droid.bluetoot(10587): #11 0xeea0ad13 /apex/com.android.runtime/lib/bionic/libc.so+0x000a9d13
+F/droid.bluetoot(10587): #12 0xee9c4193 /apex/com.android.runtime/lib/bionic/libc.so+0x00063193
+F/droid.bluetoot(10587): 
+F/droid.bluetoot(10657): [1007/142725.394494:FATAL:hci_layer_android.cc(102)] Check failed: status == Status::SUCCESS. 
+F/droid.bluetoot(10657): #00 0xc0ae23b3 /system/lib/libchrome.so+0x000823b3
+F/droid.bluetoot(10657): #01 0xc07008bb /system/lib/libbluetooth.so+0x001bd8bb
+F/droid.bluetoot(10657): #02 0xc032e441 /system/lib/android.hardware.bluetooth@1.0.so+0x00011441
+F/droid.bluetoot(10657): #03 0xc052967f /system/lib/android.hardware.bluetooth@1.1.so+0x0001267f
+F/droid.bluetoot(10657): #04 0xec95cf13 /system/lib/libhidlbase.so+0x0005bf13
+F/droid.bluetoot(10657): #05 0xec95f983 /system/lib/libhidlbase.so+0x0005e983
+F/droid.bluetoot(10657): #06 0xec96075f /system/lib/libhidlbase.so+0x0005f75f
+F/droid.bluetoot(10657): #07 0xec96c36b /system/lib/libhidlbase.so+0x0006b36b
+F/droid.bluetoot(10657): #08 0xf0551e85 /system/lib/libutils.so+0x0000de85
+F/droid.bluetoot(10657): #09 0xef2af02f /system/lib/libandroid_runtime.so+0x0006e02f
+F/droid.bluetoot(10657): #10 0xf05519cd /system/lib/libutils.so+0x0000d9cd
+F/droid.bluetoot(10657): #11 0xeea0ad13 /apex/com.android.runtime/lib/bionic/libc.so+0x000a9d13
+F/droid.bluetoot(10657): #12 0xee9c4193 /apex/com.android.runtime/lib/bionic/libc.so+0x00063193
+F/droid.bluetoot(10657): 
+F/droid.bluetoot(10728): [1007/142731.346177:FATAL:hci_layer_android.cc(102)] Check failed: status == Status::SUCCESS. 
+F/droid.bluetoot(10728): #00 0xc0ce63b3 /system/lib/libchrome.so+0x000823b3
+F/droid.bluetoot(10728): #01 0xc09508bb /system/lib/libbluetooth.so+0x001bd8bb
+F/droid.bluetoot(10728): #02 0xc071c441 /system/lib/android.hardware.bluetooth@1.0.so+0x00011441
+F/droid.bluetoot(10728): #03 0xc063167f /system/lib/android.hardware.bluetooth@1.1.so+0x0001267f
+F/droid.bluetoot(10728): #04 0xec95cf13 /system/lib/libhidlbase.so+0x0005bf13
+F/droid.bluetoot(10728): #05 0xec95f983 /system/lib/libhidlbase.so+0x0005e983
+F/droid.bluetoot(10728): #06 0xec96075f /system/lib/libhidlbase.so+0x0005f75f
+F/droid.bluetoot(10728): #07 0xec96c36b /system/lib/libhidlbase.so+0x0006b36b
+F/droid.bluetoot(10728): #08 0xf0551e85 /system/lib/libutils.so+0x0000de85
+F/droid.bluetoot(10728): #09 0xef2af02f /system/lib/libandroid_runtime.so+0x0006e02f
+F/droid.bluetoot(10728): #10 0xf05519cd /system/lib/libutils.so+0x0000d9cd
+F/droid.bluetoot(10728): #11 0xeea0ad13 /apex/com.android.runtime/lib/bionic/libc.so+0x000a9d13
+F/droid.bluetoot(10728): #12 0xee9c4193 /apex/com.android.runtime/lib/bionic/libc.so+0x00063193
+F/droid.bluetoot(10728): 
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): MSG_WINDOW_FOCUS_CHANGED 0 1
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3968859360]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3968859360]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3195982112]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3195982112]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3968498304]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3968498304]
+D/InputTransport( 6029): Input channel destroyed: 'ClientS', fd=155
+I/SurfaceControl( 6029): nativeRelease nativeObject s[3195983200]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[3195983200]
+I/SurfaceView( 6029): onWindowVisibilityChanged(8) false io.flutter.embedding.android.FlutterSurfaceView{ec43339 V.E...... ........ 0,0-720,1436} of ViewRootImpl@e06a61b[MainActivity]
+I/SurfaceView( 6029): surfaceDestroyed callback.size 1 #2 io.flutter.embedding.android.FlutterSurfaceView{ec43339 V.E...... ........ 0,0-720,1436}
+I/SurfaceView( 6029): remove() from RT android.view.SurfaceView$2@ff0aa97 Surface(name=SurfaceView - com.grupo4topicos3.petcuida.petcuida/com.grupo4topicos3.petcuida.petcuida.MainActivity@ec43339@0)/@0xaabd38a
+I/SurfaceControl( 6029): nativeRelease nativeObject s[4016852064]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[4016852064]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[4016852352]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[4016852352]
+I/SurfaceControl( 6029): nativeRelease nativeObject s[2976752480]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[2976752480]
+I/SurfaceControl( 6029): assignNativeObject: nativeObject = 0 Surface(name=null)/@0x5bee46d / android.view.SurfaceControl.readFromParcel:1117 android.view.IWindowSession$Stub$Proxy.relayout:1826 android.view.ViewRootImpl.relayoutWindow:9005 android.view.ViewRootImpl.performTraversals:3360 android.view.ViewRootImpl.doTraversal:2618 android.view.ViewRootImpl$TraversalRunnable.run:9971 android.view.Choreographer$CallbackRecord.run:1010 android.view.Choreographer.doCallbacks:809 android.view.Choreographer.doFrame:744 android.view.Choreographer$FrameDisplayEventReceiver.run:995 
+I/SurfaceControl( 6029): assignNativeObject: nativeObject = 0 Surface(name=null)/@0x83b5d7e / android.view.SurfaceControl.readFromParcel:1117 android.view.IWindowSession$Stub$Proxy.relayout:1836 android.view.ViewRootImpl.relayoutWindow:9005 android.view.ViewRootImpl.performTraversals:3360 android.view.ViewRootImpl.doTraversal:2618 android.view.ViewRootImpl$TraversalRunnable.run:9971 android.view.Choreographer$CallbackRecord.run:1010 android.view.Choreographer.doCallbacks:809 android.view.Choreographer.doFrame:744 android.view.Choreographer$FrameDisplayEventReceiver.run:995 
+I/SurfaceControl( 6029): nativeRelease nativeObject s[4016851936]
+I/SurfaceControl( 6029): nativeRelease nativeObject e[4016851936]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): Relayout returned: old=(0,0,720,1520) new=(0,0,720,1520) req=(720,1520)8 dur=23 res=0x5 s={false 0} ch=true fn=111
+I/SurfaceView( 6029): windowStopped(true) false io.flutter.embedding.android.FlutterSurfaceView{ec43339 V.E...... ........ 0,0-720,1436} of ViewRootImpl@e06a61b[MainActivity]
+I/ViewRootImpl@e06a61b[MainActivity]( 6029): stopped(true) old=false
+Lost connection to device.
+
+=== FIM DO LOG: 2026-10-07 14:27:37 ===
