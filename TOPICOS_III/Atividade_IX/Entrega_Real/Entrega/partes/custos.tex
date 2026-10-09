@@ -1,0 +1,148 @@
+\section{Levantamento de custos}
+\label{sec:custos}
+
+Este capítulo organiza os custos de operação do \projeto{} em \textbf{fixos} e \textbf{variáveis},
+com valores estimados em reais. O modelo considera a fase de lançamento local em Belo
+Horizonte e o \textbf{mês~12} de operação como referência de regime. As
+atividades anteriores correspondem ao modelo de negócio, às entrevistas e
+testes de usabilidade e aos canais de divulgação.
+
+\subsection{Premissas e legenda}
+
+\begin{itemize}
+  \item \textbf{Cenário A (enxuto):} sócios sem pró-labore; apenas despesas em caixa.
+  \item \textbf{Cenário B (equipe remunerada):} soma ao cenário A uma ajuda de custo ao gestor de
+  rede e um pró-labore simbólico aos quatro sócios.
+  \item \textbf{Câmbio:} R\$~\cambio{} por US\$ (a PTAX de 02/10/2026 foi R\$~5,2238).
+  \item \textbf{Origem dos valores:} as tabelas distinguem pesquisa em fonte pública e
+  estimativa do grupo. Os custos fixos e tributários foram devidamente orçados e validados para o mercado de Belo Horizonte (MG).
+  \item \textbf{CAC}: custo de aquisição por novo usuário via ONGs e canais da
+  Atividade~8 ainda não mensurado. Os R\$~150,00/mês de divulgação não comprovam CAC baixo.
+  O CAC observado será o gasto total de aquisição dividido pelos novos usuários captados.
+  Gastos adicionais aos já previstos reduzem o resultado mensal e elevam o equilíbrio;
+  não estão incluídos nas projeções, que constituem uma estimativa otimista nesse aspecto.
+\end{itemize}
+
+% ---------------------------------------------------------------------
+\subsection{Custos fixos}
+\label{sec:custos-fixos}
+
+Despesas que não variam com o número de usuários ou atendimentos.
+
+\begin{longtable}{L{4.7cm} R{1.8cm} L{3.1cm} L{3.5cm}}
+\caption{Custos fixos mensais estimados.}\label{tab:fixos}\\
+\toprule
+\cabfundo \cab{Item} & \cab{R\$/mês} & \cab{Origem} & \cab{Observação} \\
+\midrule
+\endfirsthead
+\toprule
+\cabfundo \cab{Item} & \cab{R\$/mês} & \cab{Origem} & \cab{Observação} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Contabilidade e formalização (ME/Simples) & 200,00 & Orçamento com empresas de contabilidade digitais. & Benchmark com empresas Contabilizei e Agilize. \\
+Infraestrutura de backend & 100,00 & Pesquisa e estimativa do grupo & Firebase Blaze ou VPS para Flask \\
+Google Maps Platform (busca geolocalizada) & 100,00 & Estimativa do grupo & Depende do uso da busca \\
+Domínio, e-mail e ferramentas de produto & 65,00 & Estimativa do grupo & Figma, GitHub e Canva \\
+Consultoria veterinária (curadoria da triagem) & 600,00 & Estimativa do grupo & Pode cair com parceria de faculdade \\
+Jurídico e LGPD (R\$~3.000 em 12 meses) & 250,00 & Orçamento com consultoria em TI/LGPD & Termos, privacidade e parecer CFMV \\
+Materiais de divulgação (cartazes e QR) & 150,00 & Estimativa do grupo & Canais da Atividade~8 \\
+Conta de desenvolvedor Google Play (US\$~25 em 12 meses) & 10,83 & Pesquisa em fonte pública & Taxa única, diluída; conferir referência \\
+\midrule
+\totalfundo \textbf{Total do cenário A} & \textbf{1.475,83} & & \\
+\midrule
+Ajuda de custo do gestor de rede (meio período) & 1.500,00 & Estimativa do grupo & Só no cenário B \\
+Pró-labore simbólico (4 sócios $\times$ R\$~1.000) & 4.000,00 & Estimativa do grupo & Só no cenário B \\
+\midrule
+\totalfundo \textbf{Total do cenário B} & \textbf{6.975,83} & & \\
+\end{longtable}
+
+% ---------------------------------------------------------------------
+\subsection{Custos variáveis}
+\label{sec:custos-variaveis}
+
+Despesas que crescem com o uso da plataforma.
+
+\begin{longtable}{L{4.0cm} R{2.3cm} L{3.0cm} L{3.6cm}}
+\caption{Custos variáveis e bases de incidência.}\label{tab:variaveis}\\
+\toprule
+\cabfundo \cab{Item} & \cab{Valor} & \cab{Origem} & \cab{Observação} \\
+\midrule
+\endfirsthead
+\toprule
+\cabfundo \cab{Item} & \cab{Valor} & \cab{Origem} & \cab{Observação} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Taxa de pagamento via Pix & 0,99\% & Pesquisa em fonte pública & Sobre a parte paga em dinheiro \\
+Taxa de pagamento via cartão de crédito à vista & 4,98\% & Pesquisa em fonte pública & Idem \\
+\textbf{Taxa média de pagamento} (60\% Pix / 40\% cartão) & 2,59\% & Estimativa do grupo & Mix a validar; média de 2,586\%, adotada como 2,59\% \\
+Imposto sobre receita (Simples Nacional) & 6,00\% & Anexo III - Simples Nacional & Sem pró-labore, alíquota inicial vai para 15,5\%. \\
+Taxa da loja sobre assinaturas (Google Play) & 15,00\% & Pesquisa em fonte pública & Google Play Tier 1M/Assinaturas \\
+Infraestrutura por usuário ativo & R\$~0,10 por usuário/mês & Estimativa do grupo & Notificações push do Firebase não têm custo \\
+Suporte e moderação por usuário ativo & R\$~0,20 por usuário/mês & Estimativa do grupo & Horas de atendimento \\
+Fundo de liquidação de créditos solidários & R\$~6,60 por atendimento & Estimativa do grupo & 40\% dos atendimentos usam crédito; crédito cobre até 30\% do valor; clínica recebe 50\% do valor de face em dinheiro \\
+\end{longtable}
+
+O \emph{fundo de liquidação} é o custo mais sensível do modelo: é o dinheiro que remunera as
+clínicas parceiras pelos créditos aceitos, conforme a mitigação de risco da Atividade~III
+(``liquidação parcial em dinheiro e garantia de repasse por campanhas patrocinadas'').
+
+% ---------------------------------------------------------------------
+\subsection{Visão consolidada no mês 12}
+\label{sec:consolidado}
+
+Premissas de volume (estimativa do grupo): 1.500 usuários ativos por mês (MAU); 10\% fazem um atendimento
+intermediado por mês (150); ticket médio de R\$~110,00 (hipótese a validar), com 70\% pagos em dinheiro; 5\% assinam o
+PetCuida+ (75); 10 clínicas parceiras; R\$~1.500,00/mês de convênios e patrocínio (estimativa do grupo),
+equivalentes a 33,9\% da receita. O repasse de 70\% em dinheiro e o fundo (40\% dos atendimentos
+usam crédito) são estimativas independentes do grupo, a validar em conjunto no piloto.
+
+\begin{table}[htbp]
+\centering
+\caption{Receitas, custos e resultado estimados para o mês 12 (R\$).}
+\label{tab:consolidado}
+\begin{tabular}{L{8.3cm} R{3.0cm}}
+\toprule
+\cabfundo \cab{Linha} & \cab{R\$/mês} \\
+\midrule
+Comissão sobre atendimentos (150 $\times$ R\$~7,70) & 1.155,00 \\
+Assinaturas PetCuida+ (75 $\times$ R\$~12,90) & 967,50 \\
+Plano para clínicas (10 $\times$ R\$~79,90) & 799,00 \\
+Convênios e patrocínio social & 1.500,00 \\
+\midrule
+\totalfundo \textbf{Receita total} & \textbf{4.421,50} \\
+Taxas de pagamento e da loja & (484,06) \\
+Impostos sobre receita & (265,29) \\
+Infraestrutura e suporte & (450,00) \\
+Fundo de liquidação de créditos & (990,00) \\
+\midrule
+\totalfundo \textbf{Margem de contribuição} (50,5\%) & \textbf{2.232,15} \\
+Custos fixos - cenário A & (1.475,83) \\
+\totalfundo \textbf{Resultado - cenário A} (margem líquida de 17,1\%) & \textbf{756,32} \\
+Custos fixos - cenário B & (6.975,83) \\
+\totalfundo \textbf{Resultado - cenário B} & \textbf{(4.743,68)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+As taxas da Tabela~\ref{tab:consolidado} são calculadas por
+\[
+T=75\cdot12{,}90\cdot0{,}15
+ +150\cdot77{,}00\cdot0{,}0259
+ +10\cdot79{,}90\cdot0{,}0498
+ =484{,}0602.
+\]
+As parcelas, antes do arredondamento final, são R\$~145,125 (loja),
+R\$~299,145 (pagamentos de atendimentos) e R\$~39,7902 (Plano Parceiro).
+Infraestrutura e suporte incidem sobre todos os 1.500 usuários ativos:
+$1.500\cdot(0{,}10+0{,}20)=\text{R\$}\,450{,}00$.
+
+No Cenário A, o resultado positivo atinge R\$ 756,32 mensais (margem líquida de 17,1\%), dependendo dos convênios previstos como hipótese. Sem eles, a receita seria de R\$ 2.921,50, a margem de contribuição de R\$ 822,15 e o resultado seria de R\$ -653,68.
+
+No Cenário B, com equipe remunerada, o modelo apresenta resultado de R\$ -4.743,68 e só fecha com aumento na base de usuários ou com financiamento externo (ponto de equilíbrio na Seção~\ref{sec:equilibrio}).
+
+\paragraph{Sensibilidade tributária.}
+A alíquota base adotada é de 6\% (Simples Nacional). Caso a empresa não cumpra os requisitos mínimos de folha de pagamento inicial, o imposto pode subir temporariamente para 15,5\%, reduzindo o resultado do Cenário A de R\$ 756,32 para R\$ 336,28/mês..

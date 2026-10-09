@@ -1,0 +1,111 @@
+\section{Estratégia de precificação}
+\label{sec:precificacao}
+
+\subsection{Preço de venda definido}
+\label{sec:preco-venda}
+
+O \projeto{} adota um modelo em que \textbf{o tutor de baixa renda não paga para usar o núcleo do
+produto}. A receita vem do fluxo financeiro, de uma assinatura opcional e do lado dos prestadores,
+conforme a Atividade~III.
+
+\begin{longtable}{L{3.4cm} L{3.7cm} L{3.2cm} L{3.4cm}}
+\caption{Preços de venda definidos.}\label{tab:precos}\\
+\toprule
+\cabfundo \cab{Oferta} & \cab{Quem paga} & \cab{Preço} & \cab{Modelo} \\
+\midrule
+\endfirsthead
+\toprule
+\cabfundo \cab{Oferta} & \cab{Quem paga} & \cab{Preço} & \cab{Modelo} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\textbf{PetCuida Básico} (cadastro, lembretes, triagem, créditos) & Tutor & \textbf{Gratuito} & Gratuidade estratégica \\
+\textbf{PetCuida+} (múltiplos pets, prontuário ampliado, descontos em parceiros) & Tutor assinante & \textbf{R\$~12,90/mês} ou \textbf{R\$~119,00/ano} & Assinatura \\
+\textbf{Comissão de intermediação} & Tutor, sobre a parte paga em dinheiro & \textbf{10\%} (faixa de 8\% a 12\%) & \emph{Take rate} \\
+\textbf{Plano Parceiro} (destaque no mapa e agenda) & Clínica ou veterinário & \textbf{R\$~79,90/mês}; 3 meses grátis no piloto & Mensalidade \\
+\textbf{Tabela social} (preço final ao tutor) & Tutor, ao clínico parceiro & Estimativa do grupo: R\$~110,00, cerca de 27\% abaixo do limite inferior de R\$~150,00 da faixa consultada (R\$~150 a R\$~350); validar localmente & Preço social \\
+\end{longtable}
+
+A assinatura anual equivale a 23\% de desconto sobre doze mensalidades (R\$~154,80). Os valores
+da assinatura e do Plano Parceiro estão dentro da faixa prevista no modelo de negócio e serão
+testados (Capítulo~\ref{sec:teste}).
+
+\subsection{Economia unitária}
+\label{sec:unitaria}
+
+\begin{table}[H]
+\centering
+\caption{Margem de contribuição por unidade vendida (R\$).}
+\label{tab:unitaria}
+\begin{tabular}{L{4.1cm} R{2.5cm} R{2.8cm} R{3.0cm}}
+\toprule
+\cabfundo \cab{Item} & \cab{Assinatura} & \cab{Atendimento} & \cab{Plano Parceiro} \\
+\midrule
+Receita unitária & 12,90 & 7,70 & 79,90 \\
+(--) Taxa de pagamento ou da loja & (1,94) & (1,99) & (3,98) \\
+(--) Imposto (6\%) & (0,77) & (0,46) & (4,79) \\
+(--) Infraestrutura e suporte & (0,30) & -- & -- \\
+\midrule
+\totalfundo \textbf{Margem antes do fundo} & \textbf{9,89} & \textbf{5,24} & \textbf{71,13} \\
+\totalfundo \textbf{Em \% da receita} & \textbf{76,7\%} & \textbf{68,1\%} & \textbf{89,0\%} \\
+(--) Fundo de liquidação & -- & (6,60) & -- \\
+\totalfundo \textbf{Margem após o fundo} & \textbf{9,89} & \textbf{$-1{,}36$} & \textbf{71,13} \\
+\totalfundo \textbf{Em \% da receita} & \textbf{76,7\%} & \textbf{$-17{,}6\%$} & \textbf{89,0\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+O atendimento rende R\$~7,70 porque a comissão de 10\% incide sobre os R\$~77,00 pagos em
+dinheiro (70\% de R\$~110,00); os créditos solidários não geram comissão.
+Os R\$~0,30 de infraestrutura e suporte alocados à assinatura nesta análise unitária não
+substituem o custo por usuário ativo da Tabela~\ref{tab:consolidado}.
+
+\subsection{Ponto de equilíbrio}
+\label{sec:equilibrio}
+
+O ponto de equilíbrio indica a quantidade de usuários ativos mensais (MAU) necessária para cobrir todos os custos fixos da operação, mantendo a proporção estimada de serviços e o valor líquido do convênio (R\$ 1.410,00):
+
+\begin{table}[H]
+\centering
+\caption{Usuários ativos necessários para o ponto de equilíbrio.}
+\label{tab:equilibrio}
+\begin{tabular}{L{5.0cm} R{3.3cm} R{3.3cm}}
+\toprule
+\cabfundo \cab{Cenário} & \cab{Com convênio (R\$~1.500)} & \cab{Sem convênio} \\
+\midrule
+A - enxuto & 121 & 2.693 \\
+B - equipe remunerada & 10.155 & 12.727 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\subsection{Sensibilidade do preço da assinatura}
+
+Resultado mensal do cenário A no mês 12, variando o preço do PetCuida+ e a proporção de
+assinantes entre os usuários ativos (R\$):
+
+\begin{table}[H]
+\centering
+\caption{Resultado mensal do cenário A com e sem convênio (R\$).}
+\label{tab:sens}
+\begin{tabular}{L{3.2cm} R{2.6cm} R{2.6cm} R{2.6cm}}
+\toprule
+\cabfundo \cab{Preço} & \cab{3\% assinam} & \cab{5\% assinam} & \cab{8\% assinam} \\
+\midrule
+\multicolumn{4}{l}{\textbf{Com convênio de R\$~1.500,00/mês (estimativa do grupo)}} \\
+R\$~9,90 & 343,94 & 578,57 & 930,51 \\
+\totalfundo R\$~12,90 & 450,59 & \textbf{756,32} & 1.214,91 \\
+R\$~14,90 & 521,69 & 874,82 & 1.404,51 \\
+\midrule
+\multicolumn{4}{l}{\textbf{Sem convênio}} \\
+R\$~9,90 & $-1.066{,}06$ & $-831{,}43$ & $-479{,}49$ \\
+\totalfundo R\$~12,90 & $-959{,}41$ & \textbf{$-653{,}68$} & $-195{,}09$ \\
+R\$~14,90 & $-888{,}31$ & $-535{,}18$ & $-5{,}49$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Os resultados da Tabela~\ref{tab:sens} consideram a dedução de 15\% da loja de aplicativos e 6\% de impostos sobre o valor das assinaturas. Nota-se que o convênio corporativo é o fator determinante para a sustentabilidade financeira do modelo no Cenário A.
