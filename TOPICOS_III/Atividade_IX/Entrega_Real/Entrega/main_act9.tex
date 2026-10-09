@@ -1,0 +1,33 @@
+% =====================================================================
+% Atividade 9 -- Levantamento de custos e precificação
+% PetCuida | Tópicos III -- Empreendedorismo e Inovação | PUC Minas
+%
+% PROTÓTIPO (valores identificados por fonte ou como estimativas a validar)
+% Compilação:  latexmk -pdf main_act9.tex     (ou pdflatex 2x)
+% =====================================================================
+\documentclass[12pt,a4paper]{article}
+
+\input{./partes/preambulo.tex}
+
+\begin{document}
+\selectlanguage{brazilian}
+
+% ---------- Elementos pré-textuais ----------
+\pagenumbering{roman}
+\input{./partes/capa.tex}
+\input{./partes/contracapa.tex}
+\input{./partes/sumario.tex}
+
+% ---------- Elementos textuais ----------
+\pagenumbering{arabic}
+\input{./partes/custos.tex}            % 1. Tabela de custos fixos e variáveis
+\clearpage
+\input{./partes/precificacao.tex}      % 2. Definição do preço de venda
+\clearpage
+\input{./partes/justificativa.tex}     % 3. Margem, valor percebido e concorrência
+\clearpage
+\input{./partes/teste_aceitacao.tex}   % 4. Ideia inicial de teste de aceitação
+\clearpage
+\input{./partes/referencias.tex}       % Fontes consultadas
+
+\end{document}
