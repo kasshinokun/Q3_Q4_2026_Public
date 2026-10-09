@@ -34,7 +34,7 @@
 
 ## Etapa 9
 - [Pesquisa no Google Forms](https://forms.gle/N3C947f2NfmwQeoRA)
-- [Aplicação Web Temporária](petcuida.pythonanywhere.com)
+- [Aplicação Web Temporária](https://petcuida.pythonanywhere.com)
 - **APK's**
   - Smartphones Similares a Samsung SM-A107M
   - Smartphones Similares a Samsung SM-A528B
