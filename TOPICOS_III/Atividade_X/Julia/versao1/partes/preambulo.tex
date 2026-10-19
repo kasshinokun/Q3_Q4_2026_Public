@@ -1,0 +1,70 @@
+% ---------------------------------------------------------------------
+% Preâmbulo: pacotes, geometria, cores, macros e ambientes
+% ---------------------------------------------------------------------
+\usepackage[brazilian,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{needspace}
+\setlength{\tabcolsep}{5pt}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\Urlmuskip=0mu plus 1mu\relax
+
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% ---------- Cores ----------
+\definecolor{azulPetCuida}{HTML}{0B5A85}
+\definecolor{destaque}{HTML}{DCEAF5}
+\definecolor{cinzaclaro}{HTML}{EEF2F6}
+\definecolor{verdeP}{HTML}{1B7F3B}
+\definecolor{laranjaH}{HTML}{C26A00}
+\definecolor{vermelhoC}{HTML}{B3261E}
+
+\hypersetup{
+    colorlinks=true,
+    allcolors=black,
+    pdftitle={Tipo societário e aspectos legais -- PetCuida},
+    pdfauthor={PetCuida -- Tópicos III},
+}
+
+% ---------- Espaçamento ----------
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.25}
+\setlist{itemsep=2pt, topsep=4pt}
+
+% ---------- Dados do trabalho (edite aqui; reflete na capa e folha de rosto) ----------
+\newcommand{\projeto}{PetCuida}
+\newcommand{\tituloatividade}{Tipo societário e aspectos legais}
+\newcommand{\tipoatividade}{(ATIVIDADE EM GRUPO)}
+\newcommand{\anoentrega}{2026}
+\newcommand{\orientador}{João Carlos Oliveira Caetano}
+\newcommand{\tutor}{Paulo Mattos}
+\newcommand{\numeroatividade}{X}
+\newcommand{\datareferencia}{15 de outubro de 2026}
+
+% ---------- Ambientes de elementos pré-textuais ----------
+\newenvironment{capa}{\thispagestyle{empty}}{\clearpage}
+\newenvironment{folhaderosto}{\thispagestyle{empty}}{\clearpage}
+
+% ---------- Colunas e cabeçalhos de tabela ----------
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcommand{\cab}[1]{\textbf{\color{white}#1}}
+\newcommand{\cabfundo}{\rowcolor{azulPetCuida}}
+\newcommand{\totalfundo}{\rowcolor{destaque}}

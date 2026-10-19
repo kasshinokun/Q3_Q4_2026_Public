@@ -1,0 +1,54 @@
+/// Pedido de ajuda publicado no Mural de Pedidos/Ofertas (banco de horas).
+class PedidoModel {
+  final String id;
+  final String titulo;
+  final String solicitante;
+  final String local;
+  final int recompensa;
+  final String descricao;
+  final bool candidatado;
+
+  const PedidoModel({
+    required this.id,
+    required this.titulo,
+    required this.solicitante,
+    required this.local,
+    required this.recompensa,
+    required this.descricao,
+    this.candidatado = false,
+  });
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'titulo': titulo,
+        'solicitante': solicitante,
+        'local': local,
+        'recompensa': recompensa,
+        'descricao': descricao,
+        'candidatado': candidatado,
+      };
+
+  factory PedidoModel.fromJson(Map<String, dynamic> json) {
+    return PedidoModel(
+      id: json['id'] as String,
+      titulo: json['titulo'] as String,
+      solicitante: json['solicitante'] as String,
+      local: json['local'] as String,
+      recompensa: json['recompensa'] as int,
+      descricao: json['descricao'] as String,
+      candidatado: json['candidatado'] as bool? ?? false,
+    );
+  }
+
+  PedidoModel copyWith({bool? candidatado}) {
+    return PedidoModel(
+      id: id,
+      titulo: titulo,
+      solicitante: solicitante,
+      local: local,
+      recompensa: recompensa,
+      descricao: descricao,
+      candidatado: candidatado ?? this.candidatado,
+    );
+  }
+}

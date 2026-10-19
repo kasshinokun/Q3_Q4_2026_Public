@@ -1,0 +1,10 @@
+=== INÍCIO DO LOG: 2026-10-07 14:18:46 ===
+Comando executado: flutter run
+--------------------------------------------------
+Launching lib/main.dart on SM A107M in debug mode...
+Running Gradle task 'assembleDebug'...                               5ms
+Error: Flutter failed to run "/media/ongtiu-ti/Teste/Nova pasta/Atividade_IX_Alfa_PetCuida_Organizacoes_D4B/Atividade_IX_Alfa_PetCuida_Organizacoes/flutter/android/gradlew -q -Ptarget-platform=android-arm -Ptarget=/media/ongtiu-ti/Teste/Nova pasta/Atividade_IX_Alfa_PetCuida_Organizacoes_D4B/Atividade_IX_Alfa_PetCuida_Organizacoes/flutter/lib/main.dart -Pbase-application-name=android.app.Application -Pdart-defines=RkxVVFRFUl9CVUlMRF9OQU1FPTEuMy4w,RkxVVFRFUl9CVUlMRF9OVU1CRVI9MQ==,RkxVVFRFUl9WRVJTSU9OPTMuNDcuNA==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049OTU4NGM2NzEzYg==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049MDZhMmUyYTExMA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My4xMy4z -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root -Pflutter.androidSdkRoot=/home/ongtiu-ti/Android/Sdk -Pflutter.installedNdkVersions=27.0.12077973,28.2.13676358 -Pflutter.sdkManagerPath=/home/ongtiu-ti/Android/Sdk/cmdline-tools/latest/bin/sdkmanager assembleDebug".
+Please ensure that the SDK and/or project is installed in a location that has read/write permissions for the current user.
+
+
+=== FIM DO LOG: 2026-10-07 14:18:51 ===

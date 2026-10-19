@@ -1,0 +1,42 @@
+=== INÍCIO DO LOG: 2026-10-07 14:19:27 ===
+Comando executado: flutter pub get && flutter run
+--------------------------------------------------
+Resolving dependencies...
+Downloading packages...
+  _flutterfire_internals 1.3.59 (1.3.77 available)
+  app_links 7.2.1 (7.2.2 available)
+  app_links_linux 1.0.3 (1.0.4 available)
+  app_links_web 1.0.4 (1.0.5 available)
+  cloud_firestore 5.6.12 (6.10.0 available)
+  cloud_firestore_platform_interface 6.6.12 (8.0.7 available)
+  cloud_firestore_web 4.4.12 (5.7.3 available)
+  cross_file 0.3.5+5 (0.4.0 available)
+  cupertino_icons 1.0.9 (2.0.0 available)
+  firebase_core 3.15.2 (4.15.0 available)
+  firebase_core_platform_interface 6.0.3 (8.1.1 available)
+  firebase_core_web 2.24.1 (3.12.0 available)
+  go_router 14.8.1 (18.0.2 available)
+  image_picker 1.2.3 (1.2.4 available)
+  image_picker_android 0.8.13+23 (0.8.13+25 available)
+  image_picker_ios 0.8.13+7 (0.8.13+9 available)
+  image_picker_platform_interface 2.11.1 (2.11.2 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  qr 3.0.2 (4.0.0 available)
+  shared_preferences 2.5.5 (2.5.6 available)
+  storage_client 2.8.0 (2.8.1 available)
+  supabase 2.16.1 (2.16.2 available)
+  supabase_flutter 2.17.2 (2.18.0 available)
+  test_api 0.7.12 (0.7.14 available)
+  url_launcher 6.3.2 (6.3.3 available)
+  vector_math 2.4.2 (2.4.3 available)
+Got dependencies!
+27 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Launching lib/main.dart on SM A107M in debug mode...
+Running Gradle task 'assembleDebug'...                               5ms
+Error: Flutter failed to run "/media/ongtiu-ti/Teste/Nova pasta/Atividade_IX_Alfa_PetCuida_Organizacoes_D4B/Atividade_IX_Alfa_PetCuida_Organizacoes/flutter/android/gradlew -q -Ptarget-platform=android-arm -Ptarget=/media/ongtiu-ti/Teste/Nova pasta/Atividade_IX_Alfa_PetCuida_Organizacoes_D4B/Atividade_IX_Alfa_PetCuida_Organizacoes/flutter/lib/main.dart -Pbase-application-name=android.app.Application -Pdart-defines=RkxVVFRFUl9CVUlMRF9OQU1FPTEuMy4w,RkxVVFRFUl9CVUlMRF9OVU1CRVI9MQ==,RkxVVFRFUl9WRVJTSU9OPTMuNDcuNA==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049OTU4NGM2NzEzYg==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049MDZhMmUyYTExMA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My4xMy4z -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root -Pflutter.androidSdkRoot=/home/ongtiu-ti/Android/Sdk -Pflutter.installedNdkVersions=27.0.12077973,28.2.13676358 -Pflutter.sdkManagerPath=/home/ongtiu-ti/Android/Sdk/cmdline-tools/latest/bin/sdkmanager assembleDebug".
+Please ensure that the SDK and/or project is installed in a location that has read/write permissions for the current user.
+
+
+=== FIM DO LOG: 2026-10-07 14:19:39 ===
