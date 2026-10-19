@@ -8,7 +8,7 @@ Horizonte (Atividade~III) e o \textbf{mês~12} de operação como referência de
 \subsection{Premissas e legenda}
 
 \begin{itemize}
-  \item \textbf{Cenário A (enxuto):} sócios sem pró-labore; apenas despesas em caixa.
+  \item \textbf{Cenário A (enxuto):} sócios sem pró-labore; apenas despesas operacionais em caixa.
   \item \textbf{Cenário B (equipe remunerada):} soma ao cenário A uma ajuda de custo ao gestor de
   rede e um pró-labore simbólico aos quatro sócios.
   \item \textbf{Câmbio:} R\$~\cambio{} por US\$ (a PTAX de 02/10/2026 foi R\$~5,2238).
@@ -20,7 +20,7 @@ Horizonte (Atividade~III) e o \textbf{mês~12} de operação como referência de
 \subsection{Custos fixos}
 \label{sec:custos-fixos}
 
-Despesas que não variam com o número de usuários ou atendimentos.
+Despesas que não variam diretamente com o número de usuários ativos ou atendimentos intermediados.
 
 \begin{longtable}{L{5.5cm} R{2.1cm} C{1.6cm} L{3.8cm}}
 \toprule
@@ -35,17 +35,17 @@ Despesas que não variam com o número de usuários ou atendimentos.
 \endfoot
 Contabilidade e formalização (ME/Simples) & 300,00 & \bC & Cotar com contador \\
 Infraestrutura de backend & 100,00 & \bP\,\bH & Firebase Blaze ou VPS para Flask \\
-Google Maps Platform (busca geolocalizada) & 100,00 & \bH & Depende do uso da busca \\
+Google Maps Platform (busca geolocalizada) & 100,00 & \bH & Depende do uso da API de busca \\
 Domínio, e-mail e ferramentas de produto & 65,00 & \bH & Figma, GitHub e Canva \\
-Consultoria veterinária (curadoria da triagem) & 600,00 & \bH & Pode cair com parceria de faculdade \\
+Consultoria veterinária (curadoria da triagem) & 600,00 & \bH & Pode cair com parceria acadêmica \\
 Jurídico e LGPD (R\$~3.000 em 12 meses) & 250,00 & \bC & Termos, privacidade e parecer CFMV \\
-Materiais de divulgação (cartazes e QR) & 150,00 & \bH & Canais da Atividade~8 \\
-Conta de desenvolvedor Google Play (US\$~25 em 12 meses) & 10,83 & \bP & Taxa única, diluída \\
+Divulgação local e mídias impressas & 150,00 & \bH & Cartazes e QR codes (Atividade~8) \\
+Conta de desenvolvedor Google Play (US\$~25 em 12 meses) & 10,83 & \bP & Taxa única, diluída em 1 ano \\
 \midrule
 \totalfundo \textbf{Total do cenário A} & \textbf{1.575,83} & & \\
 \midrule
-Ajuda de custo do gestor de rede (meio período) & 1.500,00 & \bH & Só no cenário B \\
-Pró-labore simbólico (4 sócios $\times$ R\$~1.000) & 4.000,00 & \bH & Só no cenário B \\
+Ajuda de custo do gestor de rede (meio período) & 1.500,00 & \bH & Exclusivo do cenário B \\
+Pró-labore simbólico (4 sócios $\times$ R\$~1.000) & 4.000,00 & \bH & Exclusivo do cenário B \\
 \midrule
 \totalfundo \textbf{Total do cenário B} & \textbf{7.075,83} & & \\
 \end{longtable}
@@ -54,7 +54,7 @@ Pró-labore simbólico (4 sócios $\times$ R\$~1.000) & 4.000,00 & \bH & Só no 
 \subsection{Custos variáveis}
 \label{sec:custos-variaveis}
 
-Despesas que crescem com o uso da plataforma.
+Despesas operacionais que crescem diretamente com o volume de uso e transações na plataforma.
 
 \begin{longtable}{L{4.4cm} R{2.8cm} C{1.6cm} L{3.9cm}}
 \toprule
@@ -67,27 +67,27 @@ Despesas que crescem com o uso da plataforma.
 \endhead
 \bottomrule
 \endfoot
-Taxa de pagamento via Pix & 0,99\% & \bP & Sobre a parte paga em dinheiro \\
-Taxa de pagamento via cartão de crédito à vista & 4,98\% & \bP & Idem \\
-\textbf{Taxa média de pagamento} (60\% Pix / 40\% cartão) & 2,59\% & \bH & Mix de pagamento a validar \\
-Imposto sobre receita (Simples Nacional) & 6,00\% & \bC & Pode chegar a 15,5\% conforme o enquadramento \\
-Taxa da loja sobre assinaturas (Google Play) & 15,00\% & \bC & Confirmar na política vigente \\
-Infraestrutura por usuário ativo & R\$~0,10/MAU & \bH & Notificações push do Firebase não têm custo \\
-Suporte e moderação por usuário ativo & R\$~0,20/MAU & \bH & Horas de atendimento \\
-Fundo de liquidação de créditos solidários & R\$~6,60/atend. & \bH & 40\% dos atendimentos usam crédito; crédito cobre até 30\% do valor; clínica recebe 50\% do valor de face em dinheiro \\
+Taxa de pagamento via Pix & 0,99\% & \bP & Sobre a fração paga em dinheiro \\
+Taxa de pagamento via cartão à vista & 4,98\% & \bP & Sobre a fração paga em dinheiro \\
+\textbf{Taxa média de gateway} (60\% Pix / 40\% cartão) & 2,59\% & \bH & Mix médio estimado para intermediação \\
+Imposto sobre receita (Simples Nacional) & 6,00\% & \bC & Anexo III (sujeito ao Fator R $\ge$ 28\%; atinge 15,5\% no Anexo V sem pró-labore) \\
+Taxa da loja sobre assinaturas (Google Play) & 15,00\% & \bC & Incide \textbf{apenas} sobre o PetCuida+ (consultas usam gateway externo) \\
+Infraestrutura por usuário ativo & R\$~0,10/MAU & \bH & Custos de banco de dados e tráfego extra \\
+Suporte e moderação por usuário ativo & R\$~0,20/MAU & \bH & Atendimento ao cliente e curadoria \\
+Fundo de liquidação de créditos solidários & R\$~6,60/atend. & \bH & 40\% dos atendimentos usam crédito; repasse de 50\% do valor de face à clínica \\
 \end{longtable}
 
-O \emph{fundo de liquidação} é o custo mais sensível do modelo: é o dinheiro que remunera as
-clínicas parceiras pelos créditos aceitos, conforme a mitigação de risco da Atividade~III
+O \emph{fundo de liquidação} é o custo mais sensível do modelo: é o recurso que remunera as
+clínicas parceiras pelos créditos aceitos, conforme a estratégia de mitigação de risco da Atividade~III
 (``liquidação parcial em dinheiro e garantia de repasse por campanhas patrocinadas'').
 
 % ---------------------------------------------------------------------
 \subsection{Visão consolidada no mês 12}
 \label{sec:consolidado}
 
-Premissas de volume ($\bH$): 1.500 usuários ativos por mês (MAU); 10\% fazem um atendimento
-intermediado por mês (150); ticket médio de R\$~110,00 com 70\% pagos em dinheiro; 5\% assinam o
-PetCuida+ (75); 10 clínicas parceiras; R\$~1.500,00/mês de convênios e patrocínio.
+Premissas de volume ($\bH$): 1.500 usuários ativos por mês (MAU); 10\% realizam um atendimento
+intermediado por mês (150 atendimentos); ticket médio de R\$~110,00 com 70\% pagos em dinheiro; 5\% assinam o
+PetCuida+ (75 assinantes); 10 clínicas parceiras ativas; R\$~1.500,00/mês provenientes de convênios e patrocínio social.
 
 \begin{table}[htbp]
 \centering
@@ -117,6 +117,5 @@ Custos fixos -- cenário B & (7.075,83) \\
 \end{tabular}
 \end{table}
 
-No cenário A o negócio se sustenta com receita modesta, pois os custos fixos são baixos. No
-cenário B, com equipe remunerada, o modelo só fecha com mais usuários ou com financiamento
-externo (ponto de equilíbrio na Seção~\ref{sec:equilibrio}).
+No cenário A o negócio atinge o ponto de equilíbrio com receita modesta devido aos baixos custos fixos. No
+cenário B, com equipe remunerada, a operação exige maior escala de usuários ou captação de fomento externo (ponto de equilíbrio detalhado na Seção~\ref{sec:equilibrio}).
