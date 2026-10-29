@@ -1,0 +1,29 @@
+% Atividade XII -- Apresentação Visual: estrutura do pitch
+% Compilação: pdflatex -> bibtex -> pdflatex -> pdflatex
+\documentclass[12pt, a4paper, article, oneside, brazil]{abntex2}
+\input{./common/preambulo.tex}
+\input{./common/capa_modelo.tex}
+\hypersetup{pdftitle={Atividade XII: estrutura do pitch e apresentação visual},
+  pdfkeywords={pitch; apresentação visual; storytelling; startup}}
+
+\begin{document}
+\selectlanguage{brazil}
+\frenchspacing
+\capadocumento{ESTRUTURA DO PITCH E APRESENTAÇÃO VISUAL}{Atividade XII -- Startup \projeto}
+\folharosto{ESTRUTURA DO PITCH E APRESENTAÇÃO VISUAL}{Atividade XII -- Startup \projeto}{Atividade XII}
+\input{./partes_xii/resumo.tex}
+\clearpage
+\pagenumbering{roman}
+\tableofcontents*
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{./partes_xii/introducao.tex}
+\input{./partes_xii/estrutura.tex}
+\input{./partes_xii/narrativa.tex}
+\input{./partes_xii/roteiro.tex}
+\input{./partes_xii/design.tex}
+\input{./partes_xii/apresentacao.tex}
+\input{./partes_xii/consideracoes.tex}
+\bibliography{./common/referencias}
+\end{document}

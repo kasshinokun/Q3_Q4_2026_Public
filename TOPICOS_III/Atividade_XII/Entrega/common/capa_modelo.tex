@@ -1,0 +1,53 @@
+% Uso: \capadocumento{TÍTULO EM CAIXA ALTA}{subtítulo}
+\newcommand{\capadocumento}[2]{%
+\begin{capa}
+  \begin{center}
+    \includegraphics[width=0.25\textwidth]{./images/brasao.png}\par
+    \vspace{0.4cm}
+    {\large\textbf{PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS}}\par
+    Campus Coração Eucarístico\par
+    Curso de Engenharia de Computação\par
+    Disciplina: Tópicos III -- Empreendedorismo e Inovação\par
+    \vspace{1.6cm}
+    Gabriel da Silva Cassino\par
+    Giovanna Naves Ribeiro\par
+    Júlia Rodrigues Vasconcellos Melo\par
+    Kathleen Rodrigues Leite Barbosa\par
+    \vfill
+    {\Large\textbf{#1}}\par
+    \vspace{0.3cm}
+    {\large #2}\par
+    \vfill
+    Belo Horizonte\par
+    2026
+  \end{center}
+\end{capa}}
+\newcommand{\folharosto}[3]{%
+\begin{folhaderosto}
+  \begin{center}
+    Gabriel da Silva Cassino\par
+    Giovanna Naves Ribeiro\par
+    Júlia Rodrigues Vasconcellos Melo\par
+    Kathleen Rodrigues Leite Barbosa\par
+    \vspace{3cm}
+    {\Large\textbf{#1}}\par
+    \vspace{0.3cm}
+    {\large #2}\par
+    \vspace{2cm}
+  \end{center}
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+    \begin{SingleSpace}
+      \small
+      Trabalho acadêmico em grupo apresentado à disciplina Tópicos III -- Empreendedorismo e Inovação, do Curso de Engenharia de Computação da Pontifícia Universidade Católica de Minas Gerais, como requisito parcial de avaliação referente à #3.\par
+      \vspace{0.4cm}
+      Professor-orientador: Prof. João Carlos Oliveira Caetano\par
+      Professor-tutor: Prof. Paulo Mattos
+    \end{SingleSpace}
+  \end{minipage}
+  \vfill
+  \begin{center}
+    Belo Horizonte\par
+    2026
+  \end{center}
+\end{folhaderosto}}
