@@ -1,0 +1,43 @@
+% Preâmbulo da Atividade XII(classe abnTeX2, modo artigo).
+% Normas: ABNT NBR 14724:2024, NBR 10520:2023, NBR 6023:2018, NBR 6024:2012,
+% NBR 6027:2012, NBR 6028:2021.
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usepackage[alf]{abntex2cite}
+\usepackage{hyperref}
+
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{2cm}{*}
+\checkandfixthelayout
+\OnehalfSpacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.25}
+\captiondelim{ -- }
+\newcommand{\fontsizetable}{\footnotesize}
+\newcommand{\fonteautores}{\par\vspace{2pt}{\footnotesize Fonte: elaborado pelos autores (2026).}\par}
+\newcommand{\fontetexto}[1]{\par\vspace{2pt}{\footnotesize Fonte: #1.}\par}
+\newcommand{\projeto}{PetCuida}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\hypersetup{
+  colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black, breaklinks=true,
+  pdfauthor={Gabriel da Silva Cassino; Giovanna Naves Ribeiro; Júlia Rodrigues Vasconcellos Melo; Kathleen Rodrigues Leite Barbosa},
+  pdfsubject={Tópicos III -- Empreendedorismo e Inovação}
+}
+\urlstyle{same}
