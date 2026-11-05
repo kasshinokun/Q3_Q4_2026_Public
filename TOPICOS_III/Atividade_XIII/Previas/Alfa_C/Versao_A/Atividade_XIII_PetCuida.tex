@@ -1,0 +1,191 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{array,booktabs,longtable,tabularx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\geometry{top=2.6cm,bottom=2.4cm,left=2.8cm,right=2.2cm}
+\setstretch{1.2}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.25em}
+\definecolor{petnavy}{HTML}{263B59}
+\definecolor{petpink}{HTML}{F2CDD6}
+\definecolor{petcream}{HTML}{FCFBF8}
+\hypersetup{colorlinks=true,linkcolor=petnavy,urlcolor=blue}
+\newcommand{\projeto}{PetCuida}
+\newcommand{\equipe}{Gabriel da Silva Cassino; Giovanna Naves Ribeiro; Júlia Rodrigues Vasconcellos Melo; Kathleen Rodrigues Leite Barbosa}
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{1.5cm}
+{\Large\textbf{PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS}}\\[0.3cm]
+Campus Coração Eucarístico\\
+Curso de Engenharia de Computação\\
+Disciplina: Tópicos III -- Empreendedorismo e Inovação
+\vspace{2.2cm}
+
+{\LARGE\textbf{ATIVIDADE XIII}}\\[0.4cm]
+{\Large\textbf{Estratégias de Crescimento, Viabilidade e Coerência}}\\[0.5cm]
+{\large Plano de crescimento e escalabilidade da startup PetCuida}
+\vfill
+\textbf{Integrantes}\\[0.25cm]
+Gabriel da Silva Cassino\\
+Giovanna Naves Ribeiro\\
+Júlia Rodrigues Vasconcellos Melo\\
+Kathleen Rodrigues Leite Barbosa
+\vfill
+Professor-orientador: João Carlos Oliveira Caetano\\
+Professor-tutor: Paulo Mattos
+\vfill
+Belo Horizonte\\2026
+\end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+
+\section{Resumo executivo}
+A PetCuida deve adotar crescimento por evidência: validar uma dor frequente em um segmento local, testar aquisição por conteúdo e comunidade, conduzir um piloto com poucos parceiros e só então automatizar processos repetitivos. A estratégia evita ampliar escopo e custos antes de provar valor para tutores e parceiros.
+
+\section{Diagnóstico do estágio atual}
+Com base no material de projeto disponível, a classificação mais prudente é \textbf{ideação com foco em validação}. Há uma proposta de plataforma e funcionalidades planejadas, mas não foram fornecidos dados verificados de usuários ativos, retenção, receita, custo de aquisição ou parcerias operacionais que comprovem tração.
+
+\subsection{Desafios prioritários}
+\begin{itemize}[leftmargin=*]
+\item validar qual problema é mais frequente e urgente para tutores;
+\item distinguir interesse declarado de uso recorrente e disposição a pagar;
+\item obter confiança e adesão de clínicas ou organizações parceiras;
+\item limitar escopo técnico e custo operacional do produto mínimo viável (MVP);
+\item tratar dados pessoais com transparência, segurança e minimização;
+\item evitar que conteúdo educativo seja interpretado como diagnóstico ou prescrição veterinária.
+\end{itemize}
+
+\section{Contexto externo e oportunidade}
+A ABEMPET reportou faturamento de R\$ 77,96 bilhões para o setor pet brasileiro em 2025, crescimento nominal de 3,45\%. Para 2026, foi divulgada uma projeção de R\$ 81 bilhões \cite{abempet2026}. Esses números demonstram a dimensão do setor, mas não definem o mercado endereçável da PetCuida nem provam que tutores pagarão por uma plataforma de organização preventiva. A entrada recomendada é local, com hipóteses e indicadores delimitados.
+
+\section{Duas estratégias de crescimento}
+\subsection{Estratégia 1: aquisição local por conteúdo e comunidade}
+\textbf{Objetivo:} atrair tutores relevantes e aprender quais mensagens geram cadastro e uso real.
+
+\textbf{Ações:}
+\begin{enumerate}[leftmargin=*]
+\item publicar conteúdo preventivo simples, com revisão e fontes confiáveis;
+\item criar uma página de apresentação com chamada única (cadastro para piloto ou lista de interesse);
+\item realizar entrevistas com 10--20 tutores e registrar padrões, não apenas opiniões positivas;
+\item testar canais orgânicos locais e, apenas se houver orçamento, um experimento pago de pequeno porte;
+\item medir conversão, custo por lead, ativação e retenção em 30 dias.
+\end{enumerate}
+O Sebrae recomenda combinar entrevistas com testes de interesse e acompanhar métricas de retenção e uso recorrente na validação de ideias \cite{sebrae}.
+
+\subsection{Estratégia 2: parcerias-piloto com clínicas e organizações}
+\textbf{Objetivo:} testar se a PetCuida resolve uma necessidade concreta também para parceiros.
+
+\textbf{Ações:}
+\begin{enumerate}[leftmargin=*]
+\item mapear parceiros potenciais em Belo Horizonte e região;
+\item entrevistar profissionais sobre retorno, comunicação, encaminhamento e dificuldades operacionais;
+\item selecionar poucos parceiros para um piloto de escopo limitado;
+\item formalizar critérios de encaminhamento, responsabilidades, consentimento e tratamento de dados;
+\item avaliar encaminhamentos concluídos, esforço por parceiro, satisfação e intenção de continuidade.
+\end{enumerate}
+Nenhuma parceria deve ser anunciada como firmada até haver confirmação explícita.
+
+\section{Estratégias de escalabilidade}
+\subsection{Automação e tecnologia}
+Automatizar apenas depois de observar tarefas repetidas e estáveis. Prioridades possíveis: cadastro reutilizável, lembretes configuráveis, templates de comunicação, base única de parceiros, relatórios simples e onboarding autoguiado. Evitar automação precoce de processos que ainda mudam a cada teste.
+
+\subsection{Modelo replicável}
+Documentar o fluxo de entrada de parceiros, critérios de qualidade, encaminhamento e suporte. Um manual operacional permite replicar o piloto em outras regiões sem depender exclusivamente do conhecimento tácito de um integrante.
+
+\subsection{Receita recorrente}
+Testar, sem presumir adoção, duas possibilidades: (i) plano premium para funções avançadas de organização; e (ii) plano de ferramentas para clínicas ou parceiros. Entrevistas de preço e pilotos devem anteceder a construção de cobrança, projeções financeiras ou metas de receita.
+
+\subsection{Princípios de segurança e confiança}
+Coletar apenas dados necessários, explicar finalidade e compartilhamento, limitar acesso, definir retenção e exclusão, e adotar medidas de segurança compatíveis com os riscos. Conteúdos clínicos precisam de revisão profissional e indicação explícita dos limites do serviço.
+
+\section{Plano de ação resumido}
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{longtable}{p{0.13\textwidth}p{0.31\textwidth}p{0.24\textwidth}p{0.23\textwidth}}
+\toprule
+\textbf{Período} & \textbf{Ações-chave} & \textbf{Recursos} & \textbf{Indicadores} \\
+\midrule
+0--30 dias & Entrevistas; jornada do tutor; escolha de uma dor; protótipo/landing page. & Tempo da equipe, formulário, ferramenta de prototipação e análise. & Entrevistas concluídas; padrões recorrentes; conversão de interesse.\\
+31--60 dias & Teste com 5--10 tutores; conversas com 3--5 parceiros; correção de fricções. & Protótipo, roteiro de teste, agenda de contatos. & Conclusão de tarefas; ativação; interesse confirmado de parceiros.\\
+61--90 dias & Piloto delimitado; medir uso, suporte, custos e satisfação; decidir próximo ciclo. & Hospedagem básica, analytics, suporte e revisão de privacidade. & Retenção 30 dias; custo por usuário ativo; satisfação; esforço operacional.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Painel de indicadores}
+\begin{itemize}[leftmargin=*]
+\item \textbf{Aquisição:} visitas, cadastros, conversão por canal e custo por lead.
+\item \textbf{Ativação:} proporção de novos usuários que concluem o primeiro fluxo essencial.
+\item \textbf{Retenção:} usuários que retornam após 7 e 30 dias; frequência de uso de funções principais.
+\item \textbf{Valor entregue:} lembretes configurados/concluídos, tarefas concluídas e satisfação declarada.
+\item \textbf{Parcerias:} parceiros ativos, encaminhamentos concluídos, tempo de resposta e continuidade do piloto.
+\item \textbf{Viabilidade:} custo operacional por usuário ativo, horas de suporte, receita recorrente e margem, quando houver cobrança.
+\end{itemize}
+O Sebrae destaca indicadores como CAC, NPS, ticket médio, crescimento, churn, valor do cliente e conversão, recomendando selecionar métricas relevantes ao estágio e à estratégia \cite{sebrae_metrics}. Como a PetCuida está em validação, as métricas iniciais devem privilegiar ativação, recorrência, custo de operação e evidências de valor; CAC e churn de assinaturas só serão interpretáveis quando houver aquisição paga e modelo recorrente.
+
+\section{Coerência estratégica e riscos}
+\begin{longtable}{p{0.23\textwidth}p{0.33\textwidth}p{0.34\textwidth}}
+\toprule
+\textbf{Risco} & \textbf{Sinal de alerta} & \textbf{Resposta proposta}\\
+\midrule
+Baixa adesão & Cadastros sem retorno ou tarefas não concluídas. & Entrevistar usuários, reduzir fricção e rever problema prioritário.\\
+Escopo excessivo & Muitas funções sem evidência de uso. & Limitar o MVP e exigir hipótese/indicador para cada função.\\
+Dependência de parceiros & Piloto depende de um único parceiro ou contato. & Padronizar processos e diversificar conversas, sem anunciar parcerias não confirmadas.\\
+Risco de privacidade & Coleta de dados sem finalidade clara ou acesso amplo. & Minimização, consentimento quando aplicável, controle de acesso e política transparente.\\
+Risco clínico/reputacional & Usuário interpreta conteúdo como diagnóstico. & Revisão profissional, linguagem cuidadosa e encaminhamento para atendimento habilitado.\\
+Monetização precoce & Investimento em cobrança antes de comprovar valor. & Testar disposição a pagar e manter custos variáveis baixos.\\
+\bottomrule
+\end{longtable}
+
+\section{Responsabilidades sugeridas}
+A distribuição preserva a proposta organizacional da Atividade XI, a confirmar pelo grupo:
+\begin{itemize}[leftmargin=*]
+\item \textbf{Gabriel da Silva Cassino:} produto, arquitetura e desenvolvimento; apoiar definição de métricas técnicas.
+\item \textbf{Kathleen Rodrigues Leite Barbosa:} contribuição técnica e integração da comunicação entre as frentes; consolidar dependências, decisões e bloqueios.
+\item \textbf{Giovanna Naves Ribeiro:} organizar conversas com parceiros e consolidar hipóteses operacionais e de sustentabilidade.
+\item \textbf{Júlia Rodrigues Vasconcellos Melo:} conduzir pesquisa de experiência, entrevistas e síntese de feedback, conforme confirmação de interesse e disponibilidade.
+\end{itemize}
+As atribuições de negócio e pesquisa são recomendações provisórias, não declarações de competências profissionais verificadas.
+
+\section{Critérios para decidir se deve escalar}
+A equipe só deve ampliar canais, regiões ou investimento após verificar: (i) problema recorrente e bem delimitado; (ii) usuários que completam o fluxo principal; (iii) retorno ao produto em período definido; (iv) operação reproduzível; (v) custo compatível com a capacidade financeira; e (vi) tratamento responsável de dados e conteúdo. Se esses sinais não aparecerem, a resposta correta pode ser ajustar o foco ou interromper a hipótese.
+
+\section{Conclusão}
+O caminho recomendado é validar antes de escalar. A aquisição local por conteúdo e comunidade e as parcerias-piloto oferecem dois caminhos complementares para aprender com baixo custo. Automação, receita recorrente e expansão geográfica são etapas condicionadas à evidência, não metas independentes. A coerência da PetCuida depende de manter prevenção, organização, acesso e acolhimento no centro das decisões.
+
+\begin{thebibliography}{9}
+\bibitem{abempet2026}
+CNN BRASIL. \textit{Brasil é 3º país com mais pets e setor prevê faturar R\$ 81 bilhões em 2026}. 23 set. 2026.
+Disponível em: \url{https://www.cnnbrasil.com.br/economia/money/negocios/brasil-e-3o-pais-com-mais-pets-e-setor-preve-faturar-r-81-bilhoes-em-2026/}. Acesso em: 25 out. 2026.
+
+\bibitem{abempet2025}
+ABEMPET. \textit{Informações gerais do setor pet}. Dados de faturamento de 2024 e contexto setorial.
+Disponível em: \url{https://abempet.org.br/informacoes-gerais-do-setor/}. Acesso em: 25 out. 2026.
+
+\bibitem{sebrae}
+SEBRAE. \textit{Como validar ideia de negócio antes de investir nela?}
+Disponível em: \url{https://blog.rn.sebrae.com.br/como-validar-ideia/}. Acesso em: 25 out. 2026.
+
+\bibitem{sebrae_metrics}
+SEBRAE. \textit{A análise dos resultados da startup}. Guia completo para iniciar uma startup.
+Disponível em: \url{https://sebrae.com.br/Sebrae/Portal\%20Sebrae/UFs/PE/Anexos/Guia\_completo\_para\_iniciar\_uma\_startup.pdf}. Acesso em: 25 out. 2026.
+
+\bibitem{atlassian}
+ATLASSIAN. \textit{Roles and responsibilities}. Team Playbook.
+Disponível em: \url{https://www.atlassian.com/team-playbook/plays/roles-and-responsibilities}. Acesso em: 25 out. 2026.
+\end{thebibliography}
+
+\end{document}

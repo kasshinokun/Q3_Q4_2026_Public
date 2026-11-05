@@ -1,0 +1,163 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{xurl}
+
+\geometry{top=2.7cm,bottom=2.4cm,left=3cm,right=2cm}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.2em}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{leftmargin=1.4cm,itemsep=0.25em,topsep=0.3em}
+\setlist[enumerate]{leftmargin=1.4cm,itemsep=0.25em,topsep=0.3em}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black,citecolor=blue!55!black,pdftitle={Atividade XIII: Estratégias de Crescimento, Viabilidade e Coerência — PetCuida},pdfauthor={Grupo 4 — Engenharia de Computação — PUC Minas}}
+\captionsetup{font=small,labelfont=bf}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small PetCuida}
+\rhead{\small Atividade XIII}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\selectlanguage{brazil}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+\includegraphics[width=0.19\textwidth]{./assets/brasao.png}\\[0.4cm]
+{\large\textbf{PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS}}\\[0.15cm]
+{\large Curso de Engenharia de Computação}\\
+{\large Tópicos III -- Empreendedorismo e Inovação}
+
+\vfill
+{\LARGE\textbf{Atividade XIII}}\\[0.35cm]
+{\Large Estratégias de crescimento, viabilidade e coerência}\\[0.25cm]
+{\large Startup: PetCuida}
+
+\vfill
+\textbf{Integrantes}\\[0.15cm]
+Gabriel da Silva Cassino\\
+Giovanna Naves Ribeiro\\
+Júlia Rodrigues Vasconcellos Melo\\
+Kathleen Rodrigues Leite Barbosa
+
+\vfill
+\textbf{Professor-orientador:} João Carlos Oliveira Caetano\\
+\textbf{Professor-tutor:} Paulo Mattos
+
+\vfill
+Belo Horizonte\\
+2026
+\end{center}
+\end{titlepage}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+{\large Gabriel da Silva Cassino}\\
+{\large Giovanna Naves Ribeiro}\\
+{\large Júlia Rodrigues Vasconcellos Melo}\\
+{\large Kathleen Rodrigues Leite Barbosa}
+
+\vfill
+{\Large\textbf{Atividade XIII}}\\[0.25cm]
+{\large Estratégias de crescimento, viabilidade e coerência}\\[0.25cm]
+{\large Startup: PetCuida}
+\end{center}
+\vfill
+\begin{flushright}
+\begin{minipage}{8.2cm}
+\small\singlespacing
+Trabalho acadêmico apresentado à disciplina Tópicos III -- Empreendedorismo e Inovação, do Curso de Engenharia de Computação da Pontifícia Universidade Católica de Minas Gerais, como requisito parcial de avaliação da Atividade XIII.\\[0.35cm]
+\textbf{Professor-orientador:} Prof. João Carlos Oliveira Caetano\\
+\textbf{Professor-tutor:} Prof. Paulo Mattos
+\end{minipage}
+\end{flushright}
+\vfill
+\begin{center}Belo Horizonte\\2026\end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\section{Estratégias de crescimento e viabilidade}
+
+Este documento detalha o plano de crescimento e viabilidade econômica para o PetCuida, conforme os requisitos da Atividade XIII [1]. A estratégia foca na redução de incertezas operacionais e na validação local em Belo Horizonte.
+
+\subsection{Diagnóstico do estágio e sustentabilidade}
+
+O PetCuida é um protótipo em validação. A prioridade é confirmar o retorno de tutores e o valor percebido por parceiros locais. O modelo de receita contempla assinaturas, planos para parceiros, intermediação e patrocínios como hipóteses a testar.
+
+\subsection{Estratégia 1: piloto territorial assistido}
+
+A primeira estratégia é validar o fluxo em um bairro de Belo Horizonte com operação manual assistida (concierge). O objetivo é coletar dados reais de uso antes da automação.
+
+\subsection{Estratégia 2: aquisição por confiança}
+
+Crescer através de conteúdo útil de prevenção e indicações de atores locais, medindo ativação (perfil do pet + lembrete) e retenção no trigésimo dia (D30).
+
+\section{Viabilidade econômica}
+
+A viabilidade será avaliada após a coleta de dados de custos variáveis (suporte, pagamento, infraestrutura) no piloto. A receita recorrente mensal seguirá a fórmula:
+\[
+\text{Receita mensal} = (N_c \times P_c) + (N_a \times T_a) + S,
+\]
+onde $N_c$ é o número de clínicas, $P_c$ o preço do plano, $N_a$ o volume de atendimentos intermediados, $T_a$ a taxa líquida e $S$ os patrocínios.
+
+\section{Plano de ação e indicadores}
+
+\begin{longtable}{P{1.8cm}P{4.2cm}P{4.0cm}P{2.7cm}}
+\caption{Ciclo de validação proposto.}\label{tab:plano}\\
+\toprule
+\textbf{Período} & \textbf{Ação} & \textbf{Meta proposta} & \textbf{Responsável} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Período} & \textbf{Ação} & \textbf{Meta proposta} & \textbf{Responsável} \\
+\midrule
+\endhead
+Sem. 1--2 & Entrevistas e mapeamento local. & 15--20 tutores, 5 clínicas. & Giovanna \\
+Sem. 3--4 & Revisão de interface e testes autônomos. & 80\% de sucesso em tarefas. & Kathleen + Gabriel \\
+Sem. 5--8 & Piloto concierge em BH. & 40--50 tutores. & Júlia + Equipe \\
+\bottomrule
+\end{longtable}
+
+\section{Riscos e salvaguardas}
+
+Os riscos de execução incluem baixa oferta local, má interpretação da triagem como diagnóstico e segurança de dados. A resposta no piloto foca em limites clínicos claros e conformidade com o guia da ANPD [2].
+
+\clearpage
+\section*{Referências}
+\addcontentsline{toc}{section}{Referências}
+\small
+\begin{enumerate}[label={[\arabic*]},leftmargin=1.3cm,itemsep=0.2em]
+\item PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS. \textit{XIII -- Estratégias de crescimento, viabilidade e coerência}. Orientação da atividade fornecida em PDF ao grupo, 2026.
+\item AUTORIDADE NACIONAL DE PROTEÇÃO DE DADOS (ANPD). \textit{Guia orientativo sobre segurança da informação para agentes de tratamento de pequeno porte}. 2026.
+\end{enumerate}
+\normalsize
+
+\end{document}
