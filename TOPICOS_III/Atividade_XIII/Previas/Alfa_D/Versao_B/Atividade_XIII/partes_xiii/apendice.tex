@@ -1,0 +1,46 @@
+\section{Apêndice A -- Premissas e fórmulas da simulação}
+\label{ap:modelo}
+
+A simulação reproduz, por fórmula, os resultados do mês 12 da Atividade IX (receita de R\$~4.421,50; margem de contribuição de R\$~2.232,15; resultado do cenário A de R\$~756,32 e do cenário B de R\$~$-$4.743,68). Seja $N$ o número de usuários ativos mensais.
+
+\begin{equation}
+\text{Receita}(N) = N\,[\,a\,t\,c\,k + s\,p + \rho\,m\,] + C
+\end{equation}
+
+em que $a$ é a proporção de usuários com atendimento intermediado, $t$ o ticket médio, $c$ a parcela paga em dinheiro, $k$ a comissão, $s$ a proporção de assinantes, $p$ o preço da assinatura, $\rho$ o número de clínicas pagantes por usuário, $m$ a mensalidade do Plano Parceiro e $C$ o convênio mensal. As deduções são:
+
+\begin{equation}
+\text{Taxas}(N) = N\,[\,s\,p\,\lambda + a\,t\,c\,\phi + \rho\,m\,\psi\,]
+\end{equation}
+\begin{equation}
+\text{Contribuição}(N) = \text{Receita}(N) - \text{Taxas}(N) - \tau\,\text{Receita}(N) - N\,(i + a\,f)
+\end{equation}
+
+em que $\lambda$ é a taxa da loja de aplicativos, $\phi$ a taxa média de pagamento, $\psi$ a taxa de cartão sobre o Plano Parceiro, $\tau$ a alíquota de impostos, $i$ a infraestrutura e o suporte por usuário e $f$ o fundo de liquidação por atendimento. O resultado mensal é a contribuição menos os custos fixos do cenário A (R\$~1.475,83) ou B (R\$~6.975,83).
+
+\begin{table}[htb]
+\centering
+\caption{Premissas do cenário-base}
+\label{tab:premissas}
+\fontsizetable
+\begin{tabularx}{\textwidth}{Y L{3.2cm}}
+\toprule
+\textbf{Parâmetro} & \textbf{Valor}\\
+\midrule
+Atendimentos intermediados ($a$) & 10\% dos usuários\\
+Ticket médio ($t$) e parcela em dinheiro ($c$) & R\$~110,00; 70\%\\
+Comissão ($k$) & 10\%\\
+Assinantes ($s$) e preço ($p$) & 5\%; R\$~12,90\\
+Clínicas pagantes ($\rho$) e mensalidade ($m$) & 1 por 150 usuários; R\$~79,90\\
+Convênio ($C$) & R\$~1.500,00\\
+Taxas: loja ($\lambda$), pagamento ($\phi$), cartão ($\psi$) & 15\%; 2,59\%; 4,98\%\\
+Impostos ($\tau$) & 6\%\\
+Infraestrutura e suporte ($i$) & R\$~0,30\\
+Fundo de liquidação ($f$) & R\$~6,60 por atendimento\\
+Custos fixos (A; B) & R\$~1.475,83; R\$~6.975,83\\
+\bottomrule
+\end{tabularx}
+\fontetexto{Atividade IX \cite{grupo2026a9}}
+\end{table}
+
+Os pontos de equilíbrio foram obtidos por busca numérica da menor quantidade de usuários para a qual o resultado é não negativo, arredondada para cima. Para o cenário-base, obtêm-se 121 usuários (A, com convênio), 2.693 (A, sem convênio), 10.155 (B, com convênio) e 12.728 (B, sem convênio), valores que coincidem com os da Atividade IX, exceto por diferenças de arredondamento. As alavancas alteram, de forma isolada ou conjunta, $f$, $s$, $\rho$ e $p$.

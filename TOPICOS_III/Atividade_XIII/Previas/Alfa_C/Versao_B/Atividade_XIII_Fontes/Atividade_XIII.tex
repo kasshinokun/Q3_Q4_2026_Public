@@ -1,0 +1,157 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\geometry{top=3cm,bottom=2cm,left=3cm,right=2cm}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.2em}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black,pdftitle={Atividade XIII — PetCuida},pdfauthor={Grupo PetCuida — PUC Minas}}
+\pagestyle{fancy}\fancyhf{}\lhead{\small PetCuida}\rhead{\small Atividade XIII}\cfoot{\thepage}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+\begin{titlepage}\thispagestyle{empty}\begin{center}
+\includegraphics[width=0.18\textwidth]{assets/brasao.png}\\[0.4cm]
+{\large\textbf{PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS}}\\[0.15cm]
+{\large Curso de Engenharia de Computação}\\
+{\large Tópicos III -- Empreendedorismo e Inovação}
+\vfill
+{\LARGE\textbf{Atividade XIII}}\\[0.35cm]
+{\Large Estratégias de crescimento, viabilidade e coerência}\\[0.2cm]
+{\large Startup: PetCuida}
+\vfill
+\textbf{Integrantes}\\[0.15cm]
+Gabriel da Silva Cassino\\Giovanna Naves Ribeiro\\Júlia Rodrigues Vasconcellos Melo\\Kathleen Rodrigues Leite Barbosa
+\vfill
+\textbf{Professor-orientador:} João Carlos Oliveira Caetano\\
+\textbf{Professor-tutor:} Paulo Mattos
+\vfill
+Belo Horizonte\\2026
+\end{center}\end{titlepage}
+
+\pagenumbering{roman}\tableofcontents\clearpage\pagenumbering{arabic}
+
+\section{Diagnóstico e coerência do estágio}
+
+O PetCuida deve ser tratado como um protótipo em validação, em transição para um piloto controlado — não como uma operação em escala. O repositório mostra um aplicativo Flutter Alpha 3i e telas de perfil do pet, calendário preventivo, triagem informativa e rede demonstrativa [2]. O relatório do grupo registra cinco sessões de usabilidade qualitativas, conduzidas com apoio da equipe. Foram relatados sinais de interesse e também dúvidas sobre créditos e QR Code [3]. A amostra é pequena, não representativa e não comprova aquisição, retenção, intenção de pagamento ou tração comercial.
+
+Há ainda limites funcionais que condicionam a expansão: o mapa é ilustrativo, sem georreferenciamento real, e o login Google estava simulado [2, 3]. Não são presumidas clínicas contratadas, faturamento ou patrocinadores. Os dados agregados do setor pet podem fornecer contexto, mas não estimam a demanda alcançável pelo PetCuida [5]. A estratégia coerente é reduzir incertezas em sequência: compreensão do produto, uso autônomo, oferta local, retorno dos usuários, custos e só então expansão.
+
+\section{Estratégia 1: piloto territorial assistido}
+
+A primeira frente é validar um fluxo em Belo Horizonte, começando por um bairro ou rede que a equipe consiga acompanhar. As metas propostas para descoberta são entrevistar 15 a 20 tutores, conversar com cinco clínicas e mapear duas organizações comunitárias. Esses números são objetivos de pesquisa para o próximo ciclo, não contatos ou acordos já realizados. As conversas devem investigar necessidades, frequência de cuidado, preço social, deslocamento, disponibilidade e condições para encaminhamento.
+
+Na etapa seguinte, a equipe deve revisar a explicação de créditos e QR Code e executar testes em que os próprios participantes realizem as tarefas sem ajuda. Em uma terceira etapa, pode-se operar um piloto concierge por até oito semanas, com cadastro e encaminhamentos acompanhados manualmente. Como hipótese de escala de teste, pode-se convidar 40 a 50 tutores e buscar duas ou três clínicas participantes, condicionado à disponibilidade real, consentimento e capacidade operacional. O número efetivamente alcançado deve ser reportado sem extrapolação para o mercado.
+
+\begin{table}[htbp]\centering\small
+\caption{Ciclo de trabalho proposto.}
+\begin{tabularx}{\textwidth}{P{2.1cm}YY}
+\toprule\textbf{Período} & \textbf{Atividade} & \textbf{Entrega/meta inicial}\\\midrule
+Semanas 1--2 & Descoberta & Entrevistas com 15--20 tutores; conversa com 5 clínicas e 2 organizações.\\
+Semanas 3--4 & Revisão e teste & Corrigir créditos/QR; 10 testes; ao menos 8 participantes concluem tarefas sem ajuda.\\
+Semanas 5--8 & Piloto assistido & Até 40--50 tutores convidados e 2--3 clínicas, se houver adesão e capacidade.\\
+Fechamento & Decisão & Continuar, iterar ou ampliar após revisar ativação, retorno, oferta, custos e segurança.\\
+\bottomrule\end{tabularx}\end{table}
+
+\section{Estratégia 2: aquisição local baseada em confiança}
+
+A aquisição deve começar por conteúdo preventivo útil, organizações locais e indicação por clínicas participantes, em vez de mídia paga ampla antes da validação. Um QR ou link distinto por evento ou parceiro pode indicar a origem dos cadastros. O funil a acompanhar inclui chegada qualificada, cadastro, criação do perfil do pet, primeiro lembrete, uso posterior e procura por serviço. A triagem deve ser informativa, revisada e explícita sobre seus limites clínicos.
+
+A ativação proposta é completar o perfil do pet e cadastrar ao menos um lembrete em até sete dias. A retenção no dia 30 deve corresponder a uma ação relevante dentro da janela dos dias 22 a 30, como consultar o histórico, atualizar um cuidado preventivo ou iniciar um encaminhamento. Curtidas e downloads, isoladamente, não demonstram valor recorrente. Campanhas pagas podem ser consideradas somente depois de medir custo por tutor ativado e retorno por canal.
+
+\section{Escalabilidade operacional, tecnologia e dados}
+
+A escala recomendada é territorial e gradual. Primeiro, padronizar cadastro de parceiros, serviços, horários, critérios de preço social, encaminhamentos e canal de suporte. Depois, automatizar apenas etapas repetitivas que já funcionem manualmente. Agendamento, mapa em tempo real e intermediação financeira exigem integrações e processos que não são comprovados pelas telas atuais.
+
+Antes de um piloto com dados pessoais, a equipe deve documentar a finalidade, limitar a coleta, restringir acessos, planejar retenção e backups e definir resposta a incidentes. O guia da ANPD para agentes de tratamento de pequeno porte oferece orientação prática que deve ser avaliada conforme o produto e as obrigações aplicáveis [6]. A triagem também precisa indicar que não substitui atendimento veterinário e deve encaminhar sinais de urgência a profissionais.
+
+\section{Viabilidade econômica}
+
+O material disponível não informa preços validados, custos mensais, faturamento, custo de aquisição ou margem por parceiro. Por isso, não se apresenta projeção financeira. O próximo ciclo deve registrar hospedagem, pagamentos, comunicação, suporte, custos variáveis por atendimento e horas de trabalho da equipe. O tempo dos fundadores deve ser anotado mesmo quando não houver pagamento, para que a operação não pareça artificialmente gratuita.
+
+As vias descritas na Atividade X — planos de parceiros, intermediação, convênios ou patrocínios — permanecem hipóteses distintas [4]. A equipe pode perguntar a clínicas o que valorizariam e qual faixa de preço considerariam, sem confundir intenção verbal com receita. Intermediação só deve ser testada depois de definir processo de repasse, transparência e requisitos aplicáveis. Patrocínios só entram na conta com compromisso formal.
+
+A receita mensal potencial pode ser modelada, após coleta de dados, como:
+\[
+R_m = (N_c \times P_c) + (N_a \times T_a) + S,
+\]
+onde $N_c$ é o número de clínicas pagantes, $P_c$ o valor mensal do plano, $N_a$ o número de atendimentos concluídos, $T_a$ a receita líquida por atendimento e $S$ o valor formal de patrocínio ou convênio. O ponto de equilíbrio aproximado, quando a margem média por parceiro é positiva, é:
+\[
+N_{eq} = \frac{C_f}{M_p},
+\]
+onde $C_f$ são custos fixos mensais e $M_p$ é a margem de contribuição média por parceiro depois dos custos variáveis. Estas equações são instrumentos de análise futura, não projeções ou números observados.
+
+\section{Indicadores e critérios de decisão}
+
+\begin{table}[htbp]\centering\small
+\caption{Indicadores propostos para o piloto.}
+\begin{tabularx}{\textwidth}{P{2.4cm}YY}
+\toprule\textbf{Frente} & \textbf{Definição} & \textbf{Meta inicial proposta}\\\midrule
+Descoberta & Entrevistas e interlocutores locais. & 15--20 tutores; 5 clínicas; 2 organizações.\\
+Usabilidade & Participante conclui tarefas-chave sem ajuda. & 10 testes; ao menos 8 concluem tarefas; 80\% explicam QR/créditos.\\
+Ativação & Perfil do pet e primeiro lembrete em até 7 dias. & 60\% dos inscritos no piloto.\\
+Retenção & Ao menos uma ação relevante entre dias 22 e 30. & 30\% dos inscritos no piloto.\\
+Oferta & Parceiro disposto a repetir um ciclo controlado. & 2 clínicas interessadas em novo teste.\\
+\bottomrule\end{tabularx}\end{table}
+
+As metas são critérios de aprendizagem a discutir com o grupo, não resultados já alcançados. Caso a amostra seja menor, apresentar contagens e limitações. O ponto de decisão deve combinar comportamento dos usuários, disponibilidade dos parceiros, custos, margem potencial, segurança e capacidade de suporte. Sem oferta local suficiente, a equipe deve ajustar o território; sem retenção, deve revisar o valor recorrente; sem margem positiva, deve rever o modelo antes de ampliar.
+
+\section{Papéis propostos para o próximo ciclo}
+
+A divisão abaixo é uma proposta de execução, coerente com responsabilidades discutidas na Atividade XI e sujeita à disponibilidade real dos integrantes [7].
+\begin{itemize}
+\item \textbf{Giovanna -- produto e coordenação:} priorizar tarefas, organizar entrevistas, acompanhar parceiros potenciais e consolidar decisões.
+\item \textbf{Gabriel -- engenharia do aplicativo:} arquitetura, desenvolvimento e revisão técnica do protótipo.
+\item \textbf{Júlia -- back-end e integrações:} mapear dependências de dados, autenticação, notificações e integrações necessárias.
+\item \textbf{Kathleen -- qualidade e facilitação:} boa programadora, conforme informado pelo grupo; conduzir testes técnicos e apoiar a ponte de comunicação entre as frentes, sintetizando dúvidas e decisões.
+\end{itemize}
+
+\section{Riscos e respostas}
+
+\begin{table}[htbp]\centering\small
+\caption{Riscos prioritários e salvaguardas.}
+\begin{tabularx}{\textwidth}{P{3.0cm}YY}
+\toprule\textbf{Risco} & \textbf{Efeito possível} & \textbf{Resposta proposta}\\\midrule
+Oferta insuficiente & Usuário não encontra serviço disponível. & Validar horários e critérios antes de divulgar; iniciar localmente.\\
+Triagem confundida com diagnóstico & Decisão clínica inadequada. & Aviso claro, revisão de conteúdo e encaminhamento profissional.\\
+Dados expostos & Perda de confiança e dano ao usuário. & Minimização, controle de acesso e resposta a incidentes [6].\\
+Economia negativa & Custos de operação superam margem. & Medir custos por participante/parceiro antes de escalar.\\
+Créditos pouco claros & Confusão ou contestação de repasses. & Definir regras de geração, uso, validade e prestação de contas.\\
+\bottomrule\end{tabularx}\end{table}
+
+\section{Conclusão}
+
+A recomendação para a Atividade XIII é começar por validação local, acompanhar tarefas e retorno reais, registrar custos e somente depois decidir se o PetCuida deve automatizar, cobrar ou expandir. A coerência depende de apresentar cada hipótese como hipótese, manter limites clínicos transparentes e proteger os dados usados no piloto. O avanço deve ocorrer quando as evidências — e não apenas o tamanho do setor ou a visibilidade — sustentarem a próxima etapa.
+
+\section*{Referências}\addcontentsline{toc}{section}{Referências}
+\small
+\begin{enumerate}[label={[\arabic*]},leftmargin=1.3cm,itemsep=0.25em]
+\item PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS. \textit{XIII -- Estratégias de crescimento, viabilidade e coerência}. Orientação fornecida ao grupo, 2026.
+\item KASSHINOKUN. \textit{Q3\_Q4\_2026\_Public: documentação do PetCuida, Atividade VI}. GitHub. Disponível em: \url{https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_VI}. Acesso em: 27 out. 2026.
+\item CASSINO, Gabriel da Silva et al. \textit{Relatório de Testes de Usabilidade -- PetCuida Alpha 3i}. Atividade VI, 2026. Disponível em: \url{https://github.com/kasshinokun/Q3_Q4_2026_Public/blob/main/TOPICOS_III/Atividade_VI/Entrevistas/Base-Envio/Relatorio_Testes_Usabilidade.tex}. Acesso em: 27 out. 2026.
+\item CASSINO, Gabriel da Silva et al. \textit{Atividade X -- Tipo societário e aspectos legais: PetCuida}. 2026. Disponível em: \url{https://github.com/kasshinokun/Q3_Q4_2026_Public/tree/main/TOPICOS_III/Atividade_X}. Acesso em: 27 out. 2026.
+\item ABEMPET. \textit{Balanço do setor pet 2025}. Comunicado disponibilizado na Câmara Setorial do MAPA, 2026. Disponível em: \url{https://www.gov.br/agricultura/pt-br/assuntos/camaras-setoriais-tematicas/documentos/camaras-setoriais/animais-e-estimacao/2026/45a-ro-23-04-2026/release-projecao-2025-setor-pet.pdf}. Acesso em: 27 out. 2026.
+\item AUTORIDADE NACIONAL DE PROTEÇÃO DE DADOS (ANPD). \textit{Guia orientativo sobre segurança da informação para agentes de tratamento de pequeno porte}. Disponível em: \url{https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia-orientativo-sobre-seguranca-da-informacao-para-agentes-de-tratamento-de-pequeno-porte}. Acesso em: 27 out. 2026.
+\item CASSINO, Gabriel da Silva et al. \textit{Atividade XI -- Estrutura organizacional com descrição de responsabilidades}. Versão do grupo, 2026.
+\end{enumerate}
+\normalsize
+\end{document}

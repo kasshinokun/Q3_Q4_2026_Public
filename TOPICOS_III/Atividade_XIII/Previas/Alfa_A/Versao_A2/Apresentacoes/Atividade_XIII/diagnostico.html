@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #F7F5F0; color: #2D2A26; font-family: 'Noto Sans JP', sans-serif; padding: 60px; position: relative; }
+    .top-line { position: absolute; top: 40px; left: 60px; right: 60px; height: 2px; background: #C05640; }
+    h1 { font-family: 'Noto Serif JP', serif; font-size: 48px; margin-top: 20px; margin-bottom: 60px; color: #C05640; }
+    .content { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: start; }
+    .analysis { display: flex; flex-direction: column; gap: 32px; }
+    .card { background: #FFFFFF; border: 1px solid #E2DCD0; border-radius: 4px; padding: 32px; }
+    h2 { font-family: 'Noto Serif JP', serif; font-size: 28px; color: #C05640; margin-bottom: 16px; }
+    p { font-size: 18px; line-height: 1.6; margin-bottom: 12px; }
+    ul { list-style: none; padding-left: 0; }
+    li { position: relative; padding-left: 24px; margin-bottom: 12px; font-size: 18px; line-height: 1.5; }
+    li::before { content: '■'; position: absolute; left: 0; color: #C05640; font-size: 14px; top: 4px; }
+    .footer { position: absolute; bottom: 40px; left: 60px; right: 60px; display: flex; justify-content: space-between; font-size: 14px; color: #6B665E; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="top-line"></div>
+    <h1>Diagnóstico do Estágio</h1>
+    <div class="content">
+      <div class="analysis">
+        <div class="card">
+          <h2>PetCuida em Validação</h2>
+          <p>A situação observada na Atividade VI sinaliza interesse, mas não confirma viabilidade econômica ou tração comercial.</p>
+          <ul>
+            <li><strong>Protótipo Funcional:</strong> Flutter Alpha 3i atende aos requisitos técnicos básicos.</li>
+            <li><strong>Incerteza de Mercado:</strong> Amostra qualitativa reduzida impede estimativas estatísticas.</li>
+            <li><strong>Gap de Operação:</strong> Fluxos de georreferenciamento e login Google ainda são simulados.</li>
+          </ul>
+        </div>
+      </div>
+      <div style="background: #E2DCD0; width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
+        <span style="color: #6B665E;">[Imagem de Suporte: Equipe em Validação]</span>
+      </div>
+    </div>
+    <div class="footer">
+      <span>Estratégias de Crescimento · PetCuida</span>
+      <span>Atividade XIII · 01</span>
+    </div>
+  </div>
+</body>
+</html>
