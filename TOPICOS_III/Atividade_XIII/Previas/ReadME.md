@@ -1,5 +1,5 @@
-# Arquivo Final para Atividade 12
-- Apresentação Visual(Apresentação e Pitch)
+# Previas para Atividade 13 - Estagios Iniciais
+- Estratégias de crescimento, viabilidade e coerência: Powerpoint e LaTex
 ## Autores
 - [Giovanna](https://github.com/giovannanaves)
 - [Gabriel Cassino](https://github.com/kasshinokun)
@@ -7,13 +7,10 @@
 - [Júlia](https://github.com/juliarvm)
 
 ## Versão e Autoria
-- Texto-Base: Gabriel
+- Texto-Base: Todos
 - Pesquisa: Todos
-- Validação: Todos
-- Revisões Iniciais: Kathleen(revisão 3b)
-- Revisão Final Escolhida: Kathleen
+- Revisões Iniciais: Todos
 
-## Sobre as versões
-Foram preparadas diversos modelos para escolha, 
-porém, a revisão 3B foi aceita pela maioria, 
-e a revisão final foi feita por Kathleen e validada pelo grupo
+## Sobre as versões Alfa
+Foram preparadas diversos modelos para escolha e produção da revisão Beta,
+a qual será aceita pela maioria, e como resultado servirá de base para revisão final.
