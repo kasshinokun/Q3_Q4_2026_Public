@@ -9,8 +9,13 @@
 ## Versão e Autoria
 - Texto-Base: Todos
 - Pesquisa: Todos
-- Revisões Iniciais: Todos
-
+- Revisões Alfa: Todos
+- Revisões Beta: Todos
 ## Sobre as versões Alfa
 Foram preparadas diversos modelos para escolha e produção da revisão Beta,
 a qual será aceita pela maioria, e como resultado servirá de base para revisão final.
+
+## Sobre as versões Beta
+Foram preparadas 3 modelos para escolha e produção da revisão final,
+a versão aceita pela maioria foi revisão de Kathleen e Gabriel(B3), 
+a qual resultou na revisão final para entrega.
