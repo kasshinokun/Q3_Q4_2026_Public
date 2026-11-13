@@ -34,8 +34,19 @@
 
 ## Etapa 9
 - [Pesquisa no Google Forms](https://forms.gle/N3C947f2NfmwQeoRA)
-- [Aplicação Web Temporária](https://petcuida.pythonanywhere.com)
+- [Aplicação Web Temporária até 07/11/2026](https://petcuida.pythonanywhere.com)
 - **APK's**
   - Smartphones Similares a Samsung SM-A107M
   - Smartphones Similares a Samsung SM-A528B
   - [Link para Pasta no Google Drive](https://drive.google.com/drive/folders/1ucK9MPxXM7AZeBhnduMgDH6oeOtt-P4X)
+
+## Etapa 14
+- Documentação (em processamento)
+- Video da entrega (em processamento)
+- Documentação de Software (em análise)
+- [Aplicação Web Temporária até 12/12/2026](https://petcuida.pythonanywhere.com)
+- **APK's**
+  - Smartphones Similares a Samsung SM-A107M
+  - Smartphones Similares a Samsung SM-A528B
+  - [Link para Pasta no Mega](https://mega.nz/folder/sVRV3JbY#XOMdonSClZot4hkZ4PahwA)
+- [Simulação Android Temporária até 20/12/2026](https://petcuida-mobile-2026.web.app/)

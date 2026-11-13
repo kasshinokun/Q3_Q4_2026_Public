@@ -1,0 +1,26 @@
+\section{Economia unitária e análise de cenários}
+A Atividade IX fornece premissas de referência: 1.500 usuários ativos/mês, 10\% com atendimento intermediado, ticket médio de R\$ 110, 70\% pagos em dinheiro, 5\% de assinantes, 10 clínicas, mensalidade de R\$ 79,90 e convênio estimado em R\$ 1.500/mês. Esses valores são estimativas internas, não resultados observados.
+
+No cenário-base da Atividade IX, a contribuição agregada é R\$ 2.232,15 para 1.500 usuários, equivalente a aproximadamente R\$ 1,49 por usuário antes de custos fixos, porém inclui o convênio de R\$ 1.500. Retirado o convênio, a contribuição fica em R\$ 822,15, aproximadamente R\$ 0,55 por usuário. Para evitar ambiguidade, esta entrega adota R\$ 0,55 como contribuição unitária operacional sem convênio e apresenta o patrocínio separadamente como receita fixa contratual. O fundo de créditos de R\$ 990/mês representa R\$ 0,66 por usuário ativo na hipótese de 150 atendimentos mensais e R\$ 6,60 por atendimento. A margem de atendimento após o fundo é negativa em R\$ 1,36 segundo o cálculo da Atividade IX.
+
+\begin{table}[H]\centering
+\caption{Premissas e riscos da economia unitária}
+\begin{tabularx}{\textwidth}{L{4cm}L{3cm}Y}
+\toprule
+Parâmetro & Premissa da Atividade IX & Tratamento nesta entrega\\\midrule
+Contribuição unitária sem convênio & R\$ 0,55/mês & Hipótese a recalcular por coorte.\\
+Fundo por atendimento & R\$ 6,60 & Limitar e validar custo real e frequência de uso.\\
+CAC & Não medido & Medir por canal e por usuário ativado, não por download.\\
+Convênio/patrocínio & R\$ 1.500/mês & Considerar apenas após contrato assinado.\\
+Custos fixos & R\$ 1.475,83 (A); R\$ 6.975,83 (B) & Revisar com custos incrementais de escala e folha.\\
+\bottomrule
+\end{tabularx}\fontedados{Atividade IX; análise crítica desta revisão}
+\end{table}
+
+A regra provisória CAC $\leq$ 6 $\times$ contribuição mensal resulta em R\$3,29. A regra é conservadora e incompleta: não substitui cálculo de CLV, payback e retenção por coorte. Se a contribuição mensal efetiva cair, o teto também cai. Se o CAC incluir horas de trabalho, incentivos, materiais e mídia, todos esses componentes devem ser contabilizados.
+
+O ponto de equilíbrio simplificado sem convênio é:
+\[
+N_{eq}=\frac{C_f}{m_u},
+\]
+em que $C_f$ representa custos fixos mensais e $m_u$ a contribuição por usuário. Com R\$ 0,55 e custos fixos de R\$ 1.475,83, o cenário A exigiria aproximadamente 2.684 usuários; o cenário B, com R\$ 6.975,83, exigiria aproximadamente 12.684. Com convênio, o cálculo deve subtrair a receita líquida contratada (e não a receita bruta) dos custos fixos. Esses valores diferem ligeiramente dos pontos de equilíbrio arredondados da Atividade IX por causa das premissas de taxas e arredondamentos. A simulação original também mantém custos fixos constantes, não modela churn e antecipa receita de parceiros mesmo quando há período gratuito; portanto, tende a ser otimista.
