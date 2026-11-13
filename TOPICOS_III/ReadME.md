@@ -49,3 +49,4 @@
   - Smartphones Similares a Samsung SM-A107M
   - Smartphones Similares a Samsung SM-A528B
   - [Link para Pasta no Mega](https://mega.nz/folder/sVRV3JbY#XOMdonSClZot4hkZ4PahwA)
+- [Simulação Android Temporária até 20/12/2026](https://petcuida-mobile-2026.web.app/)
