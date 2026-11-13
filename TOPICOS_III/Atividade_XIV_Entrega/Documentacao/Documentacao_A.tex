@@ -1,0 +1,162 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{graphicx}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\title{\textbf{Documentação Técnica de Software: PetCuida Android}}
+\author{Grupo 4 --- Tópicos III (Engenharia de Computação, PUC Minas)}
+\date{Novembro de 2026}
+
+\begin{document}
+
+% ==========================================
+% CAPA
+% ==========================================
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=0.25\textwidth]{./images/brasao.png}\par
+\vspace{0.5cm}
+{\Large\textbf{PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS}}\\
+{\large Campus Coração Eucarístico}\\
+{\large Curso de Engenharia de Computação}\\
+{\large Disciplina: Tópicos III -- Empreendedorismo e Inovação}
+\vspace{2.2cm}
+{\Huge\textbf{Documentação Técnica de Software:\\PetCuida Android}}\\
+\vspace{0.4cm}
+{\Large Arquitetura, Configuração e Requisitos de Evolução}
+\vfill
+{\Large\textbf{Integrantes:}}\\[0.2cm]
+\large Gabriel da Silva Cassino\\
+\large Giovanna Naves Ribeiro\\
+\large Júlia Rodrigues Vasconcellos Melo\\
+\large Kathleen Rodrigues Leite Barbosa\\
+\vspace{0.8cm}
+{\large\textbf{Professor-orientador:}}\\ João Carlos Oliveira Caetano\\
+{\large\textbf{Professor-tutor:}}\\ Paulo Mattos
+\vfill
+Belo Horizonte\\2026
+\end{center}
+\end{titlepage}
+
+% ==========================================
+% CONTRACAPA
+% ==========================================
+\begin{titlepage}
+\begin{center}
+{\large\textbf{Gabriel da Silva Cassino}}\\
+{\large\textbf{Giovanna Naves Ribeiro}}\\
+{\large\textbf{Júlia Rodrigues Vasconcellos Melo}}\\
+{\large\textbf{Kathleen Rodrigues Leite Barbosa}}
+\vfill
+{\Large\textbf{Documentação Técnica de Software: PetCuida Android}}\\
+{\large (Especificação da Aplicação Mobile --- Revisão \texttt{D4C2B\_LGPD})}
+\vfill
+\end{center}
+\begin{flushright}
+\begin{minipage}{8cm}
+\small Documentação técnica apresentada à disciplina Tópicos III -- Empreendedorismo e Inovação, do Curso de Engenharia de Computação da PUC Minas, como artefato complementar de engenharia referente à arquitetura mobile do projeto PetCuida.
+\end{minipage}
+\end{flushright}
+\vfill
+\begin{center}Belo Horizonte\\2026\end{center}
+\end{titlepage}
+
+% ==========================================
+% SUMÁRIO
+% ==========================================
+\tableofcontents
+\newpage
+
+
+\section{Identificação e arquitetura}
+O \textbf{PetCuida Android} constitui o destino nativo para dispositivos Android desenvolvido a partir da mesma base de código Flutter utilizada na versão Web. O código-fonte em Dart reside no diretório \texttt{lib/}, enquanto as configurações específicas da plataforma nativa encontram-se em \texttt{android/}. O identificador de pacote declarado no Gradle é \texttt{com.grupo4topicos3.petcuida.petcuida}, utilizando o rótulo de exibição \texttt{PetCuida} e a versão \texttt{1.3.0+1} definida no arquivo \texttt{pubspec.yaml}.
+
+A camada nativa inicializa a classe \texttt{MainActivity} utilizando o padrão \textit{Flutter embedding v2}. As rotas, o gerenciamento de estado e os componentes visuais (\textit{widgets}) são integralmente compartilhados com a aplicação Web. Na entrega atual, a camada de dados opera por meio de uma simulação em memória volátil (\textit{mock}), e a interface informa explicitamente ao usuário que a autenticação e as integrações externas são demonstrativas.
+
+\section{Configuração Android observada}
+O arquivo \texttt{android/app/build.gradle.kts} herda dinamicamente as propriedades \texttt{compileSdk}, \texttt{targetSdk}, \texttt{minSdk}, versionamento e NDK diretamente da configuração do Flutter, fazendo com que os valores efetivos dependam do SDK instalado no ambiente de compilação. A compatibilidade de compilação para Java e Kotlin está configurada para a \textbf{JVM 17}.
+
+O manifesto Android (\texttt{AndroidManifest.xml}) define o rótulo \texttt{PetCuida}, configura a \textit{activity} principal como exportada para o inicializador do sistema (\textit{launcher}) e declara a permissão de acesso à câmera. O recurso de hardware de câmera foi marcado como opcional (\texttt{required="false"}) para assegurar que o aplicativo possa ser instalado em dispositivos que não possuam câmera integrada.
+
+Ressalta-se que o bloco de compilação \texttt{release} no Gradle está atualmente configurado para assinar o pacote com a chave padrão de depuração (\textit{debug}). Essa configuração atende apenas a testes internos e não constitui um perfil distribuível em lojas oficiais. Adicionalmente, o pacote de entrega omite o arquivo \texttt{local.properties} (que armazena caminhos locais da máquina de desenvolvimento) e não inclui credenciais produtivas do Firebase.
+
+\section{Fluxos e tratamento de dados}
+A experiência do protótipo contempla as telas de abertura (\textit{splash}), autenticação e cadastro simulados, \textit{onboarding}, painel principal, perfil do tutor, gestão de pets, triagem orientativa, rede solidária, agendamentos e painel corporativo para organizações parceiras. Tanto o cadastro quanto a sessão ativa não são persistidos em banco de dados nem vinculados a um provedor de identidade real. Todas as ações executadas alteram apenas o estado em memória, sendo reinicializadas ao encerrar o processo do aplicativo.
+
+A permissão de câmera atende exclusivamente ao fluxo de seleção de imagem para o perfil do animal, sem realizar envio (\textit{upload}) para servidores remotos. Não há sincronização em nuvem de prontuários, processamento de pagamentos, saldo financeiro real, envio de notificações \textit{push} ou integração ativa com clínicas. Por fim, o módulo de triagem atua estritamente como guia orientativo de interface, não possuindo caráter de diagnóstico veterinário.
+
+\section{Execução e validação}
+Para compilar, testar e executar o projeto em um ambiente configurado com Flutter SDK, Android SDK, Java 17 e um dispositivo físico ou emulador, devem-se executar os seguintes comandos na raiz do projeto Flutter:
+
+\begin{itemize}[leftmargin=*]
+  \item \texttt{flutter pub get} --- instala e resolve as dependências declaradas;
+  \item \texttt{flutter analyze} --- executa a análise estática de código e verificação de tipos;
+  \item \texttt{flutter test} --- executa a suíte de testes unitários e de \textit{widgets};
+  \item \texttt{flutter run -d <id-do-dispositivo>} --- inicia a aplicação em modo de depuração;
+  \item \texttt{flutter build apk -{}-debug} --- gera o pacote instalável (APK) para testes internos.
+\end{itemize}
+
+Antes de gerar uma versão de produção (\textit{release}), é indispensável configurar uma chave de assinatura segura e verificar o versionamento, as versões efetivas do SDK, as permissões declaradas e a árvore de dependências. Nota-se que o \textit{Gradle wrapper} isoladamente não compila o projeto sem a presença do SDK do Flutter no ambiente.
+
+\section{Segurança e requisitos de evolução}
+O APK de demonstração não deve ser utilizado com dados pessoais reais nem implantado como serviço ativo. Para a transição rumo ao piloto controlado, estabelecem-se os seguintes requisitos técnicos obrigatórios:
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Autenticação e controle de acesso:} Implementar autenticação real com sessão persistente, derivar a propriedade dos registros a partir de identidade confiável, testar o isolamento entre contas e aplicar políticas de segurança do tipo \textit{default-deny} no banco de dados.
+  \item \textbf{Saneamento de ambiente:} Remover dados iniciais de demonstração (\textit{seeds}) dos ambientes remotos e migrar o modelo de dados para a camada produtiva.
+  \item \textbf{Conformidade com a LGPD:} Implementar mecanismos formais de gestão de consentimento, controle de armazenamento de imagens, políticas de retenção e exclusão de dados, além de exibir mensagens claras de falha de rede sem simular falso sucesso.
+  \item \textbf{Distribuição e hardware:} Configurar assinatura criptográfica de \textit{release} protegida fora do repositório de código e reavaliar a real necessidade da permissão de câmera, mantendo-a opcional.
+  \item \textbf{Qualidade e resiliência:} Validar o comportamento de formulários, teclado virtual, escalonamento de fontes, rotação de tela, ciclo de vida da aplicação (retorno após suspensão) e recuperação de conectividade em dispositivos reais, além de executar testes de autorização no backend antes de inserir credenciais de produção.
+\end{enumerate}
+
+\section{Arquivos relevantes}
+A Tabela~\ref{tab:arquivos_android} relaciona os principais arquivos estruturais que compõem a implementação Android e a camada compartilhada do aplicativo.
+
+\begin{table}[H]
+\centering
+\caption{Principais arquivos da implementação Android e da camada compartilhada.}
+\label{tab:arquivos_android}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{6.8cm}Y}
+\toprule
+\textbf{Arquivo} & \textbf{Função}\\
+\midrule
+\path{android/app/src/main/AndroidManifest.xml} & Define o rótulo, o ponto de entrada (\textit{launcher}) e as permissões do sistema.\\
+\addlinespace[4pt]
+\path{android/app/build.gradle.kts} & Especifica a identidade do pacote e as opções de compilação Android.\\
+\addlinespace[4pt]
+\path{android/app/src/main/kotlin/.../MainActivity.kt} & Implementa a \textit{activity} nativa hospedeira do Flutter.\\
+\addlinespace[4pt]
+\path{lib/main.dart} & Ponto de entrada e raiz de composição compartilhada da aplicação.\\
+\addlinespace[4pt]
+\path{lib/core/services/app_data_service.dart} & Gerencia o estado e os dados simulados da demonstração.\\
+\addlinespace[4pt]
+\path{lib/core/services/auth_service.dart} & Implementa o fluxo de autenticação demonstrativa sem backend.\\
+\addlinespace[4pt]
+\path{test/core/services/app_data_service_test.dart} & Contém os casos de testes unitários da camada de serviços.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+\addcontentsline{toc}{section}{Referências}
+\begin{thebibliography}{9}
+\bibitem{ref1}
+GRUPO 4. \textbf{Documentação Própria A: código-fonte e configuração Android (\texttt{flutter/})}. Belo Horizonte: PUC Minas, 2026.
+
+\bibitem{ref2}
+GRUPO 4. \textbf{Pacote de entrega \texttt{PetCuida\_D4C2B\_LGPD} e Protótipos Iniciais}. Belo Horizonte: PUC Minas, 2026.
+
+\bibitem{ref3}
+GRUPO 4. \textbf{Documentação Própria B: proposta técnica e critérios de aceite para Web e Mobile}. Belo Horizonte: PUC Minas, 2026.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,178 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[brazil]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+% ==========================================
+% CAPA
+% ==========================================
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=0.25\textwidth]{./images/brasao.png}\par
+\vspace{0.5cm}
+{\Large\textbf{PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS}}\\
+{\large Campus Coração Eucarístico}\\
+{\large Curso de Engenharia de Computação}\\
+{\large Disciplina: Tópicos III -- Empreendedorismo e Inovação}
+\vspace{2.2cm}\\
+{\Huge\textbf{Guia de Melhorias Futuras:\\PetCuida Web e Mobile}}\\
+\vspace{0.4cm}
+{\Large Prioridades Técnicas, Segurança, Critérios de Aceite e Roteiro de Evolução}
+\vfill
+{\Large\textbf{Integrantes:}}\\[0.2cm]
+\large Gabriel da Silva Cassino\\
+\large Giovanna Naves Ribeiro\\
+\large Júlia Rodrigues Vasconcellos Melo\\
+\large Kathleen Rodrigues Leite Barbosa\\
+\vspace{0.8cm}
+{\large\textbf{Professor-orientador:}}\\ João Carlos Oliveira Caetano\\
+{\large\textbf{Professor-tutor:}}\\ Paulo Mattos
+\vfill
+Belo Horizonte\\2026
+\end{center}
+\end{titlepage}
+
+% ==========================================
+% CONTRACAPA
+% ==========================================
+\begin{titlepage}
+\begin{center}
+{\large\textbf{Gabriel da Silva Cassino}}\\
+{\large\textbf{Giovanna Naves Ribeiro}}\\
+{\large\textbf{Júlia Rodrigues Vasconcellos Melo}}\\
+{\large\textbf{Kathleen Rodrigues Leite Barbosa}}
+\vfill
+{\Large\textbf{Guia de Melhorias Futuras: PetCuida Web e Mobile}}\\
+{\large (Plano de Engenharia e Conformidade --- Revisão \texttt{D4C2B\_LGPD})}
+\vfill
+\end{center}
+\begin{flushright}
+\begin{minipage}{8cm}
+\small Documento técnico apresentado à disciplina Tópicos III -- Empreendedorismo e Inovação, do Curso de Engenharia de Computação da PUC Minas, estabelecendo os requisitos técnicos, bloqueadores de segurança e critérios de aceite para a transição do protótipo PetCuida ao ambiente produtivo.
+\end{minipage}
+\end{flushright}
+\vfill
+\begin{center}Belo Horizonte\\2026\end{center}
+\end{titlepage}
+
+% ==========================================
+% SUMÁRIO
+% ==========================================
+\tableofcontents
+\newpage
+
+% ==========================================
+% CONTEÚDO
+% ==========================================
+\section{Princípio de planejamento}
+A arquitetura atual do \textbf{PetCuida} (\texttt{D4C2B\_LGPD}) baseia-se em um núcleo Flutter compartilhado pelos destinos Web e Android, complementado por uma camada de serviços e prototipação em Flask. O plano de evolução técnica deve, portanto, consolidar primeiro as regras de domínio, persistência e segurança no núcleo compartilhado, para então validar as particularidades de cada plataforma cliente.
+
+Ressalta-se que a entrega atual opera essencialmente como uma simulação local em memória, não devendo ser confundida com um sistema conectado a banco de dados produtivo, autenticação real ou piloto comercial ativo. As diretrizes apresentadas a seguir distinguem os requisitos bloqueadores de segurança (P0) das melhorias de confiabilidade funcional (P1) e maturidade operacional (P2).
+
+\section{Prioridade P0 --- Bloqueadores para piloto com dados reais}
+Nenhum dado pessoal de tutores, parceiros ou histórico clínico de animais deve ser coletado em ambiente real antes da conclusão integral dos seguintes requisitos:
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Identidade e gestão de sessão:} Substituir o mapa de usuários em memória e o login simulado por um provedor de autenticação persistente (como Firebase Authentication ou Supabase Auth). A sessão deve emitir um identificador único e confiável para o tutor ou organização (PF/PJ), com fluxos definidos para encerramento de sessão (\textit{logout}), expiração de \textit{tokens}, recuperação de senha e estados de carregamento.
+  \item \textbf{Autorização e isolamento entre contas:} Validar rigorosamente a leitura e a escrita entre contas independentes para cada entidade privada. O sistema nunca deve confiar em identificadores de proprietário enviados livremente pelo cliente. Regras de segurança no servidor (\textit{Firestore Security Rules} ou \textit{Supabase Row Level Security}) devem adotar a política de negação por padrão (\textit{default-deny}), separar permissões por operação e contar com testes automatizados positivos e negativos \cite{firebase, supabase}.
+  \item \textbf{Modelo de dados e fonte única da verdade:} Definir um único backend principal para produção, versionando migrações de esquema e alinhando serialização e índices. Como catálogo público, perfil privado, organizações PJ, agendamentos, pedidos e movimentações de créditos possuem ciclos de vida distintos, os registros devem ser estruturados em coleções ou tabelas normalizadas, evitando documentos globais monolíticos.
+  \item \textbf{Remoção de dados demonstrativos (\textit{seeds}):} Os registros fictícios devem permanecer restritos ao ambiente local de demonstração. Em ambientes remotos, novas contas devem iniciar vazias ou carregar apenas seus próprios dados, eliminando completamente identificadores compartilhados como \texttt{tutor-demo}.
+  \item \textbf{Consistência de interface e tratamento de falhas:} A interface deve confirmar agendamentos, cadastros ou candidaturas somente após o aceite efetivo da operação pelo servidor. É obrigatório exibir indicadores de carregamento, mensagens claras de falha recuperável com opção de nova tentativa e tratamento adequado para perda de conectividade, evitando duplicações ou falsos positivos de sucesso.
+  \item \textbf{Privacidade e segurança operacional (LGPD):} Consolidar os controles previstos no módulo \texttt{privacy.py}, inventariando dados coletados, registrando consentimento informado, aplicando minimização de dados (especialmente localização e histórico clínico) e definindo políticas de retenção e exclusão. Chaves administrativas jamais devem ser embutidas no código do cliente, seguindo as diretrizes da ANPD para controle de acesso, menor privilégio e cópias de segurança \cite{anpd}.
+\end{enumerate}
+
+\section{Prioridade P1 --- Confiabilidade funcional por plataforma}
+
+\subsection{Núcleo compartilhado e regras de negócio}
+A camada de apresentação (\textit{widgets}) deve ser desacoplada dos casos de uso e dos SDKs externos por meio de interfaces explícitas para autenticação, perfis (PF e PJ), pets, catálogo, agendamentos, pedidos e carteira de créditos. 
+
+O saldo de créditos solidários deve ser calculado exclusivamente a partir de um livro-razão (\textit{ledger}) auditável no servidor, nunca como um campo numérico editável pelo aplicativo cliente. Da mesma forma, o envio de fotos de pets ou documentos exige armazenamento em nuvem autorizado, impedindo que caminhos locais do dispositivo sejam gravados como URLs remotas.
+
+No âmbito clínico, a triagem deve permanecer explicitamente identificada como orientativa. Antes de expandir a árvore de decisões, o fluxo precisa ser revisado por médicos-veterinários parceiros, mantendo alertas destacados para sinais de emergência e validando cenários que possam gerar falsa tranquilização. Transações financeiras reais e conversão de créditos permanecem fora do escopo produtivo até a contratação de provedores regulamentados.
+
+\subsection{Plataforma Web}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Responsividade e painéis:} Validar a adaptação visual em telas de dispositivos móveis, \textit{tablets} e computadores, estabelecendo limites adequados de largura de leitura e ergonomia nos painéis do tutor e da pessoa jurídica.
+  \item \textbf{Acessibilidade e fluxos críticos:} Realizar inspeção de navegação por teclado, compatibilidade com leitores de tela, contraste de cores, foco visível e tamanho de áreas clicáveis, testando login, cadastro, \textit{onboarding}, formulários e agendamento nos principais navegadores.
+  \item \textbf{Metadados e PWA:} Manter consistentes os metadados de idioma (\texttt{pt-BR}), título, descrição, \textit{viewport} e manifesto PWA, validando ícones, atualização de versão e comportamento \textit{offline} caso o modo instalável seja adotado.
+  \item \textbf{Roteamento e limpeza de sessão:} Testar o recarregamento direto de URLs internas, o ajuste de \texttt{base href} em hospedagens sob subdiretórios, o tratamento de páginas não encontradas (erro 404) e a ausência de dados pessoais expostos no console ou armazenamento local do navegador.
+\end{itemize}
+
+\subsection{Plataforma Android}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Identidade e assinatura de publicação:} Configurar explicitamente a identidade do pacote, o versionamento e as versões mínima e alvo do SDK. O perfil \texttt{release} no Gradle deve ser desvinculado da chave de \textit{debug} e assinado com certificado criptográfico seguro armazenado fora do repositório.
+  \item \textbf{Permissões e hardware:} Aplicar o princípio de menor privilégio na solicitação de permissões. Como a câmera é opcional, deve-se testar o comportamento do aplicativo diante da negação ou revogação da permissão, ausência de câmera física e seleção alternativa via galeria.
+  \item \textbf{Ciclo de vida e dispositivos:} Validar o comportamento em diferentes densidades de tela, abertura de teclado virtual, retomada após suspensão em segundo plano, perda repentina de rede, botão nativo de voltar e ausência de dados sensíveis nos \textit{logs} do sistema.
+Use o código com cuidado.
+\item \textbf{Homologação de pacote:} Compilar e instalar o APK ou \textit{App Bundle} de \textit{release} assinado em dispositivos físicos de teste, verificando o fluxo de atualização de versão e os links externos de política de privacidade.
+\end{itemize}
+\section{Prioridade P2 --- Operação, observabilidade e escala}
+Para sustentar a evolução contínua após o piloto inicial, recomenda-se estruturar uma esteira de integração contínua (CI) executando verificação de formatação, análise estática (\texttt{flutter analyze}), testes unitários, validação de regras de segurança e geração automatizada dos pacotes Web e Android.
+A configuração por ambiente (desenvolvimento, homologação e produção) deve ser isolada sem exposição de segredos no cliente. Operacionalmente, é necessário implementar registro de \textit{logs} anonimizados, monitoramento de erros, alertas de falha de sincronização, rotinas testadas de \textit{backup}/restauração e documentação formal de versionamento e reversão (\textit{rollback}). Quanto à escolha definitiva entre Firebase Firestore e Supabase (PostgreSQL), a decisão deve basear-se nos ensaios técnicos dos adaptadores já presentes no repositório, priorizando o Supabase caso a integridade relacional entre entidades (tutores, pets, organizações e transações) se mostre predominante, ou o Firestore caso a sincronização \textit{offline} nativa em tempo real seja o requisito crítico.
+\section{Critérios de aceite mensuráveis}
+A transição do protótipo para o piloto controlado será considerada apta somente quando todos os critérios abaixo forem verificados:
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Integridade transacional:} Cada ação válida gera um único registro no servidor; requisições duplicadas ou identificadores inválidos são rejeitados sem corromper o estado, e falhas de rede nunca são exibidas como sucesso.
+\item \textbf{Isolamento de privacidade:} Em testes automatizados com duas contas distintas, nenhuma conta consegue ler, alterar ou excluir registros privados da outra, com cobertura explícita de casos permitidos e negados.
+\item \textbf{Automatização de compilação:} Análise estática, suíte de testes unitários, compilação Web e geração de pacote Android assinado executam com sucesso em ambiente controlado.
+\item \textbf{Conformidade Web:} Os fluxos essenciais funcionam integralmente em telas móveis e \textit{desktop}, suportam recarregamento direto de rotas sem erro 404 e atendem aos requisitos básicos de acessibilidade e foco.
+\item \textbf{Conformidade Android:} A instalação e a atualização do pacote de \textit{release} ocorrem sem falhas em aparelhos de teste, a negação de permissões opcionais não bloqueia o aplicativo e não há uso de assinatura de \textit{debug}.
+\item \textbf{Governança LGPD:} O inventário de dados, termos de consentimento, prazos de retenção, fluxo de exclusão de conta e controle de acesso administrativo estão documentados e validados.
+\item \textbf{Segurança clínica e financeira:} A linguagem da triagem encontra-se revisada por médico-veterinário e as movimentações de créditos operam via livro-razão no servidor (ou permanecem explicitamente sinalizadas como demonstrativas).
+\end{enumerate}
+
+\section{Roteiro de execução sugerido}
+A Tabela~\ref{tab:roteiro_execucao} organiza a sequência recomendada de implementação em cinco fases incrementais, garantindo que a segurança e o isolamento de dados precedam a abertura para usuários reais.
+
+\begin{table}[H]
+\centering
+\caption{Fases sequenciais recomendadas para evolução técnica do PetCuida.}
+\label{tab:roteiro_execucao}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{4.3cm}Y}
+\toprule
+\textbf{Fase} & \textbf{Atividades principais e entregas}\\
+\midrule
+\textbf{1. Fechamento de escopo} & Validar a cópia atual do código Flutter, congelar os requisitos do piloto assistido e definir o backend produtivo único (Firestore ou Supabase).\\
+\addlinespace[5pt]
+\textbf{2. Identidade e isolamento} & Implementar autenticação real (PF/PJ), modelar entidades separadas, configurar regras \textit{default-deny} e executar testes automatizados de isolamento entre contas.\\
+\addlinespace[5pt]
+\textbf{3. Fluxo vertical básico} & Conectar o primeiro fluxo completo (perfil do tutor e cadastro do pet) à nuvem, validando tratamento de erros, estados de carregamento e remoção de \textit{seeds}.\\
+\addlinespace[5pt]
+\textbf{4. Expansão funcional} & Integrar catálogo de parceiros, agendamentos, painel organizacional e livro-razão de créditos no servidor, submetendo a triagem à revisão veterinária.\\
+\addlinespace[5pt]
+\textbf{5. Homologação e \textit{release}} & Executar testes de responsividade Web, ciclo de vida Android, auditoria de conformidade LGPD e geração dos pacotes assinados para o piloto.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+Até a conclusão integral dessas cinco etapas, o aplicativo deve permanecer estritamente em modo de demonstração controlada, mantendo visível o aviso de dados fictícios em todas as interfaces.
+
+\addcontentsline{toc}{section}{Referências}
+\begin{thebibliography}{9}
+\bibitem{a1}
+GRUPO 4. \textbf{Pacote de entrega \texttt{PetCuida_D4C2B_LGPD}: código-fonte Flutter, backend Flask e adaptadores}. Belo Horizonte: PUC Minas, 2026.
+\bibitem{a2}
+GRUPO 4. \textbf{Propostas técnicas e critérios de aceite para evolução Web e Mobile do PetCuida}. Belo Horizonte: PUC Minas, 2026.
+\bibitem{firebase}
+FIREBASE. \textbf{Get started with Cloud Firestore Security Rules}. Disponível em: \url{google.com}. Acesso em: 11 nov. 2026.
+\bibitem{supabase}
+SUPABASE. \textbf{Row Level Security}. Disponível em: \url{supabase.com}. Acesso em: 11 nov. 2026.
+\bibitem{anpd}
+AUTORIDADE NACIONAL DE PROTEÇÃO DE DADOS (ANPD). \textbf{Guia orientativo sobre segurança da informação para agentes de tratamento de pequeno porte}. Versão 1.0, out. 2021. Disponível em: \url{www.gov.br}. Acesso em: 11 nov. 2026.
+\end{thebibliography}
+\end{document}

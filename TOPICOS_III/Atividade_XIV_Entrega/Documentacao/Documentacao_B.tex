@@ -1,0 +1,171 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[brazil]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+% ==========================================
+% CAPA
+% ==========================================
+\begin{titlepage}
+\begin{center}
+{\includegraphics[width=0.25\textwidth]{./images/brasao.png}\par
+\vspace{0.5cm}
+{\Large\textbf{PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS}}\\
+{\large Campus Coração Eucarístico}\\
+{\large Curso de Engenharia de Computação}\\
+{\large Disciplina: Tópicos III -- Empreendedorismo e Inovação}
+\vspace{2.2cm}
+{\Huge\textbf{Documentação Técnica de Software:\\PetCuida Web e Firebase Hosting}}\\
+\vspace{0.4cm}
+{\Large Arquitetura Web Flutter, Prévia Estática e Requisitos de Implantação}
+\vfill
+{\Large\textbf{Integrantes:}}\\[0.2cm]
+\large Gabriel da Silva Cassino\\
+\large Giovanna Naves Ribeiro\\
+\large Júlia Rodrigues Vasconcellos Melo\\
+\large Kathleen Rodrigues Leite Barbosa\\
+\vspace{0.8cm}
+{\large\textbf{Professor-orientador:}}\\ João Carlos Oliveira Caetano\\
+{\large\textbf{Professor-tutor:}}\\ Paulo Mattos
+\vfill
+Belo Horizonte\\2026
+\end{center}
+\end{titlepage}
+
+% ==========================================
+% CONTRACAPA
+% ==========================================
+\begin{titlepage}
+\begin{center}
+{\large\textbf{Gabriel da Silva Cassino}}\\
+{\large\textbf{Giovanna Naves Ribeiro}}\\
+{\large\textbf{Júlia Rodrigues Vasconcellos Melo}}\\
+{\large\textbf{Kathleen Rodrigues Leite Barbosa}}
+\vfill
+{\Large\textbf{Documentação Técnica de Software: PetCuida Web e Firebase Hosting}}\\
+{\large (Especificação das Interfaces Web --- Revisão \texttt{D4C2B\_LGPD})}
+\vfill
+\end{center}
+\begin{flushright}
+\begin{minipage}{8cm}
+\small Documentação técnica apresentada à disciplina Tópicos III -- Empreendedorismo e Inovação, do Curso de Engenharia de Computação da PUC Minas, como artefato complementar de engenharia referente à arquitetura Web e hospedagem do projeto PetCuida.
+\end{minipage}
+\end{flushright}
+\vfill
+\begin{center}Belo Horizonte\\2026\end{center}
+\end{titlepage}
+
+% ==========================================
+% SUMÁRIO
+% ==========================================
+\tableofcontents
+\newpage
+
+% ==========================================
+% CONTEÚDO
+% ==========================================
+\section{Identificação e arquitetura}
+A frente Web do \textbf{PetCuida} contempla duas abordagens complementares no pacote entregue: (i) a compilação \textbf{Flutter Web}, que atua como destino para navegadores a partir da mesma base de código compartilhada com o aplicativo Android, e (ii) uma \textbf{prévia web estática} configurada especificamente para demonstrações rápidas no \textbf{Firebase Hosting}.
+
+Na frente Flutter Web, o código-fonte em Dart reside em \path{flutter/lib/} e os arquivos de configuração do navegador ficam em \path{flutter/web/}. O projeto utiliza o sistema visual Material, o pacote \texttt{Provider} para gerenciamento de estado e o \texttt{GoRouter} para roteamento, organizando modelos e serviços em \path{core/} e \path{features/}. O ponto de entrada em \path{lib/main.dart} configura a localização \texttt{pt\_BR}, instancia os serviços de demonstração em memória (\texttt{AppDataService} e \texttt{AuthService}) e exibe um aviso global informando o caráter demonstrativo dos dados.
+
+\section{Funcionalidades observáveis (Flutter Web)}
+O roteador do aplicativo Web define fluxos de abertura (\textit{splash}), login, cadastro e \textit{onboarding}, dando acesso às áreas principais de início, gestão do pet, triagem orientativa e rede solidária. Também estão mapeadas rotas para agenda, mural comunitário, perfil, histórico clínico, saldo e extrato de créditos, configurações, suporte e painel corporativo para organizações parceiras.
+
+Na simulação atual, os dados iniciais (\textit{seeds}) representam perfis fictícios, catálogo local de serviços e pedidos demonstrativos. Ações como agendar um atendimento ou candidatar-se a um pedido atualizam o estado apenas na sessão ativa em memória, sendo descartadas ao recarregar a página ou encerrar o processo, sem sincronização entre navegador e dispositivos móveis.
+
+\section{Metadados e comportamento Web}
+A configuração atualizada de \path{web/index.html} e \path{web/manifest.json} define o idioma HTML \texttt{pt-BR}, título e descrição próprios, \textit{viewport}, cor de tema e manifesto PWA (\textit{Progressive Web App}) com a identidade visual do PetCuida, substituindo os textos padrão gerados pelo Flutter.
+
+Permanecem como verificações pendentes os testes de instalação PWA, navegação direta via \textit{deep links}, critérios de acessibilidade, SEO, cache \textit{offline} e compatibilidade entre diferentes navegadores. Além disso, caso a compilação Web seja hospedada em um subdiretório, o atributo \texttt{base href} deverá ser ajustado no momento do \textit{build}.
+
+\section{Prévia web estática no Firebase Hosting}
+Além da aplicação compilada em Flutter, o pacote inclui uma prévia web estática em HTML/JavaScript puro destinada a demonstrações ágeis via \textbf{Firebase Hosting}. A configuração de implantação é controlada pelo arquivo \path{firebase.json}, que define o diretório público como a própria raiz do pacote (\texttt{"public": "."}) com regras de exclusão de arquivos internos, e pelo arquivo \path{firebaserc}, que vincula o projeto padrão \texttt{petcuida-mobile-2026}.
+
+O pacote preserva duas versões da prévia estática: o arquivo \path{index_0.html}, que apresenta um fluxo inicial simplificado (navegação entre início, pets, rede e agenda), e o arquivo \path{index_1a.html}, que constitui o ponto de entrada mais completo. O \path{index_1a.html} simula diretamente no navegador a autenticação para pessoa física (PF) e pessoa jurídica (PJ), alternância de perfis, painel inicial, agenda, rede solidária, área do pet, prontuário e geração dinâmica de QR Code.
+
+Ressalta-se que os dados exibidos nessa prévia são estritamente demonstrativos, não havendo autenticação real, persistência de contas, backend de prontuário ou processamento financeiro. Como a biblioteca de geração de QR Code é carregada via CDN externa, essa funcionalidade exige conexão ativa com a internet para operar.
+
+\section{Dependências, execução e implantação}
+No módulo Flutter Web, as dependências são declaradas em \path{pubspec.yaml}, abrangendo Flutter, Provider, GoRouter, internacionalização, seleção de imagens e adaptadores remotos. Embora os SDKs do Firebase e do Supabase constem no arquivo de dependências, o ponto de entrada atual não os inicializa, mantendo a operação restrita à memória local.
+
+Em um ambiente equipado com Flutter SDK e Google Chrome, os comandos para validação e geração dos artefatos Web são:
+
+\begin{itemize}[leftmargin=*]
+  \item \texttt{flutter pub get} --- baixa e resolve as dependências do projeto;
+  \item \texttt{flutter analyze} --- realiza a análise estática do código Dart;
+  \item \texttt{flutter test} --- executa a suíte de testes unitários;
+  \item \texttt{flutter run -d chrome} --- executa a aplicação em modo de desenvolvimento no navegador;
+  \item \texttt{flutter build web} --- compila os artefatos estáticos finais na pasta \path{build/web/}.
+\end{itemize}
+
+Para a publicação da prévia estática no Firebase Hosting, após instalar o Firebase CLI e autenticar a conta vinculada ao projeto \texttt{petcuida-mobile-2026}, utiliza-se o comando \texttt{firebase deploy -{}-only hosting}, certificando-se previamente de definir qual arquivo HTML (\path{index_1a.html}) será servido como \path{index.html} principal.
+
+\section{Limites e requisitos de evolução}
+Nenhuma das interfaces Web atuais (Flutter Web ou prévia Firebase Hosting) deve ser utilizada com dados pessoais reais ou exposta como serviço produtivo sem a conclusão das salvaguardas técnicas. Para a evolução rumo ao piloto real, estabelecem-se os seguintes requisitos obrigatórios:
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Autenticação e controle de acesso:} Substituir os logins simulados por provedores reais (como Firebase Authentication), implementar controle de sessão segura no navegador e configurar políticas de acesso por perfil (PF/PJ) e por tutor.
+  \item \textbf{Persistência e saneamento de dados:} Migrar os registros demonstrativos para banco de dados em nuvem (Firestore ou Supabase) com regras de segurança restritivas, removendo todos os dados fictícios (\textit{seeds}) antes da publicação.
+  \item \textbf{Conformidade com a LGPD:} Implementar fluxos explícitos de consentimento, políticas de retenção e exclusão de dados, controle rigoroso de acesso ao prontuário e exibição da política de privacidade na interface.
+  \item \textbf{Experiência Web e resiliência:} Validar a responsividade em diferentes resoluções, navegação por teclado, compatibilidade com leitores de tela, recarregamento direto de rotas (evitando erros HTTP 404 em SPAs) e tratamento visual de falhas de rede.
+  \item \textbf{Supervisão clínica:} Submeter os fluxos da triagem orientativa à validação de médicos-veterinários parceiros e manter avisos permanentes de não diagnóstico.
+\end{enumerate}
+
+\section{Estrutura relevante}
+A Tabela~\ref{tab:arquivos_web} consolida os principais arquivos que compõem tanto a aplicação Flutter Web quanto o pacote de prévia no Firebase Hosting.
+
+\begin{table}[H]
+\centering
+\caption{Principais arquivos da aplicação Flutter Web e da prévia Firebase Hosting.}
+\label{tab:arquivos_web}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{6.6cm}Y}
+\toprule
+\textbf{Arquivo} & \textbf{Função}\\
+\midrule
+\texttt{lib/main.dart} & Ponto de entrada e inicialização da aplicação Flutter.\\
+\addlinespace[4pt]
+\texttt{lib/core/routes/\allowbreak app\_router.dart} & Configuração de rotas, parâmetros e redirecionamentos.\\
+\addlinespace[4pt]
+\texttt{lib/core/services/\allowbreak app\_data\_service.dart} & Gerenciamento de estado em memória da demonstração.\\
+\addlinespace[4pt]
+\texttt{lib/core/services/\allowbreak auth\_service.dart} & Fluxo de autenticação simulado sem backend.\\
+\addlinespace[4pt]
+\texttt{web/index.html} e \texttt{web/manifest.json} & Shell HTML, metadados e manifesto PWA do Flutter Web.\\
+\addlinespace[4pt]
+\texttt{firebase.json} e \texttt{firebaserc} & Configuração do Firebase Hosting e vínculo com o projeto \texttt{petcuida-mobile-2026}.\\
+\addlinespace[4pt]
+\texttt{index\_1a.html} e \texttt{index\_0.html} & Prévias estáticas HTML/JS (versão ampliada com PF/PJ e versão inicial).\\
+\addlinespace[4pt]
+\texttt{test/core/services/\allowbreak app\_data\_service\_test.dart} & Suíte de testes unitários da camada de serviços.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\addcontentsline{toc}{section}{Referências}
+\begin{thebibliography}{9}
+\bibitem{src}
+GRUPO 4. \textbf{Código-fonte compartilhado e shell Web (\texttt{flutter/lib/} e \texttt{flutter/web/})}. Belo Horizonte: PUC Minas, 2026.
+
+\bibitem{hosting}
+GRUPO 4. \textbf{Pacote de prévia estática Firebase Hosting (\texttt{petcuida-mobile-2026})}. Belo Horizonte: PUC Minas, 2026.
+
+\bibitem{base}
+GRUPO 4. \textbf{Pacote de entrega \texttt{PetCuida\_D4C2B\_LGPD} e artefatos da Atividade XIV}. Belo Horizonte: PUC Minas, 2026.
+\end{thebibliography}
+
+\end{document}
